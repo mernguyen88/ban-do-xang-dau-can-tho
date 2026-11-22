@@ -1,31 +1,48 @@
 # Bản đồ cơ sở xăng dầu Cần Thơ
 
-Website tương tác từ 9 vị trí bến cảng/bến phao liên quan xăng dầu và raster hiện trạng năm 2025 do chủ dự án cung cấp.
+Website tra cứu hiện trạng sử dụng đất năm 2025 quanh **868 vị trí**: 840 cơ sở xăng dầu và 28 bến cảng, tính từ raster hiện trạng gốc 10 m. 9 vị trí cũ đã được bỏ theo yêu cầu (lượt 23/11/2026).
 
-Bấm một vị trí để xem vùng đệm 2 km, hiện trạng bên trong, bảng diện tích ha và tỷ lệ từng loại đất. Bảng chỉ hiển thị bảy loại đất được phân loại; tỷ lệ vẫn tính trên toàn vùng đệm. Có thể tải bảng CSV của từng vị trí hoặc cả 9 vị trí.
+- Bấm một điểm: chỉ hiện **một** vùng đệm, ảnh hiện trạng trong vùng đệm và bảng/biểu đồ diện tích (ha, %) của điểm đó.
+- Mọi điểm có vùng đệm **2 km**. 7 điểm được ghép với kho có dung tích trong **Phụ lục 2** có thêm **3, 5, 10 km**.
+- Chế độ **Bảng / Biểu đồ** (thanh ngang, đơn vị ha hoặc %), cùng màu và cùng số liệu gốc; CSV từng điểm và toàn bộ (`data/dien_tich.csv`).
+- Tìm theo tên/mã/địa chỉ (gõ không dấu được), lọc loại cơ sở, kho có dung tích, vị trí ước lượng. Liên kết trực tiếp: `#BC21`, `#BC21/10000`.
 
-## Dữ liệu và cách tính
+## Dữ liệu
 
-- Raster gốc: Hien_trang_2025_7lop_co_rung.tif, 10 m, EPSG:32648, NoData = 0.
-- Gộp các bản ghi trùng tên và tọa độ. Bến phao cùng tên nhưng khác tọa độ được giữ riêng.
-- Vùng đệm 2.000 m trong UTM 48N; 1.440 cạnh. Diện tích ô biên tính theo phần giao với vùng đệm.
-- Tỷ lệ tính trên toàn vùng đệm, bao gồm phần thiếu dữ liệu.
-- Mã 7 hiển thị là Rừng; chỉ đổi tên lớp theo yêu cầu, giữ nguyên mã và số liệu.
-- Các vùng đệm chồng lấn; không cộng trực tiếp để suy ra diện tích duy nhất.
-- Các kết quả đã được kiểm tra độc lập bằng cách chuyển raster sang polygon và giao với từng vùng đệm.
+| Nguồn | Bản ghi | Dùng |
+| --- | --- | --- |
+| `dau_vao/Co_so_xang_dau_Can_Tho.shp` (WGS84) | 843 | 840 (gộp 3 bản ghi trùng hoàn toàn cùng tên + địa chỉ + tọa độ) |
+| `dau_vao/bencang.shp` (WGS84) | 73 | 28 bến cảng (bỏ 45 bến phao/phao/rùa neo theo yêu cầu) |
+| `Hien_trang_2025_7lop_co_rung.tif` | EPSG:32648, 10 m, NoData 0 | SHA-256 `f92f71a6…9303`; **không đưa lên kho** — đặt vào `dau_vao/` khi chạy lại |
+| Phụ lục 2 (`thongtinbosung.docx`) | 18 kho | 7 kho ghép được với điểm bản đồ (`gis/kho_phu_luc_2.csv`); 11 kho không có vị trí |
 
-## Xuất bản
+Lưu ý: 353 điểm ghi "Vị trí ước lượng" trong nguồn, nhiều điểm dùng chung tâm phường/xã; 3 bến cảng Duyên Hải nằm ngoài phạm vi raster (không tính diện tích). Giao diện ghi rõ các trường hợp này.
 
-Tệp index.html nằm ở thư mục gốc. Trong GitHub Settings → Pages, chọn Deploy from a branch, nhánh main, thư mục /(root). Tệp .nojekyll giữ website ở dạng tĩnh.
+## Phương pháp
 
-Website dùng đường dẫn tương đối, phù hợp GitHub Pages dạng tài khoản hoặc dự án. Không cần build, API key hoặc máy chủ xử lý GIS. Khi đổi raster hoặc thêm vị trí, cần tính lại dữ liệu đầu vào.
+Vùng đệm tròn trong UTM 48N (1.440 cạnh). Diện tích mỗi lớp = tổng diện tích **giao thực tế** giữa ô 10 m và vùng đệm (ô biên tính theo phần giao). Tỷ lệ = diện tích lớp / diện tích toàn vùng đệm × 100, không chuẩn hóa tổng về 100 %. NoData/ngoài phạm vi chỉ theo dõi nội bộ (`qc` trong JSON), không hiển thị. Ảnh PNG chỉ để xem.
 
-Leaflet 1.9.4 đi kèm giấy phép trong assets/LEAFLET-LICENSE.txt. Bản đồ nền OpenStreetMap được ghi công trên giao diện.
+## Chạy lại quy trình GIS
 
-## Giao diện
+```bash
+pip install -r gis/requirements.txt
+# đặt Hien_trang_2025_7lop_co_rung.tif (và thongtinbosung.docx nếu trích lại Phụ lục 2) vào dau_vao/
+python gis/kiem_ke.py                 # 1. kiểm kê CRS, số bản ghi, trùng tọa độ, giá trị raster
+python gis/hop_nhat_diem.py           # 2. ID ổn định, đối chiếu trùng, hợp nhất → gis/ket_qua/
+python gis/tinh_dien_tich.py          # 3. tính diện tích + ảnh → data/ (có bộ đệm, chạy lại nhanh)
+python gis/kiem_tra_nhat_quan.py      # 4. kiểm tra tổng lớp, %, hình học, CSV
+python gis/doi_chieu_doc_lap.py       # 5. đối chiếu độc lập bằng polygon hóa raster
+python gis/tests/test_dien_tich.py    # kiểm thử thuật toán (raster tổng hợp)
+```
 
-Logo Đại học Cần Thơ do chủ dự án cung cấp, giữ nguyên tỷ lệ và màu. Giao diện nền trắng, màu xanh theo logo; font Be Vietnam Pro và Noto Sans hỗ trợ tiếng Việt, lưu cùng website. Không khẳng định đây là trang xuất bản chính thức của trường.
+Cấu hình: `gis/cau_hinh.toml`. Sửa ghép kho trong `gis/kho_phu_luc_2.csv` (cột `ma_diem`); quyết định gộp/tách cặp nghi trùng trong `gis/quyet_dinh_trung.csv` (`gop` | `rieng`), rồi chạy lại bước 2–5.
 
-## Bàn giao để phát triển tiếp
+## Xem thử và xuất bản
 
-Đọc [BAN_GIAO_AI.md](BAN_GIAO_AI.md), đưa [PROMPT_AI_TIEP_THEO.txt](PROMPT_AI_TIEP_THEO.txt) cho AI tiếp theo và kiểm tra các tệp đầu vào trước khi thêm dữ liệu. Kế hoạch bổ sung 843 trạm và 73 bến cảng cùng biểu đồ chưa được triển khai trong bản này.
+```bash
+python -m http.server 8000     # mở http://localhost:8000 (không mở bằng file://)
+```
+
+GitHub Pages xuất bản từ nhánh `main`, thư mục gốc. Kiểm thử giao diện: `python kiem_thu/tuong_tac.py`, đo tốc độ: `python kiem_thu/do_toc_do.py`.
+
+Logo Đại học Cần Thơ giữ nguyên bản; không khẳng định đây là trang chính thức của trường. Leaflet 1.9.4 (giấy phép trong `assets/`), nền OpenStreetMap. Tài liệu bàn giao chi tiết: [BAN_GIAO_AI.md](BAN_GIAO_AI.md).

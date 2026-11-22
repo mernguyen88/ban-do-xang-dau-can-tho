@@ -1,0 +1,917 @@
+﻿source,fid,source_id,web_id,trang_thai,ten
+ben_cang,0,1,BC01,giu,Bến cảng TTĐL Duyên Hải
+ben_cang,1,2,BC02,giu,Bến cảng Nhà máy nhiệt điện Duyên Hải 2 - Cầu cảng nhập than
+ben_cang,2,3,BC03,giu,Bến cảng tổng hợp Định An (chưa công bố)
+ben_cang,3,4,BC04,giu,Bến cảng Superdong Trần Đề - Sóc Trăng
+ben_cang,4,5,BC05,giu,Bến cảng Trà Cú (chưa công bố)
+ben_cang,5,6,BC06,giu,Bến cảng chuyên dùng quốc tế Lee & Man
+ben_cang,6,7,BC07,giu,Bến cảng chuyên dùng NMNĐ Sông Hậu 1
+ben_cang,7,8,BC08,giu,Bến cảng tổng hợp VIMC Hậu Giang
+ben_cang,8,9,BC09,giu,Bến cảng Cái Cui
+ben_cang,9,10,BC10,giu,Bến cảng Tân cảng Cái Cui
+ben_cang,10,11,BC11,giu,Bến cảng xăng dầu Petro Mekong
+ben_cang,11,12,BC12,giu,Bến cảng 620 Châu Thới
+ben_cang,12,13,BC13,giu,Bến cảng Bình Minh
+ben_cang,13,14,BC14,giu,Bến cảng Bình Thủy
+ben_cang,14,15,BC15,giu,Bến cảng X55
+ben_cang,15,16,BC16,giu,Bến cảng Total Gas Cần Thơ
+ben_cang,16,17,BC17,giu,Bến cảng Hoàng Diệu (Cần Thơ)
+ben_cang,17,18,BC18,giu,Bến cảng chuyên dùng kho xăng dầu K34/QK9
+ben_cang,18,19,BC19,giu,Bến cảng lương thực Sông Hậu (Trà Nóc)
+ben_cang,19,20,BC20,giu,Bến cảng Kho Xăng dầu Trà Nóc
+ben_cang,20,21,BC21,giu,Bến cảng Tổng kho xăng dầu Miền Tây
+ben_cang,21,22,BC22,giu,Bến cảng PV Gas South
+ben_cang,22,23,BC23,giu,Bến cảng CTCP TMĐT Dầu khí Nam Sông Hậu - chi nhánh Cần Thơ
+ben_cang,23,24,BC24,giu,Bến cảng Sài Gòn Petro Cần Thơ
+ben_cang,24,25,BC25,giu,Bến cảng chuyên dụng Phúc Thành
+ben_cang,25,26,BC26,giu,Bến cảng Nhiệt điện Ô Môn
+ben_cang,26,27,BC27,giu,Bến cảng chuyên dùng xuất thạch cao NMNĐ Cần Thơ
+ben_cang,27,28,BC28,giu,Bến cảng tổng hợp Cái Côn
+ben_cang,28,29,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,29,30,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,30,31,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,31,32,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,32,33,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,33,34,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,34,35,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,35,36,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,36,37,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,37,38,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,38,39,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,39,40,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,40,41,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,41,42,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,42,43,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,43,44,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,44,45,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,45,46,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,46,47,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,47,48,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,48,49,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,49,50,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,50,51,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,51,52,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,52,53,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,53,54,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,54,55,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,55,56,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,56,57,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,57,58,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,58,59,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,59,60,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,60,61,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,61,62,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,62,63,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,63,64,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,64,65,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,65,66,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,66,67,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,67,68,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,68,69,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,69,70,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,70,71,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,71,72,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+ben_cang,72,73,,loai: không phải bến cảng (chỉ lấy bến cảng theo yêu cầu),
+tram,0,1,TXD0001,giu,Chi nhánh Công ty TNHH Một thành viên Xăng dầu Quân Bảo tại Cần Thơ - Địa điểm kinh doanh Cửa hàng Xăng dầu Nam Cần Thơ
+tram,1,2,TXD0002,giu,Chi nhánh Công ty TNHH Petro Hoàng Yến Cần Thơ - Cửa hàng Xăng dầu Hoàng Yến Số 6
+tram,2,3,TXD0003,giu,Công ty TNHH Thương mại Xăng dầu Vạn Nguyên 2
+tram,3,4,TXD0004,giu,Công ty TNHH Xây dựng Western Petroleum -Địa điểm kinh doanh Cửa hàng Xăng dầu Mỹ Khánh
+tram,4,5,TXD0005,giu,Địa điểm kinh doanh - Công ty TNHH MTV Xăng dầu Thiên Minh
+tram,5,6,TXD0006,giu,Địa điểm kinh doanh Công ty TNHH Petro Hoàng Yến Cần Thơ - Cửa hàng Xăng dầu Hoàng Yến Số 26
+tram,6,7,TXD0007,giu,Địa điểm kinh doanh Petrolimex - Cửa hàng 04 - Công ty TNHH MTV Petrolimex Cần Thơ
+tram,7,8,TXD0008,giu,Địa điểm kinh doanh Petrolimex - Cửa hàng 06 - Công ty TNHH MTVPetrolimex Cần Thơ
+tram,8,9,TXD0009,giu,Cửa hàng bán lẻ Xăng dầu Số 80
+tram,9,10,TXD0010,giu,Cửa hàng Xăng dầu Số 6 - Công ty Cổ phần Dầu khí Mekong
+tram,10,11,TXD0011,giu,Cửa hàng Xăng dầu Tây Nam 06
+tram,11,12,TXD0012,giu,Petrolimex - Cửa hàng 02
+tram,12,13,TXD0013,giu,Petrolimex - Cửa hàng 03
+tram,13,14,TXD0014,giu,Trạm bán lẻ Xăng dầu Cần Thơ (Petro 28)
+tram,14,15,TXD0015,giu,Trạm Xăng dầu Số 02 Cần Thơ
+tram,15,16,TXD0016,giu,Trạm Xăng dầu Số 365
+tram,16,17,TXD0017,giu,Chi nhánh Công ty TNHH MTV Xăng dầu Tây Nam Bộ - Petrolimex - Cửa hàng 05
+tram,17,18,TXD0018,giu,Công ty TNHH Một thành viên Xăng dầu Kim Kim Phượng 6
+tram,18,19,TXD0019,giu,Công ty TNHH Một thành viên Xăng dầu Thiên Minh - Cửa hàng bán lẻ Xăng dầu Số 8
+tram,19,20,TXD0020,giu,Công ty TNHH Thương mại Dịch vụ LV Petro
+tram,20,21,TXD0021,giu,Công ty TNHH Xăng dầu Kim Phượng
+tram,21,22,TXD0022,giu,Công ty TNHH Một thành viên Dầu khí Việt Phát - Địa điểm kinh doanh - Cửa hàng Xăng dầu Số 65
+tram,22,23,TXD0023,giu,Công ty TNHH Một thành viên Xăng dầu STS Tây Nam Bộ - Địa điểm kinh doanh - Cửa hàng Xăng dầu Số 08
+tram,23,24,TXD0024,giu,Công ty TNHH Một thành viên Xăng dầu STS Tây Nam Bộ - Địa điểm kinh doanh - Cửa hàng Xăng dầu Số 5
+tram,24,25,TXD0025,giu,Công ty TNHH Một thành viên Xăng dầu Tây Nam Bộ - Petrolimex - Cửa hàng 15
+tram,25,26,TXD0026,giu,Công ty TNHH Thương mại Dầu khí Minh Chi - Cửa hàng Xăng dầu Bến xe khách Trung tâm
+tram,26,27,TXD0027,giu,Công ty TNHH Xăng dầu Đức Phú Cường - Cửa hàng Xăng dầu Hoàng Yến Số 2
+tram,27,28,TXD0028,giu,Công ty Trách nhiệm hữu hạn Thương mại Dịch vụ Lê Uyên - Địa điểm kinh doanh Trạm Xăng dầu Lê Uyên 1
+tram,28,29,TXD0029,giu,Địa điểm kinh doanh - Công ty TNHH Thương mại Dịch vụ Sản xuất Minh Thuận Phát - Cửa hàng Số 28
+tram,29,30,TXD0030,giu,Địa điểm kinh doanh Công ty Cổ phần Tập đoàn Đầu tư Ngân Tín - Cửa hàng Xăng dầu Cái Răng
+tram,30,31,TXD0031,giu,Địa điểm kinh doanh Công ty TNHH Một thành viên Xăng dầu Tây Nam Bộ - Petrolimex - Cửa hàng 18
+tram,31,32,TXD0032,giu,Địa điểm kinh doanh Công ty TNHH Một thành viên Xăng dầu Tây Nam Bộ - Petrolimex - Cửa hàng 19
+tram,32,33,TXD0033,giu,Địa điểm kinh doanh Công ty TNHH Một thành viên Xăng dầu Tây Nam Bộ - Petrolimex - Cửa hàng 21
+tram,33,34,TXD0034,giu,Địa điểm kinh doanh Công ty TNHH Một thành viên Xăng dầu Tây Nam Bộ - Petrolimex - Cửa hàng 23
+tram,34,35,TXD0035,giu,Địa điểm kinh doanh Công ty TNHH Xăng dầu Đức Phú Cường - Cửa hàng Xăng dầu Đức Phú Cường Số 1
+tram,35,36,TXD0036,giu,Địa điểm kinh doanh Số 02 - Công ty TNHH Petro Anh Dũng
+tram,36,37,TXD0037,giu,Trạm cẤp phát Xăng dầu Số 01 - Bộ Chỉ huy Quân sự thành phố Cần Thơ
+tram,37,38,TXD0038,giu,Trạm cẤp phát Xăng dầu Số 2 - Bộ Chỉ huy Quân sự thành phố Cần Thơ
+tram,38,39,TXD0039,giu,Chi nhánh Công ty TNHH kinh doanh Xăng dầu Cam Thủy – Cửa hàng Cam Thủy 17
+tram,39,40,TXD0040,giu,Chi nhánh Công ty TNHH Một thành viên Hòa Hà
+tram,40,41,TXD0041,giu,Chi nhánh Công ty TNHH Một thành viên Xăng dầu Quân Đội tại Hậu Giang – Cửa hàng Xăng dầu Số 20
+tram,41,42,TXD0042,giu,Chi nhánh Doanh nghiệp tư nhân Minh Hùng Số 2
+tram,42,43,TXD0043,giu,Công ty Cổ phần Thương mại Đầu tư Dầu khí Nam Sông Hậu – Địa điểm kinh doanh Cửa hàng Xăng dầu Ngã Bảy
+tram,43,44,TXD0044,giu,Công ty TNHH Một thành viên Hòa Hà – Chi nhánh 2
+tram,44,45,TXD0045,giu,Công ty TNHH Một thành viên Ngân Thành
+tram,45,46,TXD0046,giu,Công ty TNHH Một thành viên Nguyễn Hạt
+tram,46,47,TXD0047,giu,Công ty TNHH Một thành viên Nhiên liệu Tây Đô – Cửa hàng Xăng dầu Hòa Hà
+tram,47,48,TXD0048,giu,Công ty TNHH Một thành viên Xăng dầu Thành Công
+tram,48,49,TXD0049,giu,Công ty TNHH MTV Xăng dầu Quang Minh
+tram,49,50,TXD0050,giu,Công ty TNHH Thương mại - Dịch vụ - Xây dựng Minh Cường
+tram,50,51,TXD0051,giu,Công ty TNHH Thương mại LĐ 268
+tram,51,52,TXD0052,giu,Công ty TNHH Thương mại và Vận tải Dầu khí Đại Lộc - Chi nhánh Hậu Giang - Cửa hàng Xăng dầu Số 2
+tram,52,53,TXD0053,giu,Công ty TNHH Xăng dầu Nhật Đoan
+tram,53,54,TXD0054,giu,Doanh nghiệp tư nhân Duy Tín
+tram,54,55,TXD0055,giu,Doanh nghiệp tư nhân Thuận Tâm
+tram,55,56,TXD0055,gop_vao,Doanh nghiệp tư nhân Thuận Tâm
+tram,56,57,TXD0057,giu,Doanh nghiệp tư nhân Xăng dầu Hậu Giang
+tram,57,58,TXD0058,giu,Doanh nghiệp tư nhân Xăng dầu Ngọc Nhi
+tram,58,59,TXD0059,giu,Chi nhánh 3 - Cty TNHH.DVTH 99 tại Cần Thơ
+tram,59,60,TXD0060,giu,CHXD Doanh nghiệp tư nhân KD XD Bích Thùy
+tram,60,61,TXD0061,giu,CHXD Hoàng Yến
+tram,61,62,TXD0062,giu,CHXD Hồng Hào 9
+tram,62,63,TXD0063,giu,CHXD Số 02 - Công ty TNHH MTV Thiên Minh
+tram,63,64,TXD0064,giu,CHXD Thiên Minh - Công ty TNHH MTV Thiên Minh
+tram,64,65,TXD0065,giu,Công ty CP Dầu khí Mê Kông -ĐĐKD Cửa hàng Xăng dầu Số 81
+tram,65,66,TXD0066,giu,Đại lý bán lẻ Xăng dầu Kim Phượng 9
+tram,66,67,TXD0067,giu,ĐĐKD Công ty TNHH MTV Quảng cáo TM Xây dựng Nam Việt - CHXD Ngọc Hiền
+tram,67,68,TXD0068,giu,ĐĐKD Công ty TNHH Petro Nguyễn Thủy - CHXD Hoàng Yến 10
+tram,68,69,TXD0069,giu,Địa điểm kinh doanh Công ty TNHH MTV Petrolimex Cần Thơ - Cửa hàng Xăng dầu Số 22
+tram,69,70,TXD0070,giu,Địa điểm kinh doanh Công ty TNHH MTV Petrolimex Cần Thơ - Cửa hàng Xăng dầu Số 24
+tram,70,71,TXD0071,giu,Chi nhánh Công ty Cổ phần Thương mại Đầu tư Dầu khí Nam Sông Hậu tại Sóc Trăng
+tram,71,72,TXD0072,giu,Chi nhánh Công ty TNHH Một thành viên Xăng dầu Tây Nam Bộ - Chi nhánh
+tram,72,73,TXD0073,giu,Công ty TNHH Nhiên liệu Xăng dầu Sài Gòn
+tram,73,74,TXD0074,giu,Công ty TNHH Thanh Qui
+tram,74,75,TXD0075,giu,Doanh nghiệp tư nhân Cao Thương
+tram,75,76,TXD0076,giu,Doanh nghiệp tư nhân Minh Thê
+tram,76,77,TXD0077,giu,Doanh nghiệp tư nhân Thanh Sang
+tram,77,78,TXD0078,giu,Doanh nghiệp tư nhân Thế Như
+tram,78,79,TXD0079,giu,Chi nhánh Công ty TNHH MTV Hòa Bình – Cửa hàng Xăng dầu Số 03
+tram,79,80,TXD0080,giu,Công ty TNHH Một thành viên Xăng dầu Hồng Quân
+tram,80,81,TXD0081,giu,Công ty TNHH MTV nhiên liệu Tây Đô – Địa điểm kinh doanh Trạm Xăng dầu Long Mỹ 3
+tram,81,82,TXD0082,giu,Công ty TNHH MTV Xăng dầu Hồng Quân 6 - Địa điểm kinh doanh Cửa hàng Xăng dầu Số 03
+tram,82,83,TXD0083,giu,Petrolimex - Cửa hàng 18
+tram,83,84,TXD0084,giu,Petrolimex - Cửa hàng Số 20
+tram,84,85,TXD0085,giu,Petrolimex - Cửa hàng Số 6
+tram,85,86,TXD0086,giu,Chi nhánh Công ty TNHH Một thành viên Hòa Bình – Cửa hàng Xăng dầu Số 03
+tram,86,87,TXD0087,giu,Chi nhánh Công ty TNHH Một thành viên Xăng dầu Tây Nam Bộ - Chi nhánh Xăng dầu Hậu Giang – Cửa hàng 06
+tram,87,88,TXD0088,giu,Chi nhánh Công ty TNHH Một thành viên Xăng dầu Tây Nam Bộ - Chi nhánh Xăng dầu Hậu Giang – Cửa hàng 18
+tram,88,89,TXD0089,giu,Chi nhánh Công ty TNHH Một thành viên Xăng dầu Tây Nam Bộ - Chi nhánh Xăng dầu Hậu Giang – Cửa hàng 20
+tram,89,90,TXD0090,giu,Công ty TNHH Một thành viên Xăng dầu Hồng Quân
+tram,90,91,TXD0091,giu,Công ty TNHH Một thành viên Xăng dầu Hồng Quân 6 – Cửa hàng Xăng dầu Số 01
+tram,91,92,TXD0092,giu,Công ty TNHH Một thành viên Xăng dầu Hồng Quân 6 – Cửa hàng Xăng dầu Số 03
+tram,92,93,TXD0093,giu,Công ty TNHH Một thành viên Xăng dầu Nguyễn Thành Thống
+tram,93,94,TXD0094,giu,Công ty TNHH Thương mại Xăng dầu Thanh Ngọc
+tram,94,95,TXD0095,giu,Công ty TNHH Xăng dầu Dũng Mỹ
+tram,95,96,TXD0096,giu,Công ty Cổ phần Xăng dầu Sài Gòn (Cửa hàng Số 5)
+tram,96,97,TXD0097,giu,Công ty TNHH Southern Energy; Công ty TNHH Một thành viên Xăng dầu Hồng Quân 6; Địa điểm kinh doanh Cửa hàng Xăng dầu Số 06
+tram,97,98,TXD0098,giu,Công ty TNHH Xăng dầu Nguyễn Thành Thống (Petimex)
+tram,98,99,TXD0099,giu,Công ty TNHH Xăng dầu Tây Nam Bộ (Petrolimex - Cửa hàng Số 4)
+tram,99,100,TXD0100,giu,Công ty TNHH Xăng dầu Vân Anh 1
+tram,100,101,TXD0101,giu,Cửa hàng Xăng dầu An Khang 1 (PVIOL)
+tram,101,102,TXD0102,giu,Cửa hàng Xăng dầu An Khang 2 (PVIOL)
+tram,102,103,TXD0103,giu,Cửa hàng Xăng dầu Trường Thịnh (Petimex)
+tram,103,104,TXD0104,giu,Cửa hàng Xăng dầu Vân Anh 7 (Petimax)
+tram,104,105,TXD0105,giu,Công ty TNHH Thương mại Xăng dầu Long Tuyền
+tram,105,106,TXD0106,giu,Cửa hàng Xăng dầu Bình Thủy
+tram,106,107,TXD0107,giu,Cửa hàng Xăng dầu Petrolimex Số 09
+tram,107,108,TXD0108,giu,Doanh nghiệp tư nhân Đại lý Xăng dầu Dũng Sơn
+tram,108,109,TXD0109,giu,Doanh nghiệp tư nhân Hà Giang
+tram,109,110,TXD0110,giu,Doanh nghiệp tư nhân Hà Giang
+tram,110,111,TXD0111,giu,Công ty TNHH Nam Sử
+tram,111,112,TXD0112,giu,Công ty TNHH Xăng dầu Đạt Phúc
+tram,112,113,TXD0113,giu,Công ty TNHH Xăng dầu Hoài Thương
+tram,113,114,TXD0114,giu,Công ty TNHH Xăng dầu Hương Dương
+tram,114,115,TXD0115,giu,Công ty TNHH Xăng dầu Thanh Phương
+tram,115,116,TXD0116,giu,Doanh nghiệp tư nhân Như Ngọc
+tram,116,117,TXD0117,giu,Chi nhánh Công ty TNHH VTXD An Bình - Cửa hàng XD số 68
+tram,117,118,TXD0118,giu,Công ty CP TMDV Tây Thịnh - Cửa hàng xăng dầu số 8
+tram,118,119,TXD0119,giu,Công ty TNHH dầu khí Huỳnh Như
+tram,119,120,TXD0120,giu,Công ty TNHH Dầu khí Quang Nhật
+tram,120,121,TXD0121,giu,Công ty TNHH Dầu khí Trung Vy - Địa điểm kinh doanh cửa hàng XD số 9
+tram,121,122,TXD0122,giu,Công ty TNHH Southern Energy - Cửa hàng xăng dầu số 66
+tram,122,123,TXD0123,giu,Công ty TNHH TMXD Phượng Hoàng
+tram,123,124,TXD0124,giu,Công ty TNHH xăng dầu Quý
+tram,124,125,TXD0125,giu,Công ty TNHH XD Kim Minh - Địa điểm kinh doanh cửa hàng xăng dầu số 10
+tram,125,126,TXD0126,giu,Địa điểm kinh doanh - Doanh nghiệp tư nhân xăng dầu Yến Khương
+tram,126,127,TXD0127,giu,Doanh nghiệp tư nhân đại lý xăng dầu số 71
+tram,127,128,TXD0128,giu,Doanh nghiệp tư nhân Minh Thư
+tram,128,129,TXD0129,giu,Doanh nghiệp tư nhân Phú Thành
+tram,129,130,TXD0130,giu,Doanh nghiệp tư nhân Quang Thái
+tram,130,131,TXD0131,giu,Doanh nghiệp tư nhân Trường An
+tram,131,132,TXD0132,giu,Doanh nghiệp tư nhân Trường Thịnh
+tram,132,133,TXD0133,giu,HTX kinh doanh vật tư Sóc Trăng - Cửa hàng xăng dầu số 9
+tram,133,134,TXD0134,giu,Petrolimex - Cửa hàng 02
+tram,134,135,TXD0135,giu,Petrolimex - Cửa hàng 07
+tram,135,136,TXD0136,giu,Chi nhánh Công ty TNHH Thương mại Dịch vụ Dầu khí Hậu Giang – Cửa hàng Xăng dầu Lê Uyên 7
+tram,136,137,TXD0137,giu,Công ty TNHH MTV Năng lượng Đông Phương – Địa điểm kinh doanh Cửa hàng Xăng dầu Số 08.
+tram,137,138,TXD0138,giu,Công ty TNHH MTV Xăng dầu S.T.S Tây Nam Bộ - Địa điểm kinh doanh – Cửa hàng Xăng dầu Ngã Bảy
+tram,138,139,TXD0139,giu,Cửa hàng xăn dầu Số 19
+tram,139,140,TXD0140,giu,Cửa hàng Xăng dầu – Doanh nghiệp tư nhân Nhà máy Xay xát Hưng Thành
+tram,140,141,TXD0141,giu,Cửa hàng Xăng dầu Doanh nghiệp tư nhân Thơ Nguyên
+tram,141,142,TXD0142,giu,Cửa hàng Xăng dầu Doanh nghiệp tư nhân Thương mại Dịch vụ Lê Phát
+tram,142,143,TXD0143,giu,Cửa hàng Xăng dầu Ngã Bảy.
+tram,143,144,TXD0144,giu,Cửa hàng Xăng dầu Petimex 45
+tram,144,145,TXD0145,giu,Cửa hàng Xăng dầu Petroliemx
+tram,145,146,TXD0146,giu,Cửa hàng Xăng dầu Toàn Mỹ
+tram,146,147,TXD0147,giu,Doanh nghiệp tư nhân Minh Hùng
+tram,147,148,TXD0148,giu,Petroliemx - Cửa hàng Số 9
+tram,148,149,TXD0149,giu,Petrolimex- Cửa hàng Xăng dầu Số 13
+tram,149,150,TXD0150,giu,Chi nhánh Doanh nghiệp tư nhân Quang Thái
+tram,150,151,TXD0151,giu,Công ty TNHH Một thành viên Dầu khí Đại Việt (Cửa hàng Xăng dầu Bửu Vinh)
+tram,151,152,TXD0152,giu,Công ty TNHH Một thành viên Nhiên liệu Tây Đô - Chi nhánh Sóc Trăng - Cửa hàng Xăng dầu Số 11
+tram,152,153,TXD0153,giu,Công ty TNHH Một thành viên Nhiên liệu Tây Đô - Chi nhánh Sóc Trăng - Trạm Xăng dầu Số 10
+tram,153,154,TXD0154,giu,Công ty TNHH Southern Energy - Cửa hàng Xăng dầu Số 79
+tram,154,155,TXD0155,giu,Công ty TNHH Thủy sản Global Việt Nam - Địa điểm kinh doanh Xăng dầu Ngã Năm
+tram,155,156,TXD0156,giu,Địa điểm kinh doanh Công ty TNHH Một thành viên Thương mại Dầu khí Hậu Giang - Cửa hàng Xăng dầu Ngã Năm - Sóc Trăng
+tram,156,157,TXD0157,giu,Địa điểm kinh doanh Công ty TNHH Xăng dầu Thiên Thịnh Minh Khải - Cửa hàng Xăng dầu Thiên Minh Khải 01
+tram,157,158,TXD0158,giu,Doanh nghiệp tư nhân Châu Nguyên Anh
+tram,158,159,TXD0159,giu,Doanh nghiệp tư nhân Châu Nhựt Anh
+tram,159,160,TXD0160,giu,Doanh nghiệp tư nhân Châu Thành
+tram,160,161,TXD0161,giu,Doanh nghiệp tư nhân Châu Văn Giàu - Trạm Xăng dầu Ngã Năm
+tram,161,162,TXD0162,giu,Doanh nghiệp tư nhân đại lý Xăng dầu Châu Văn Tư
+tram,162,163,TXD0163,giu,Doanh nghiệp tư nhân Quốc Dũng
+tram,163,164,TXD0164,giu,Petrolimex - Cửa hàng 15
+tram,164,165,TXD0165,giu,Petrolimex - Cửa hàng 20
+tram,165,166,TXD0166,giu,Cửa hàng Xăng dầu 01 (Petrolimex)
+tram,166,167,TXD0167,giu,Cửa hàng Xăng dầu 02 (Petromekong)
+tram,167,168,TXD0168,giu,Cửa hàng Xăng dầu Hữu Tỷ (Doanh nghiệp tư nhân Hữu Tỷ)
+tram,168,169,TXD0169,giu,Cửa hàng Xăng dầu Số 35 (Sài Gòn Petro)
+tram,169,170,TXD0170,giu,Trạm Xăng dầu Đồng Tháp 27 (Công ty Cổ phần Nhiên liệu Tây Đô)
+tram,170,171,TXD0171,giu,Cây xăng Hoàng Yến
+tram,171,172,TXD0172,giu,Cửa hàng Xăng dầu Điện Hiên 6
+tram,172,173,TXD0173,giu,Cửa hàng Xăng dầu Hoàng Yến Số 4
+tram,173,174,TXD0174,giu,Cửa hàng Xăng dầu Ô Môn – BBPetro
+tram,174,175,TXD0175,giu,Đại lý Xăng dầu Kim Vân
+tram,175,176,TXD0176,giu,Petrolimex – Cửa hàng Xăng dầu Số 12
+tram,176,177,TXD0177,giu,PVOIL Petromekong – Cửa hành Xăng dầu Số 82
+tram,177,178,TXD0178,giu,Trạm Xăng dầu Ô Môn – Petimex
+tram,178,179,TXD0179,giu,VOIL – Cửa hàng Xăng dầu Số 04
+tram,179,180,TXD0180,giu,Cây xăng 25 (Petrolimex)
+tram,180,181,TXD0181,giu,Cây xăng Hoàng Oanh
+tram,181,182,TXD0182,giu,Cây xăng Số 12 (Petimex)
+tram,182,183,TXD0183,giu,Cây xăng Số 22
+tram,183,184,TXD0184,giu,Cây xăng Số 34
+tram,184,185,TXD0185,giu,Cây xăng Thái Châu
+tram,185,186,TXD0186,giu,Cây xăng Vân Anh
+tram,186,187,TXD0187,giu,Chi nhánh Xăng dầu Tây Nam Bộ
+tram,187,188,TXD0188,giu,Công ty Cổ phần Dầu khí Mêkông (Cửa hàng Xăng dầu Số 10)
+tram,188,189,TXD0189,giu,Công ty Cổ phần Thành Phát OTP - Chi nhánh Cửa hàng Xăng dầu Số 1
+tram,189,190,TXD0190,giu,Công ty TNHH Một thành viên Hải Duy
+tram,190,191,TXD0191,giu,Công ty TNHH Một thành viên Xăng dầu An Phúc Nguyễn
+tram,191,192,TXD0192,giu,Công ty TNHH MTV KS Ngọc Lan
+tram,192,193,TXD0193,giu,Công ty TNHH Xăng dầu 5A
+tram,193,194,TXD0194,giu,Công ty TNHH Xăng dầu Bích Thủy
+tram,194,195,TXD0195,giu,Công ty TNHH Xăng dầu Thái Thuận Phong
+tram,195,196,TXD0195,gop_vao,Công ty TNHH Xăng dầu Thái Thuận Phong
+tram,196,197,TXD0197,giu,Công ty Xăng dầu Tây Nam Bộ - Chi nhánh Xăng dầu Sóc Trăng (Cửa hàng Số 9)
+tram,197,198,TXD0198,giu,Cửa hàng bán lẻ Xăng dầu 30/4
+tram,198,199,TXD0199,giu,Cửa hàng bán lẻ Xăng dầu Địa điểm kinh doanh Số 2 - Công ty TNHH Dầu khí Huỳnh Như
+tram,199,200,TXD0200,giu,Cửa hàng bán lẻ Xăng dầu Việt Thư
+tram,200,201,TXD0201,giu,Cửa hàng Xăng dầu Đô Thị
+tram,201,202,TXD0202,giu,Cửa hàng Xăng dầu Hạnh Quyên
+tram,202,203,TXD0203,giu,Cửa hàng Xăng dầu Vi Vy
+tram,203,204,TXD0204,giu,Doanh nghiệp tư nhân Đại lý Xăng dầu 206
+tram,204,205,TXD0205,giu,Doanh nghiệp tư nhân Đại lý Xăng dầu Số 3
+tram,205,206,TXD0206,giu,Doanh nghiệp tư nhân Trân Anh
+tram,206,207,TXD0207,giu,Hợp tác xã kinh doanh Vật tư Sóc Trăng
+tram,207,208,TXD0208,giu,Chi nhánh Công ty Cổ phần Thương mại Dịch vụ năng lượng Hoàng Gia - Cửa hàng Xăng dầu Số 11
+tram,208,209,TXD0209,giu,Chi nhánh Công ty TNHH MTV Xăng dầu Tây Nam Bộ - Petrolimex - Cửa hàng Số 11
+tram,209,210,TXD0210,giu,Công ty Cổ phần Thương mại và Dịch vụ Lê Hùng Thịnh - Cửa hàng Xăng dầu Lê Hùng Thịnh
+tram,210,211,TXD0211,giu,Công ty CP Dầu khí Mê Kông - Cửa hàng bán lẻ Xăng dầu Số 85
+tram,211,212,TXD0212,giu,Công ty TNHH Petro Hoàng Yến Cần Thơ - Cửa hàng Xăng dầu Hoàng Yến Số 11
+tram,212,213,TXD0213,giu,Công ty TNHH MTV Xăng dầu Bảo Bảo - Cửa hàng Xăng dầu 91
+tram,213,214,TXD0214,giu,Công ty TNHH Thảo Lộc Phát - Cửa hàng Xăng dầu Lộc Phát
+tram,214,215,TXD0215,giu,Công ty TNHH TM DV Phước Thới - Cửa hàng Xăng dầu Phước Thới
+tram,215,216,TXD0216,giu,Doanh nghiệp tư nhân Xăng dầu Phú Xương
+tram,216,217,TXD0217,giu,Tổng Công ty Dịch vụ Xăng dầu Petrolimex - Chi nhánh vận tải và Dịch vụ Petrolimex Cần Thơ
+tram,217,218,TXD0218,giu,Chi nhánh Công ty Cổ phần Dầu khí Mê Kông tại tỉnh Sóc Trăng - Cửa hàng Xăng dầu Số 20
+tram,218,219,TXD0219,giu,Chi nhánh Công ty TNHH Đầu tư chuyển giao công nghệ cao Châu Á Thái Bình Dương - Cửa hàng Xăng dầu Số 16
+tram,219,220,TXD0220,giu,Chi nhánh Công ty TNHH Một thành viên Xăng dầu Quân Bảo tại Sóc Trăng
+tram,220,221,TXD0221,giu,Chi nhánh Xăng dầu Sóc Trăng - Petrolimex - Cửa hàng 21
+tram,221,222,TXD0222,giu,Công ty TNHH Ngọc Thảo Phát - Cửa hàng Xăng dầu Ngọc Thảo Phát 206
+tram,222,223,TXD0223,giu,Cửa hàng Số 4 - Chi nhánh Xăng dầu Sóc Trăng - Petrolimex
+tram,223,224,TXD0224,giu,Cửa hàng Xăng dầu 108 – Công ty TNHH XD Phong Loan
+tram,224,225,TXD0225,giu,Cửa hàng Xăng dầu 19 - Chi nhánh Công ty TNHH Xăng dầu Vĩnh Long Petro tại Sóc Trăng
+tram,225,226,TXD0226,giu,Cửa hàng Xăng dầu Gia Lộc - Chi nhánh Công ty TNHH Đầu tư Thương mại DV Gia Lộc tại Sóc Trăng.
+tram,226,227,TXD0227,giu,Cửa hàng Xăng dầu Hùng Vương - Công ty TNHH Ngọc Hội
+tram,227,228,TXD0228,giu,Cửa hàng Xăng dầu Số 01 - Chi nhánh Xăng dầu Sóc Trăng - Petrolimex
+tram,228,229,TXD0229,giu,Cửa hàng Xăng dầu Số 5 – Công ty TNHH Thương mại Dịch vụ Việt Thư
+tram,229,230,TXD0230,giu,Cửa hàng Xăng dầu Trương Quang Hiển 1 - Cty TNHH XD vận tải Trương Quang Hiển
+tram,230,231,TXD0231,giu,Địa điểm kinh doanh Chi nhánh Xăng dầu Sóc Trăng - Petrolimxe - Cửa hàng 01
+tram,231,232,TXD0232,giu,Địa điểm kinh doanh Chi nhánh Xăng dầu Sóc Trăng - Petrolimxe - Cửa hàng 90
+tram,232,233,TXD0233,giu,Địa điểm kinh doanh Công ty TNHH Một thành viên Thương mại Dầu khí Hậu Giang - Trạm Xăng dầu phường 7 - Thành phố Sóc Trăng
+tram,233,234,TXD0234,giu,Địa điểm kinh doanh Công ty TNHH vận tải Dầu khí Tây Nam - Cửa hàng Xăng dầu Trà Men
+tram,234,235,TXD0235,giu,Địa điểm kinh doanh Cửa hàng Xăng dầu Số 28 - Công ty TNHH Một thành viên Xăng dầu Dầu khí Bạc Liêu
+tram,235,236,TXD0236,giu,Địa điểm kinh doanh kho trung chuyển Xăng dầu Tân Thạnh - Công ty Cổ phần Dầu khí Mê Kông
+tram,236,237,TXD0237,giu,Địa điểm kinh doanh Petrolimex - Cửa hàng 105 - Chi nhánh Petrolimex Sóc Trăng
+tram,237,238,TXD0238,giu,Petrolimex - Cửa hàng 08
+tram,238,239,TXD0239,giu,Petrolimex - Cửa hàng 30
+tram,239,240,TXD0240,giu,Công ty Cổ phần Thương mại Dịch vụ Tây Thịnh - Địa điểm kinh doanh - Cửa hàng Xăng dầu Số 1
+tram,240,241,TXD0241,giu,Công ty CP Dầu khí Mê Kông - Địa điểm kinh doanh - Cửa hàng Xăng dầu Số 83
+tram,241,242,TXD0242,giu,Công ty CP Dầu khí Mê Kông - Địa điểm kinh doanh - Cửa hàng Xăng dầu Số 84
+tram,242,243,TXD0243,giu,Công ty TNHH Một thành viên Thương mại Dịch vụ Tây Nam Cửu Long - Địa điểm kinh doanh Cửa hàng Xăng dầu Ba Mươi Tháng Tư
+tram,243,244,TXD0244,giu,Công ty TNHH Một thành viên Xăng dầu S.T.S Tây Nam Bộ - Cửa hàng Xăng dầu 199
+tram,244,245,TXD0245,giu,Công ty TNHH Một thành viên Xăng dầu S.T.S Tây Nam Bộ - Cửa hàng Xăng dầu 207
+tram,245,246,TXD0246,giu,Công ty TNHH Thương mại Dầu khí Tây Nam - HG - Địa điểm kinh doanh - Cửa hàng Xăng dầu Hưng Lợi
+tram,246,247,TXD0247,giu,Địa điểm kinh doanh Công ty TNHH Thương mại Dịch vụ Tuyết Sương - Trạm Xăng dầu An Khánh
+tram,247,248,TXD0248,giu,Địa điểm kinh doanh Công ty TNHH Xăng dầu Đức Phú Cường - Cửa hàng Xăng dầu Hoàng Yến Số 9
+tram,248,249,TXD0249,giu,Địa điểm kinh doanh Petrolimex - Cửa hàng 10 - Công ty TNHH MTV Petrolimex Cần Thơ
+tram,249,250,TXD0250,giu,Địa điểm kinh doanh Petrolimex - Cửa hàng 16 - Công ty TNHH MTV Petrolimex Cần Thơ
+tram,250,251,TXD0251,giu,Địa điểm kinh doanh Petrolimex - Cửa hàng 17 - Công ty TNHH MTV Petrolimex Cần Thơ
+tram,251,252,TXD0252,giu,Chi nhánh Doanh nghiệp tư nhân Xăng dầu Tư Thanh - Cửa hàng bán lẻ Xăng dầu Ngọc Mai
+tram,252,253,TXD0253,giu,Công ty TNHH kinh doanh Xăng dầu Cam Thủy - Cửa hàng Cam Thủy 8
+tram,253,254,TXD0254,giu,Công ty TNHH Một thành viên Xăng dầu Võ Tiến Thọ
+tram,254,255,TXD0255,giu,Doanh nghiệp tư nhân Minh Lê
+tram,255,256,TXD0256,giu,Doanh nghiệp tư nhân Xăng dầu Dũng Mai
+tram,256,257,TXD0257,giu,Công ty TNHH Một thành viên Xăng dầu Bảo Bảo (Cửa hàng Xăng dầu Số 02)
+tram,257,258,TXD0258,giu,Công ty TNHH Một thành viên Xăng dầu Thiên Minh (Cửa hàng bán lẻ Xăng dầu Số 9)
+tram,258,259,TXD0259,giu,Công ty TNHH Xăng dầu Đức Phú Cường – Cửa hàng Xăng dầu Hoàng Yến Số 12
+tram,259,260,TXD0260,giu,Cửa hàng Xăng dầu 06
+tram,260,261,TXD0261,giu,Cửa hàng Xăng dầu Cảng Hoàng Diệu
+tram,261,262,TXD0262,giu,Cửa hàng Xăng dầu Số 13
+tram,262,263,TXD0263,giu,Cửa hàng Xăng dầu Số 8 (Vĩnh Long Petro)
+tram,263,264,TXD0264,giu,Cửa hàng Xăng dầu Thành Tâm
+tram,264,265,TXD0265,giu,Cửa hàng Xăng dầu Trà Nóc
+tram,265,266,TXD0266,giu,Trạm cẤp phát Xăng dầu K34 (Quân khu 9)
+tram,266,267,TXD0267,giu,Cửa hàng Xăng dầu Cam Thủy 4
+tram,267,268,TXD0268,giu,Cửa hàng Xăng dầu Điện Hiên 2
+tram,268,269,TXD0269,giu,Cửa hàng Xăng dầu Điện Hiên 3
+tram,269,270,TXD0270,giu,Cửa hàng Xăng dầu Huỳnh Mai
+tram,270,271,TXD0271,giu,Cửa hàng Xăng dầu Nguyễn Phước
+tram,271,272,TXD0272,giu,Cửa hàng Xăng dầu NshPetro
+tram,272,273,TXD0273,giu,Cửa hàng Xăng dầu Ô Môn 2 - Cty Ngọc Anh
+tram,273,274,TXD0274,giu,Cửa hàng Xăng dầu Số 6 - Cty Sông Tiền
+tram,274,275,TXD0275,giu,Cửa hàng Xăng dầu Tân Hưng
+tram,275,276,TXD0276,giu,Chi nhánh Doanh nghiệp tư nhân Xăng dầu Ba Trà - Cửa hàng Xăng dầu Thúy An
+tram,276,277,TXD0277,giu,Chi nhánh Tổng Công ty Thương mại Kỹ thuật và Đầu tư - Công ty Cổ phần tại Cần Thơ
+tram,277,278,TXD0278,giu,Công ty CP Dầu khí Mê Kông - Địa điểm kinh doanh - Cửa hàng bán lẻ Xăng dầu Số 86
+tram,278,279,TXD0279,giu,Công ty TNHH Dầu khí Quỳnh Khang - Cửa hàng Xăng dầu Tư Lít 2
+tram,279,280,TXD0280,giu,Công ty TNHH Một thành viên Điện Hiền - Cửa hàng Xăng dầu Điện Hiền 1
+tram,280,281,TXD0281,giu,Công ty TNHH Một thành viên Điện Hiền - Cửa hàng Xăng dầu Điện Hiền 5
+tram,281,282,TXD0282,giu,Công ty TNHH Xăng dầu Hữu Dư
+tram,282,283,TXD0283,giu,Địa điểm kinh doanh - Công ty TNHH kinh doanh Xăng dầu Miên Nam - Tây Nam Bộ - Cửa hàng Xăng dầu Thốt nốt
+tram,283,284,TXD0284,giu,Địa điểm kinh doanh Chi nhánh Công ty Cổ phần Đầu tư Thương mại Dương Trí - Cửa hàng Xăng dầu 19
+tram,284,285,TXD0285,giu,Doanh nghiệp tư nhân Minh Thư Minh Anh
+tram,285,286,TXD0286,giu,Doanh nghiệp tư nhân Nguyễn Thành
+tram,286,287,TXD0287,giu,Doanh nghiệp tư nhân Trần Văn Xê
+tram,287,288,TXD0288,giu,Doanh nghiệp tư nhân Xăng dầu Bích Liên
+tram,288,289,TXD0289,giu,Doanh nghiệp tư nhân Xăng dầu Khánh Oanh
+tram,289,290,TXD0290,giu,Công ty TNHH MTV Petro Minh Quang Phú
+tram,290,291,TXD0291,giu,Công ty TNHH Xăng dầu Hiền Tuyền
+tram,291,292,TXD0292,giu,Doanh nghiệp tư nhân Xăng dầu Ba Trà
+tram,292,293,TXD0293,giu,Doanh nghiệp tư nhân Xăng dầu Mai Phương
+tram,293,294,TXD0294,giu,Doanh nghiệp tư nhân Xăng dầu Mỹ Hạnh
+tram,294,295,TXD0295,giu,Công ty TNHH Một thành viên Xăng dầu Phát Huy 2
+tram,295,296,TXD0296,giu,Công ty TNHH Tư nhân Tiến Thọ
+tram,296,297,TXD0297,giu,Doanh nghiệp tư nhân dầu hỏa Hòa Hiệp
+tram,297,298,TXD0298,giu,Doanh nghiệp tư nhân Phát Huy
+tram,298,299,TXD0299,giu,Công ty Cổ phần tập đoàn Đầu tư Ngân Tín
+tram,299,300,TXD0300,giu,Cửa hàng bán lẻ Xăng dầu Petrolimex – Cửa hàng 02
+tram,300,301,TXD0301,giu,Cửa hàng bán lẻ Xăng dầu Petrolimex – Cửa hàng 21
+tram,301,302,TXD0302,giu,Cửa hàng Xăng dầu Hiếu Lộc
+tram,302,303,TXD0303,giu,Cửa hàng Xăng dầu Số 50
+tram,303,304,TXD0304,giu,Cửa hàng Xăng dầu Tân Hiệp Phát
+tram,304,305,TXD0305,giu,Cửa hàng Xăng dầu Vị Thanh
+tram,305,306,TXD0306,giu,Trạm Xăng dầu Số 165
+tram,306,307,TXD0307,giu,Cây xăng 14
+tram,307,308,TXD0308,giu,Cây xăng 54
+tram,308,309,TXD0309,giu,Cây xăng Duyên Anh
+tram,309,310,TXD0310,giu,Cây xăng Tấn Đạt 6
+tram,310,311,TXD0311,giu,Cây xăng Tây Đô
+tram,311,312,TXD0312,giu,Cây Xăng Thành Lợi
+tram,312,313,TXD0313,giu,Chi nhánh Xăng dầu Sóc Trăng - Petrolimex - Cửa hàng 18
+tram,313,314,TXD0314,giu,Chi nhánh Xăng dầu Sóc Trăng - Petrolimex (Cửa hàng 13)
+tram,314,315,TXD0315,giu,Công ty TNHH Huệ Mi (Chi nhánh đại lý Xăng dầu) - Nguyễn Việt Phúc
+tram,315,316,TXD0316,giu,Doanh nghiệp tư nhân Dù Y - Trần Dù Y
+tram,316,317,TXD0317,giu,Doanh nghiệp tư nhân Hai - Thương - Thạch Thương
+tram,317,318,TXD0318,giu,Doanh nghiệp tư nhân Lý Hảo - Lý Thị Sém Loánh
+tram,318,319,TXD0319,giu,Doanh nghiệp tư nhân Lý Hiệp Thành - Lý Hiệp Thành
+tram,319,320,TXD0320,giu,Doanh nghiệp tư nhân Số 67 - Trương Tuấn Dũ
+tram,320,321,TXD0321,giu,Doanh nghiệp tư nhân Trương Khánh Dũ - Trương Tuấn Dũ
+tram,321,322,TXD0322,giu,Doanh nghiệp tư nhân Vĩnh Phong - Trương Hồng Quang
+tram,322,323,TXD0323,giu,Cửa hàng Xăng dầu Nam Sông Hậu 03 - Cát Lượng - Công ty TNHH Thương mại Dầu khí Nam Sông Hậu Sóc Trăng
+tram,323,324,TXD0324,giu,Doanh nghiệp tư nhân Ái Xuân
+tram,324,325,TXD0325,giu,Doanh nghiệp tư nhân Huỳnh Ngọc Quang
+tram,325,326,TXD0326,giu,Doanh nghiệp tư nhân Khánh Phát
+tram,326,327,TXD0327,giu,Doanh nghiệp tư nhân Khánh Sao
+tram,327,328,TXD0328,giu,Doanh nghiệp tư nhân Xăng dầu Hải Âu
+tram,328,329,TXD0329,giu,Petrolimex - Cửa hàng 06 - Chi nhánh Xăng dầu Sóc Trăng
+tram,329,330,TXD0330,giu,Trạm Xăng dầu Vĩnh Châu 2 - Công ty TNHH Một thành viên Nhiên liệu Tây Đô - Chi nhánh Sóc Trăng
+tram,330,331,TXD0331,giu,Công ty TNHH Nhiên liệu Thành Phát
+tram,331,332,TXD0332,giu,Cửa hàng Xăng dầu Tân Đạt 4 - Công ty TNHH Tấn Đạt
+tram,332,333,TXD0333,giu,Doanh nghiệp tư nhân Đại lý Xăng dầu An Hiệp
+tram,333,334,TXD0334,giu,Doanh nghiệp tư nhân Quang Minh
+tram,334,335,TXD0335,giu,Doanh nghiệp tư nhân Tân Huy Hoàng
+tram,335,336,TXD0336,giu,Petrolimex Số 108 - Chi nhánh Petrolimex Sóc Trăng - Công ty TNHH Một thành viên Petrolimex Cần Thơ
+tram,336,337,TXD0337,giu,Cây xăng Số 12
+tram,337,338,TXD0338,giu,Công ty Cổ phần Xây dựng Thương mại Dịch vụ Trúc Nga
+tram,338,339,TXD0339,giu,Công ty TNHH Dầu khí Xanh PV
+tram,339,340,TXD0340,giu,Công ty TNHH kinh doanh Xăng dầu Tài Lộc
+tram,340,341,TXD0341,giu,Công ty TNHH Một thành viên Nguyễn Lượng
+tram,341,342,TXD0342,giu,Công ty TNHH Một thành viên Xăng dầu Lê Ngọc Lâm
+tram,342,343,TXD0343,giu,Công ty TNHH Xăng dầu Phát Giàu
+tram,343,344,TXD0344,giu,Công ty TNHH Xăng dầu Phát Thành
+tram,344,345,TXD0345,giu,Doanh nghiệp tư nhân Tấn Phát
+tram,345,346,TXD0346,giu,Doanh nghiệp tư nhân Xăng dầu Hậu Cẩn
+tram,346,347,TXD0347,giu,Doanh nghiệp tư nhân Xăng dầu Huỳnh Kim Lợi
+tram,347,348,TXD0348,giu,Doanh nghiệp tư nhân Xăng dầu Kim Ngân
+tram,348,349,TXD0349,giu,Chi nhánh Công ty TNHH Đầu tư chuyển giao công nghệ cao Châu Á Thái Bình Dương - Cửa hàng Xăng dầu Số 15
+tram,349,350,TXD0350,giu,Chi nhánh Công ty TNHH Một thành viên Nhiên liệu Tây Đô - Cửa hàng bán lẻ Xăng dầu An Trạch
+tram,350,351,TXD0351,giu,Chi nhánh Công ty TNHH Vinh Long Petro tại Sóc Trăng - Địa điểm kinh doanh Cửa hàng Xăng dầu An Ninh
+tram,351,352,TXD0352,giu,Công ty TNHH Bích Ngân
+tram,352,353,TXD0353,giu,Doanh nghiệp tư nhân CHXD Mỹ Trân 2
+tram,353,354,TXD0354,giu,Doanh nghiệp tư nhân Đại lý Xăng dầu Số 27
+tram,354,355,TXD0355,giu,Doanh nghiệp tư nhân Hiền Tín Đạt- Cửa hàng Tín Đạt
+tram,355,356,TXD0356,giu,Doanh nghiệp tư nhân Hoàng Anh
+tram,356,357,TXD0357,giu,Doanh nghiệp tư nhân Hoàng Anh 1
+tram,357,358,TXD0358,giu,Doanh nghiệp tư nhân Quốc Phong
+tram,358,359,TXD0359,giu,Doanh nghiệp tư nhân Xuân Trang
+tram,359,360,TXD0360,giu,Petrolimex - Cửa hàng 102
+tram,360,361,TXD0361,giu,Công ty Cổ phần Dầu khí Mê Kông
+tram,361,362,TXD0362,giu,Doanh nghiệp tư nhân Lê Vũ
+tram,362,363,TXD0363,giu,Doanh nghiệp tư nhân Nguyễn Mười
+tram,363,364,TXD0364,giu,Doanh nghiệp tư nhân Quốc Hiệp (Chi nhánh 1)
+tram,364,365,TXD0365,giu,Doanh nghiệp tư nhân Xăng dầu Diễm Thy
+tram,365,366,TXD0366,giu,Doanh nghiệp tư nhân Xăng dầu Quốc Anh
+tram,366,367,TXD0367,giu,Chi nhánh Dầu khí Ngọc Trai Phú Quốc - Cửa hàng Xăng dầu Ngã Sáu
+tram,367,368,TXD0368,giu,Công ty Cổ phần Thương mại Dịch vụ Tây Thịnh - Địa điểm kinh doanh - Cửa hàng Xăng dầu Số 3
+tram,368,369,TXD0369,giu,Công ty TNHH Một thành viên Gia Phú Lube Oil - Địa điểm kinh doanh Cửa hàng Xăng dầu Số 1
+tram,369,370,TXD0370,giu,Công ty TNHH Một thành viên Xăng dầu Quân Bảo - Địa điểm kinh doanh Cửa hàng Xăng dầu Ngã Sáu
+tram,370,371,TXD0371,giu,Công ty TNHH Một thành viên Xăng dầu Yến Linh
+tram,371,372,TXD0372,giu,Cửa hàng Xăng dầu Công ty TNHH Một thành viên Thương mại Hoàng Huy
+tram,372,373,TXD0373,giu,Địa điểm kinh doanh Công ty Cổ phần Dầu khí Thu Đức - Chi nhánh Tây Đô - Trạm Xăng dầu Đồng Phú
+tram,373,374,TXD0374,giu,Doanh nghiệp tư nhân Nguyễn Hùng
+tram,374,375,TXD0375,giu,Petrolimex - Cửa hàng 44 - Chi nhánh Petrolimex Hậu Giang - Công ty TNHH Một thành viên Petrolimex Cần Thơ
+tram,375,376,TXD0376,giu,Petrolimex - Cửa hàng 51 - Chi nhánh Petrolimex Hậu Giang - Công ty TNHH Một thành viên Petrolimex Cần Thơ
+tram,376,377,TXD0377,giu,Công ty TNHH kinh doanh Xăng dầu Phát Lộc
+tram,377,378,TXD0378,giu,Công ty TNHH kinh doanh Xăng dầu Tấn Phát
+tram,378,379,TXD0379,giu,Công ty TNHH Một thành viên Dầu khí Đông Nam - Cửa hàng Xăng dầu Số 04
+tram,379,380,TXD0380,giu,Công ty TNHH Một thành viên Thương mại Xăng dầu Út Triệu 2
+tram,380,381,TXD0381,giu,Địa điểm kinh doanh - Công ty TNHH Xăng dầu Hữu Dư - Cửa hàng Xăng dầu Tường Giang
+tram,381,382,TXD0382,giu,Địa điểm kinh doanh Công ty TNHH Thương mại Dịch vụ Dương Nhật - Cửa hàng Xăng dầu Dương Nhật
+tram,382,383,TXD0383,giu,Địa điểm kinh doanh Công ty TNHH Vận tải Dầu khí Tây Nam - Cửa hàng Xăng dầu Vạn Sanh Phát
+tram,383,384,TXD0384,giu,Địa điểm kinh doanh Petrolimex - Cửa hàng 08 - Công ty TNHH MTVPetrolimex Cần Thơ
+tram,384,385,TXD0385,giu,Doanh nghiệp tư nhân Cao Đàng
+tram,385,386,TXD0386,giu,Doanh nghiệp tư nhân Năm Oai
+tram,386,387,TXD0387,giu,Doanh nghiệp tư nhân Võ Văn Kiệt
+tram,387,388,TXD0388,giu,Doanh nghiệp tư nhân Xăng dầu Phúc Ân
+tram,388,389,TXD0389,giu,Doanh nghiệp tư nhân Xăng dầu Út Triệu
+tram,389,390,TXD0390,giu,Chi nhánh 2 Doanh nghiệp tư nhân Tâm Dung
+tram,390,391,TXD0391,giu,Chi nhánh Doanh nghiệp tư nhân Tâm Dung
+tram,391,392,TXD0392,giu,Công ty TNHH Xăng dầu Lưu Nguyễn
+tram,392,393,TXD0393,giu,Doanh nghiệp tư nhân Đại lý Xăng dầu Duy Nguyên
+tram,393,394,TXD0394,giu,Doanh nghiệp tư nhân Hoàng Khải
+tram,394,395,TXD0395,giu,Doanh nghiệp tư nhân Tâm Dung
+tram,395,396,TXD0396,giu,Công ty TNHH Một thành viên Dầu khí Tuấn Phát
+tram,396,397,TXD0397,giu,Công ty TNHH Một thành viên Dầu khí Việt Thịnh (Cây xăng Thanh Đại)
+tram,397,398,TXD0398,giu,Công ty TNHH Một thành viên Kế Sách Sóc Trăng
+tram,398,399,TXD0399,giu,Công ty TNHH Một thành viên Tuyên Mai
+tram,399,400,TXD0400,giu,Doanh nghiệp tư nhân Hoàng Thu
+tram,400,401,TXD0401,giu,Công ty TNHH Xăng dầu Mạnh Hùng 108
+tram,401,402,TXD0402,giu,Công ty TNHH Xăng dầu Mạnh Hùng ST
+tram,402,403,TXD0403,giu,Cửa hàng Xăng dầu Chín Hùng
+tram,403,404,TXD0404,giu,Cửa hàng Xăng dầu Hiệp Thành (cơ sở 2)
+tram,404,405,TXD0405,giu,Cửa hàng Xăng dầu Hữu Tâm
+tram,405,406,TXD0406,giu,Cửa hàng Xăng dầu SE (Số 22)
+tram,406,407,TXD0407,giu,Cửa hàng Xăng dầu Tây Nam Cửu Long (Số 07)
+tram,407,408,TXD0408,giu,CHXD Công ty TNHH Thương mại Dịch vụ xây dựng Công Danh
+tram,408,409,TXD0409,giu,Công ty TNHH MTV Dầu khí Minh Thành
+tram,409,410,TXD0410,giu,Công tyTNHH MTV nhiên liệu Tây Đô – Trạm Xăng dầu Tầm Vu
+tram,410,411,TXD0411,giu,Cửa hàng Xăng dầu Cái Tắc
+tram,411,412,TXD0412,giu,Cửa hàng Xăng dầu Ngã Sáu
+tram,412,413,TXD0413,giu,Cửa hàng Xăng dầu Số 1
+tram,413,414,TXD0413,gop_vao,Cửa hàng Xăng dầu Số 1
+tram,414,415,TXD0415,giu,Cửa hàng Xăng dầu Số 8
+tram,415,416,TXD0416,giu,Doanh nghiệp tư nhân kinh doanh Xăng dầu Trung Kiên.
+tram,416,417,TXD0417,giu,Petrolimex - Cửa hàng Số 19
+tram,417,418,TXD0418,giu,Trạm Xăng dầu Đông Thạnh
+tram,418,419,TXD0419,giu,Công ty Cổ phần nhiên liệu Tây Đô - Trạm Xăng dầu Đông Bình
+tram,419,420,TXD0420,giu,Công ty Cổ phần nhiên liệu Tây Đô - Trạm Xăng dầu Đông Lợi
+tram,420,421,TXD0421,giu,Công ty TNHH Dầu khí Nam Bộ - Cửa hàng bán lẻ Xăng dầu Số 01
+tram,421,422,TXD0422,giu,Địa điểm kinh doanh Công ty Cổ phần Dầu khí Mê Kông - Cửa hàng Xăng dầu Số 6
+tram,422,423,TXD0423,giu,Doanh nghiệp tư nhân Huỳnh Sơn
+tram,423,424,TXD0424,giu,Doanh nghiệp tư nhân Nguyễn Văn Kiên
+tram,424,425,TXD0425,giu,Doanh nghiệp tư nhân Xăng dầu Lê Văn Thương - Cửa hàng Xăng dầu Lê Văn Thương
+tram,425,426,TXD0426,giu,Chi nhánh Công ty TNHH VTXD An Bình - Cửa hàng Xăng dầu Số 1
+tram,426,427,TXD0427,giu,Chi nhánh Công ty TNHH VTXD An Bình – Cửa hàng Xăng dầu Số 3
+tram,427,428,TXD0428,giu,Công ty TNHH MTV Xăng dầu Vạn Xuân
+tram,428,429,TXD0429,giu,Công ty TNHH Xăng dầu Ánh Xuân Chi nhánh 1
+tram,429,430,TXD0430,giu,Địa điểm kinh doanh Xăng dầu Số 2
+tram,430,431,TXD0431,giu,Doanh nghiệp tư nhân Khánh Hào
+tram,431,432,TXD0432,giu,Doanh nghiệp tư nhân Thanh Trúc
+tram,432,433,TXD0433,giu,Doanh nghiệp tư nhân Vinh Tài Lộc
+tram,433,434,TXD0434,giu,Doanh nghiệp tư nhân Xăng dầu Lê Phát Đạt
+tram,434,435,TXD0435,giu,Công ty TNHH Một thành viên Hòa Hà Chi nhánh 3
+tram,435,436,TXD0436,giu,Công ty TNHH Một thành viên Xăng dầu Hiệp Phú 6
+tram,436,437,TXD0437,giu,Công ty TNHH Một thành viên Xăng dầu Miền Nam
+tram,437,438,TXD0438,giu,Công ty TNHH Một thành viên Xăng dầu Vân Anh - Chi nhánh 05
+tram,438,439,TXD0439,giu,Công ty Trách nhiệm hữu hạn Một thành viên Xăng dầu Hồng Quân 9
+tram,439,440,TXD0440,giu,Doanh nghiệp tư nhân Thương mại Dịch vụ Xăng dầu Vân Anh 6
+tram,440,441,TXD0441,giu,CHXD Hồng Qui
+tram,441,442,TXD0442,giu,Công ty TNHH Dầu khí Văn Sung
+tram,442,443,TXD0443,giu,Công ty TNHH MTV Văn Hùng
+tram,443,444,TXD0444,giu,Công ty TNHH ST 3
+tram,444,445,TXD0445,giu,Công ty TNHH XD Tấn Đạt 5
+tram,445,446,TXD0446,giu,Cửa hàng Xăng dầu Số 09
+tram,446,447,TXD0447,giu,Cửa hàng Xăng dầu Số 55
+tram,447,448,TXD0448,giu,Doanh nghiệp tư nhân Huynh Phúc
+tram,448,449,TXD0449,giu,Doanh nghiệp tư nhân Lâm Huỳnh Mai
+tram,449,450,TXD0450,giu,Petrolimex - Cửa hàng 88
+tram,450,451,TXD0451,giu,CHXD Mỹ Tân
+tram,451,452,TXD0452,giu,CHXD Petrolimex – Cửa hàng 56
+tram,452,453,TXD0453,giu,CHXD Doanh nghiệp tư nhân Nguyễn Văn Thảo
+tram,453,454,TXD0454,giu,CHXD Doanh nghiệp tư nhân Út Quận
+tram,454,455,TXD0455,giu,CHXD Kênh 5
+tram,455,456,TXD0456,giu,CHXD Ngọc Tuyền 2
+tram,456,457,TXD0457,giu,Công ty TNHH Xăng dầu Tân Hòa Bình
+tram,457,458,TXD0458,giu,Địa điểm kinh doanh Chi nhánh Công ty TNHH Xăng dầu Vĩnh Long Petro tại Hậu Giang - Cửa hàng Xăng dầu Hỏa Lựu
+tram,458,459,TXD0459,giu,Địa điểm kinh doanh Công ty TNHH Vận tải Dầu khí Tây Nam - Cửa hàng Xăng dầu Vạn Lộc
+tram,459,460,TXD0460,giu,Địa điểm kinh doanh Cửa hàng xăng dầu Số 5- Tân Tiến - Công ty CP Tập đoàn Đầu tư Ngân Tín
+tram,460,461,TXD0461,giu,Doanh nghiệp tư nhân Xăng dầu gas Ba Neo
+tram,461,462,TXD0462,giu,Petrolimex - Cửa hàng 01
+tram,462,463,TXD0463,giu,Công ty TNHH Minh Khải - Chi nhánh Công ty TNHH Minh Khải
+tram,463,464,TXD0464,giu,Công ty TNHH Sản xuất Thương mại Dịch vụ Song Quân - Địa điểm kinh doanh Số 1
+tram,464,465,TXD0465,giu,Công ty TNHH Thương mại Dịch vụ Phú My
+tram,465,466,TXD0466,giu,Công ty TNHH Xăng dầu gas Thanh Nhã
+tram,466,467,TXD0467,giu,Địa điểm kinh doanh Công ty TNHH Thương mại Xây dựng Cẩm Tú - Cửa hàng Xăng dầu Thanh Lâm 2
+tram,467,468,TXD0468,giu,Doanh nghiệp tư nhân Diệu Xuân
+tram,468,469,TXD0469,giu,Doanh nghiệp tư nhân Phúc Mỹ (Cửa hàng Xăng dầu Số 1)
+tram,469,470,TXD0470,giu,Công ty TNHH Xăng dầu Ngọc Thương
+tram,470,471,TXD0471,giu,Cửa hàng bán lẻ Xăng dầu 02
+tram,471,472,TXD0472,giu,Cửa hàng bán lẻ Xăng dầu 108
+tram,472,473,TXD0473,giu,Cửa hàng Xăng dầu 108 – Chi nhánh Công ty TNHH Xăng dầu Tuyết Ngọc
+tram,473,474,TXD0474,giu,Cửa hàng Xăng dầu Petrolimex Số 07
+tram,474,475,TXD0475,giu,Đại lý Xăng dầu Ngọc Phượng
+tram,475,476,TXD0476,giu,Doanh nghiệp tư nhân Xăng dầu Anh Thư
+tram,476,477,TXD0477,giu,Trạm Xăng dầu An Thành
+tram,477,478,TXD0478,giu,"Trạm Xăng dầu Indel Kế Sách, Sóc Trăng"
+tram,478,479,TXD0479,giu,Trạm Xăng dầu Kim Lợi
+tram,479,480,TXD0480,giu,Chi nhánh Xăng dầu Sóc Trăng
+tram,480,481,TXD0481,giu,Công ty TNHH Đức Đại - Cửa hàng Xăng dầu Đức Trọng
+tram,481,482,TXD0482,giu,Công ty TNHH Một thành viên Delta Oil
+tram,482,483,TXD0483,giu,Doanh nghiệp tư nhân Lộc Thắng
+tram,483,484,TXD0484,giu,Công ty TNHH Dầu khí Mai Phương
+tram,484,485,TXD0485,giu,Công ty TNHH Một thành viên Hoà Bình
+tram,485,486,TXD0486,giu,Công ty TNHH Một thành viên Lâm Tân Sóc Trăng
+tram,486,487,TXD0487,giu,Công ty TNHH Thanh Vy
+tram,487,488,TXD0488,giu,Công ty TNHH Xăng dầu Lai Thành Nam Phương
+tram,488,489,TXD0489,giu,Công ty TNHH Xăng dầu Vĩnh Long
+tram,489,490,TXD0490,giu,Doanh nghiệp tư nhân Cửa hàng Xăng dầu Hoàng Ánh
+tram,490,491,TXD0491,giu,Doanh nghiệp tư nhân Tư Xe
+tram,491,492,TXD0492,giu,Chi nhánh 1 – Công ty TNHH kinh doanh Xăng dầu Châu
+tram,492,493,TXD0493,giu,Chi nhánh Công ty TNHH Dầu khí Hồng Phấn – Cửa hàng Xăng dầu Hồng Phấn 1
+tram,493,494,TXD0494,giu,Công ty TNHH kinh doanh Xăng dầu Châu
+tram,494,495,TXD0495,giu,Công ty TNHH Quốc Khởi
+tram,495,496,TXD0496,giu,Doanh nghiệp tư nhân Kim Hiệp Thành 1
+tram,496,497,TXD0497,giu,Doanh nghiệp tư nhân Thiện Quang
+tram,497,498,TXD0498,giu,Công ty TNHH Dầu khí Trần Gia - Địa điểm kinh doanh Cửa hàng Xăng dầu Tuyết Quang
+tram,498,499,TXD0499,giu,Doanh nghiệp tư nhân Thạch Chuôl
+tram,499,500,TXD0500,giu,Doanh nghiệp tư nhân Thuận An
+tram,500,501,TXD0501,giu,Công ty TNHH Dầu khí Phạm Gia Group
+tram,501,502,TXD0502,giu,Công ty TNHH Một thành viên Long Hưng Sóc Trăng
+tram,502,503,TXD0503,giu,Công ty TNHH Xăng dầu Phạm Tín Nghĩa
+tram,503,504,TXD0504,giu,Doanh nghiệp tư nhân Xăng dầu Kim Cương
+tram,504,505,TXD0505,giu,Cây xăng Thiên Đạt - PV OIL
+tram,505,506,TXD0506,giu,Đại lý Xăng dầu Trường Thịnh
+tram,506,507,TXD0507,giu,Petrolimex - Cửa hàng 10
+tram,507,508,TXD0508,giu,PVOIL Petromekong - Cửa hàng Xăng dầu Số 16
+tram,508,509,TXD0509,giu,Công ty TNHH Một thành viên Xăng dầu Mộng Như
+tram,509,510,TXD0510,giu,Công ty TNHH Một thành viên Xăng dầu Thành Chiến
+tram,510,511,TXD0511,giu,Công ty TNHH Một thành viên Xăng dầu Thuỷ Linh
+tram,511,512,TXD0512,giu,Công ty TNHH Vạn An Trường
+tram,512,513,TXD0513,giu,Cửa hàng Xăng dầu Việt Hồng
+tram,513,514,TXD0514,giu,Doanh nghiệp tư nhân Xăng dầu Hồng Đẹp
+tram,514,515,TXD0515,giu,Công ty TNHH Xăng dầu Ánh Xuân
+tram,515,516,TXD0516,giu,Công ty TNHH Xăng dầu Hoàng Quyên
+tram,516,517,TXD0517,giu,Công ty Trách nhiệm hữu hạn Dầu khí Trọng Đạt
+tram,517,518,TXD0518,giu,Công ty Trách nhiệm hữu hạn Xăng dầu cũa-Mũi
+tram,518,519,TXD0519,giu,Cây xăng Âu Mai
+tram,519,520,TXD0520,giu,Cây xăng Phong Mỵ
+tram,520,521,TXD0521,giu,Chi nhánh Công ty TNHH Một thành viên Xăng dầu Văn Sung - Dịch vụ Cẩm Đô Văn Sung
+tram,521,522,TXD0522,giu,Công ty TNHH Một thành viên Thương mại Dịch vụ Xăng dầu Mỹ A
+tram,522,523,TXD0523,giu,Công ty TNHH Một thành viên Xăng dầu Anh Khoa
+tram,523,524,TXD0524,giu,Công ty TNHH Một thành viên Xăng dầu Gia Huy
+tram,524,525,TXD0525,giu,Công ty TNHH Một thành viên Xăng dầu Văn Sung
+tram,525,526,TXD0526,giu,Công ty TNHH Xây dựng Trọng Tín - Chi nhánh Cửa hàng Xăng dầu Quang Vinh
+tram,526,527,TXD0527,giu,Công ty TNHH Dầu khí Băng Giang
+tram,527,528,TXD0528,giu,Công ty TNHH Dầu khí Trâm Anh
+tram,528,529,TXD0529,giu,Công ty TNHH Hai Khoái
+tram,529,530,TXD0530,giu,Công ty TNHH Một thành viên Minh Khải
+tram,530,531,TXD0531,giu,Công ty TNHH Một thành viên Tám Thủy
+tram,531,532,TXD0532,giu,Công ty TNHH Một thành viên Thương mại Xăng dầu Gia Hân
+tram,532,533,TXD0533,giu,Công ty TNHH Sản xuất Thương mại Dịch vụ Song Quân
+tram,533,534,TXD0534,giu,Công ty TNHH Tám Luyến
+tram,534,535,TXD0535,giu,Doanh nghiệp tư nhân Hoàng Thanh
+tram,535,536,TXD0536,giu,Doanh nghiệp tư nhân Xăng dầu Ba Điền
+tram,536,537,TXD0537,giu,Doanh nghiệp tư nhân Xăng dầu Tấn Phúc
+tram,537,538,TXD0538,giu,Doanh nghiệp tư nhân Xăng dầu Thanh My
+tram,538,539,TXD0539,giu,Doanh nghiệp tư nhân Xăng dầu Yến Khương
+tram,539,540,TXD0540,giu,Công ty TNHH Một thành viên Xăng dầu S.T.S Tây Nam Bộ - Địa điểm kinh doanh - Cửa hàng Xăng dầu Số 6
+tram,540,541,TXD0541,giu,Công ty TNHH Thương mại Dầu khí Chính Giang - Địa điểm kinh doanh - Cửa hàng Xăng dầu Chính Giang 5
+tram,541,542,TXD0542,giu,Công ty TNHH Xăng dầu Đặng Hoàng Phúc
+tram,542,543,TXD0543,giu,Địa điểm kinh doanh Công ty Cổ phần Dầu khí Thu Đức - Chi nhánh Tây Đô - Cửa hàng Xăng dầu Nhơn Nghĩa
+tram,543,544,TXD0544,giu,Địa điểm kinh doanh Công ty Cổ phần Dầu khí Thu Đức - Chi nhánh Tây Đô - Cửa hàng Xăng dầu Nhơn Phú
+tram,544,545,TXD0545,giu,Địa điểm kinh doanh Công ty Cổ phần Dầu khí Thu Đức - Chi nhánh Tây Đô - Cửa hàng Xăng dầu Phong Điền
+tram,545,546,TXD0546,giu,Địa điểm kinh doanh Petrolimex - Cửa hàng 20 - Công ty TNHH MTVPetrolimex Cần Thơ
+tram,546,547,TXD0547,giu,Địa điểm kinh doanh Petrolimex - Cửa hàng 26 - Công ty TNHH MTVPetrolimex Cần Thơ
+tram,547,548,TXD0548,giu,Địa điểm kinh doanh Số 06 - Công ty TNHH Petro Anh Dũng
+tram,548,549,TXD0549,giu,Chi nhánh Công ty TNHH Xăng dầu Tuyết Ngọc – Trạm Xăng dầu 108
+tram,549,550,TXD0550,giu,Chi nhánh Doanh nghiệp tư nhân Xuyên Út
+tram,550,551,TXD0551,giu,Công ty TNHH Thương mại Xăng dầu Nam Anh
+tram,551,552,TXD0552,giu,Doanh nghiệp tư nhân Anh Kiệt
+tram,552,553,TXD0553,giu,Doanh nghiệp tư nhân Xuyên Út
+tram,553,554,TXD0554,giu,Chi nhánh Doanh nghiệp tư nhân Đông Tú - Đại lý bán lẻ Xăng dầu Số 2
+tram,554,555,TXD0555,giu,Chi nhánh Doanh nghiệp tư nhân Út Bằng
+tram,555,556,TXD0556,giu,Chi nhánh Mỹ Xuyên - Công ty Cổ phần Xây dựng Đầu tư Đại Phát
+tram,556,557,TXD0557,giu,Công ty Cổ phần Dầu khí Đại Đông Dương - Chi nhánh Sóc Trăng
+tram,557,558,TXD0558,giu,Công ty Cổ phần Dầu khí Quốc tế TPP - Địa điểm kinh doanh Cửa hàng Xăng dầu Số 3
+tram,558,559,TXD0559,giu,Công ty Cổ phần Đầu tư Phát triển Năng lượng Hùng Thịnh - Chi nhánh Sóc Trăng - Địa điểm kinh doanh Cửa hàng Xăng dầu Hùng Thịnh 1 – Mỹ Xuyên
+tram,559,560,TXD0560,giu,Công ty Cổ phần Đầu tư Phát triển Năng lượng Hưng Thịnh - Chi nhánh Sóc Trăng - Địa điểm kinh doanh Cửa hàng Xăng dầu Hưng Thịnh 2 – Mỹ Xuyên
+tram,560,561,TXD0561,giu,Công ty Cổ phần Nhiên liệu Đại Dương – Địa điểm kinh doanh Đại Dương 28
+tram,561,562,TXD0562,giu,Công ty TNHH Dầu khí Quang Thái
+tram,562,563,TXD0563,giu,Công ty TNHH Minh Khải
+tram,563,564,TXD0564,giu,Công ty TNHH Một thành viên Petrolimex - Cửa hàng 98
+tram,564,565,TXD0565,giu,Công ty TNHH Petro Gia Lộc 54
+tram,565,566,TXD0566,giu,Công ty TNHH Thuận An Yên – Chi nhánh Sóc Trăng
+tram,566,567,TXD0567,giu,Công ty TNHH Thương mại - Dịch vụ Minh Khải
+tram,567,568,TXD0568,giu,Đại lý Xăng dầu Minh Dương
+tram,568,569,TXD0569,giu,Địa điểm kinh doanh Công ty TNHH Một thành viên Thương mại Dịch vụ Mạnh Khoa - Cửa hàng Xăng dầu Số 54
+tram,569,570,TXD0570,giu,Doanh nghiệp tư nhân Đông Tú
+tram,570,571,TXD0571,giu,Doanh nghiệp tư nhân Trương Nhân
+tram,571,572,TXD0572,giu,Chi nhánh Công ty Cổ phần Đầu tư phát triển Khang Minh tại Cần Thơ
+tram,572,573,TXD0573,giu,Chi nhánh Công ty Cổ phần Xăng dầu Dầu khí Sài Gòn tại Cần Thơ
+tram,573,574,TXD0574,giu,Chi nhánh miền Tây - Công ty TNHH TMDV và XNK Hồng Quyên
+tram,574,575,TXD0575,giu,Công ty Cổ phần Dầu khí Phú Thái - CH Xăng dầu PTOIL 09
+tram,575,576,TXD0576,giu,Công ty TNHH MTV Dầu khí Hoài Nhân
+tram,576,577,TXD0577,giu,Công ty TNHH MTV Dầu khí Tân Thới
+tram,577,578,TXD0578,giu,Công ty TNHH Phân phối Xăng dầu Nam Sông Hậu Phong Điền
+tram,578,579,TXD0579,giu,Công ty TNHH Thương mại Xăng dầu LỘC HOA
+tram,579,580,TXD0580,giu,Công ty TNHH TM DV Huỳnh Tín Phát
+tram,580,581,TXD0581,giu,Doanh nghiệp tư nhân Hồng Quyên
+tram,581,582,TXD0582,giu,Doanh nghiệp tư nhân Mười Xiêm
+tram,582,583,TXD0583,giu,Doanh nghiệp tư nhân Vạn Nguyên
+tram,583,584,TXD0584,giu,Doanh nghiệp tư nhân Nguyễn Phúc Cường
+tram,584,585,TXD0585,giu,Công ty TNHH Một thành viên Nguyễn Hùng 3
+tram,585,586,TXD0586,giu,Công ty TNHH Một thành viên Nhật Mai
+tram,586,587,TXD0587,giu,Doanh nghiệp tư nhân Nhật Mai
+tram,587,588,TXD0588,giu,Doanh nghiệp tư nhân Xăng dầu Phạm Mai
+tram,588,589,TXD0589,giu,Chi nhánh Công ty TNHH Nhiên liệu Xăng dầu Sài Gòn - Cửa hàng Xăng dầu Số 36
+tram,589,590,TXD0590,giu,Chi nhánh Petrolimex Sóc Trăng 72
+tram,590,591,TXD0591,giu,Chi nhánh Sóc Trăng 104
+tram,591,592,TXD0592,giu,Công ty TNHH Dầu khí Hùng Lợi
+tram,592,593,TXD0593,giu,Công ty TNHH Một thành viên Trúc Phương
+tram,593,594,TXD0594,giu,Công ty TNHH Xăng dầu Nguyễn Tấn Lợi
+tram,594,595,TXD0595,giu,Công ty TNHH Xăng dầu Thân Mến
+tram,595,596,TXD0596,giu,Công ty TNHH Xăng dầu Trinh Ngọc Trân
+tram,596,597,TXD0597,giu,"Cửa hàng Xăng dầu Số 14, Chi nhánh Sóc Trăng"
+tram,597,598,TXD0598,giu,"Cửa hàng Xăng dầu Số 6, Chi nhánh Bạc Liêu"
+tram,598,599,TXD0599,giu,Doanh nghiệp tư nhân Đăng Ngân
+tram,599,600,TXD0600,giu,Doanh nghiệp tư nhân Ngọc Trân
+tram,600,601,TXD0601,giu,Doanh nghiệp tư nhân Như Sang
+tram,601,602,TXD0602,giu,Doanh nghiệp tư nhân Tấn Tỷ
+tram,602,603,TXD0603,giu,Công ty TNHH Xăng dầu Khuôn
+tram,603,604,TXD0604,giu,Cửa hàng Xăng dầu Minh Nhựt - Công ty TNHH Thương mại Dầu khí Tây Nam
+tram,604,605,TXD0605,giu,Doanh nghiệp tư nhân Khuôn
+tram,605,606,TXD0606,giu,Doanh nghiệp tư nhân Xăng dầu Thạch Ngọc Tùng
+tram,606,607,TXD0607,giu,Doanh nghiệp tư nhân Xăng dầu Thạch Ngọc Tùng 2
+tram,607,608,TXD0608,giu,Công ty Cổ phần Thương mại Đầu tư Dầu khí Nam Sông Hậu - Địa điểm kinh doanh Cửa hàng Xăng dầu Hòa Mỹ
+tram,608,609,TXD0609,giu,Công ty TNHH Petro Nguyễn Thủy – Cửa hàng Xăng dầu Nguyễn Thủy Số 4
+tram,609,610,TXD0610,giu,Công ty TNHH Thương mại kinh doanh Xăng dầu Huỳnh Hoàng
+tram,610,611,TXD0611,giu,Công ty TNHH Một thành viên Đỗ Hoàng Dũng
+tram,611,612,TXD0612,giu,Công ty TNHH Một thành viên Thương mại - Dịch vụ Lê Duy
+tram,612,613,TXD0613,giu,Công ty TNHH Một thành viên Xăng dầu Hồng Xuân
+tram,613,614,TXD0614,giu,Doanh nghiệp tư nhân Xăng dầu Thành Tài
+tram,614,615,TXD0615,giu,Chi nhánh Công ty Cổ phần Thành Phát OTP - Cửa hàng Xăng dầu Châu Khoa
+tram,615,616,TXD0616,giu,Chi nhánh Công ty TNHH Thương mại Xây dựng Cẩm Tú – Cửa hàng Xăng dầu Thanh Lâm
+tram,616,617,TXD0617,giu,Công ty TNHH Một thành viên Tiến Thuận
+tram,617,618,TXD0618,giu,Doanh nghiệp tư nhân Minh Phong
+tram,618,619,TXD0619,giu,Doanh nghiệp tư nhân Xăng dầu Bảo Duyên
+tram,619,620,TXD0620,giu,Doanh nghiệp tư nhân Xăng dầu Châu Khoa
+tram,620,621,TXD0621,giu,Doanh nghiệp tư nhân Xăng dầu Hữu Tâm
+tram,621,622,TXD0622,giu,Công ty Cổ phần EZ Petroleum Development
+tram,622,623,TXD0623,giu,Công ty TNHH Dịch vụ Vận tải Phong Loan
+tram,623,624,TXD0624,giu,Công ty TNHH Một thành viên Bắc - Nam Thịnh Hòa
+tram,624,625,TXD0625,giu,Công ty TNHH Một thành viên Thương mại 199
+tram,625,626,TXD0626,giu,Công ty TNHH Một thành viên Xăng dầu Bé Em
+tram,626,627,TXD0627,giu,Công ty TNHH Một thành viên Xăng dầu Hồng Quân 6
+tram,627,628,TXD0628,giu,Công ty TNHH Một thành viên Xăng dầu Tư Thảo
+tram,628,629,TXD0629,giu,Doanh nghiệp tư nhân Hạp Hải
+tram,629,630,TXD0630,giu,Công ty TNHH Southern Energy - Cửa hàng Xăng dầu Số 01 (Trần Minh Luân)
+tram,630,631,TXD0631,giu,Công ty TNHH Xăng dầu An Phúc Thịnh (Nguyễn Văn Mung)
+tram,631,632,TXD0632,giu,Cửa hàng Xăng dầu Châu Thành A
+tram,632,633,TXD0633,giu,Cửa hàng Xăng dầu Chi nhánh Công ty TNHH Một thành viên Vận tải Xăng dầu Thịnh Hòa
+tram,633,634,TXD0634,giu,Cửa hàng Xăng dầu Chi nhánh Công ty TNHH Một thành viên Vận tải Xăng dầu Thịnh Hòa
+tram,634,635,TXD0635,giu,Cửa hàng Xăng dầu Công ty Cổ phần Thương mại Đầu tư Dầu khí Nam Sông Hậu - Trạm Xăng dầu Nam Sông Hậu 6
+tram,635,636,TXD0636,giu,Cửa hàng Xăng dầu Công ty TNHH Một thành viên Xăng dầu Mỹ Hiền (Lý Thanh Hiền)
+tram,636,637,TXD0637,giu,Cửa hàng Xăng dầu Công ty TNHH Một thành viên Xăng dầu Phương Uyên (Nguyễn Thị Cẩm Giang)
+tram,637,638,TXD0638,giu,Cửa hàng Xăng dầu Công ty TNHH Nam An - Group Chi nhánh Hậu Giang (Nguyễn Ngọc Thương)
+tram,638,639,TXD0639,giu,Cửa hàng Xăng dầu Công ty TNHH Sản xuất Thương mại Xăng dầu Thanh Bình (Đăng Thanh Tân)
+tram,639,640,TXD0640,giu,Cửa hàng Xăng dầu Doanh nghiệp tư nhân Nam Tiến (Nguyễn Thanh Nam)
+tram,640,641,TXD0641,giu,Cửa hàng Xăng dầu Doanh nghiệp tư nhân Trần Hui (Trần Hui)
+tram,641,642,TXD0642,giu,Cửa hàng Xăng dầu Doanh nghiệp tư nhân Tư Tòng
+tram,642,643,TXD0643,giu,Cửa hàng Xăng dầu Doanh nghiệp tư nhân Văn Sơn (Nguyễn Thanh Sơn)
+tram,643,644,TXD0644,giu,Cửa hàng Xăng dầu Doanh nghiệp tư nhân Xăng dầu Hải Huệ (Bùi Minh Hải)
+tram,644,645,TXD0645,giu,Cửa hàng Xăng dầu Lê Uyên 6 (Petrolimex)
+tram,645,646,TXD0646,giu,Cửa hàng Xăng dầu Một Ngàn
+tram,646,647,TXD0647,giu,Cửa hàng Xăng dầu SFT - Cửa hàng Xăng dầu Số 22
+tram,647,648,TXD0648,giu,Cửa hàng Xăng dầu Số 8
+tram,648,649,TXD0649,giu,Cửa hàng Xăng dầu Sông Hậu 1
+tram,649,650,TXD0650,giu,Cửa hàng Xăng dầu Tân Hòa
+tram,650,651,TXD0651,giu,Cửa hàng Xăng dầu Trạm Xăng dầu Tân Hòa (Petrolimex)
+tram,651,652,TXD0652,giu,Cây xăng Lê Tín
+tram,652,653,TXD0653,giu,Cây Xăng Quang Tiếng
+tram,653,654,TXD0654,giu,Cây xăng Tuyết Nhung
+tram,654,655,TXD0655,giu,Công ty TNHH Một thành viên Tín Đại Phát
+tram,655,656,TXD0656,giu,Công ty TNHH Xăng dầu Ngọc Duy
+tram,656,657,TXD0657,giu,Cửa hàng Xăng dầu Hưng Anh Thịnh
+tram,657,658,TXD0658,giu,Doanh nghiệp tư nhân Xăng dầu Bảy Hiên
+tram,658,659,TXD0659,giu,Petrolimex - Cửa hàng 81
+tram,659,660,TXD0660,giu,Công ty TNHH Mai Ngọc Đạt
+tram,660,661,TXD0661,giu,Công ty TNHH Một thành viên Khang Long
+tram,661,662,TXD0662,giu,Công ty TNHH Một thành viên Xăng dầu Hồng Quân 10
+tram,662,663,TXD0663,giu,Công ty TNHH Xăng dầu Hoàng Văn 3
+tram,663,664,TXD0664,giu,Doanh nghiệp tư nhân Châu Lý Dũng
+tram,664,665,TXD0665,giu,Doanh nghiệp tư nhân Đầy Chung
+tram,665,666,TXD0666,giu,Doanh nghiệp tư nhân Hoàng Hoa
+tram,666,667,TXD0667,giu,Công ty TNHH Anh Ngọc Thành
+tram,667,668,TXD0668,giu,Công ty TNHH Dầu khí Hữu Phúc
+tram,668,669,TXD0669,giu,Công ty TNHH Một thành viên Điện Hiền - Cửa hàng Xăng dầu Điện Hiền 2
+tram,669,670,TXD0670,giu,Công ty TNHH Sanh Hòa - Cửa hàng Xăng dầu Sanh Hòa
+tram,670,671,TXD0671,giu,Công ty TNHH Southern Energy - Địa điểm kinh doanh SE - Cửa hàng Xăng dầu Long Phú
+tram,671,672,TXD0672,giu,Công ty TNHH Xăng dầu Tuyết Nhi
+tram,672,673,TXD0673,giu,Công ty TNHH Xăng dầu Út Xinh
+tram,673,674,TXD0674,giu,Cửa hàng Xăng dầu Số 1
+tram,674,675,TXD0675,giu,Địa điểm kinh doanh Công ty TNHH Xăng dầu Phong Loan – Cửa hàng Xăng dầu 108 - Cửa hàng Số 04
+tram,675,676,TXD0676,giu,Doanh nghiệp tư nhân Dương Văn Luyến (Cửa hàng Vạn Phước)
+tram,676,677,TXD0677,giu,Công ty TNHH Một thành viên Dầu khí Đông Nam - Cửa hàng Xăng dầu Số 02
+tram,677,678,TXD0678,giu,Công ty TNHH MTV DK Đông Nam - Cửa hàng Số 01
+tram,678,679,TXD0679,giu,Công ty TNHH Nguyễn Huỳnh Tấn - Địa điểm kinh doanh
+tram,679,680,TXD0680,giu,Cây Xăng dầu Phụng Hiệp
+tram,680,681,TXD0681,giu,Cây Xăng dầu Phụng Hiệp 4
+tram,681,682,TXD0682,giu,Cây xăng Long Thạnh
+tram,682,683,TXD0683,giu,Cây xăng Nguyễn Thuỷ
+tram,683,684,TXD0684,giu,Cây xăng Nguyễn Thủy Số 2
+tram,684,685,TXD0685,giu,Công ty TNHH Hai thành viên Hòa Hà
+tram,685,686,TXD0686,giu,Công ty TNHH Hậu Giang Petrol
+tram,686,687,TXD0687,giu,Công ty TNHH kỹ thuật TM Dầu khí Kim Liên
+tram,687,688,TXD0688,giu,Công ty TNHH MTV Petrolimex - Cửa hàng Số 7
+tram,688,689,TXD0689,giu,Công ty TNHH MTV Petrolimex - Cửa hàng Số 9
+tram,689,690,TXD0690,giu,Doanh nghiệp tư nhân Đây Chung- Chi nhánh Số 2
+tram,690,691,TXD0691,giu,Công ty Cổ phần Thương mại Dầu khí Đồng Tháp (PETIMEX) - Cửa hàng Xăng dầu Tây Nam - HG38
+tram,691,692,TXD0692,giu,Công ty TNHH Một thành viên Nông nghiệp Cờ Đỏ - Cửa hàng Xăng dầu Kênh 4
+tram,692,693,TXD0693,giu,Công ty TNHH Một thành viên Xăng dầu Hữu Tâm - Cửa hàng Xăng dầu Hữu Tâm
+tram,693,694,TXD0694,giu,Công ty TNHH Một thành viên Dầu khí Tuấn Kiệt
+tram,694,695,TXD0695,giu,Cửa hàng Xăng dầu Cam Thủy 5
+tram,695,696,TXD0696,giu,Cửa hàng Xăng dầu Petrolimex 25
+tram,696,697,TXD0697,giu,Doanh nghiệp tư nhân Hoàng Thành Bùi
+tram,697,698,TXD0698,giu,Doanh nghiệp tư nhân Hoàng Văn Hùng
+tram,698,699,TXD0699,giu,Doanh nghiệp tư nhân Út Vui
+tram,699,700,TXD0700,giu,Chi nhánh Công ty TNHH Phượng Nhung - Cửa hàng Xăng dầu Số 07
+tram,700,701,TXD0701,giu,Công ty TNHH Một thành viên Thương mại Dịch vụ Huỳnh Vàng
+tram,701,702,TXD0702,giu,Cửa hàng bán lẻ Xăng dầu Doanh nghiệp tư nhân Dầu khí Thanh Toàn
+tram,702,703,TXD0703,giu,Điểm kinh doanh Công ty TNHH Phượng Nhung
+tram,703,704,TXD0704,giu,Doanh nghiệp tư nhân Lan Thanh
+tram,704,705,TXD0705,giu,Cửa hàng Xăng dầu 09 - PVOIL
+tram,705,706,TXD0706,giu,Cửa hàng Xăng dầu Công ty TNHH Thương mại - Dịch vụ Lê Uyên
+tram,706,707,TXD0707,giu,Cửa hàng Xăng dầu Doanh nghiệp tư nhân Tám Tân
+tram,707,708,TXD0708,giu,"Cửa hàng Xăng dầu INDEL Thạnh Xuân, Hậu Giang"
+tram,708,709,TXD0709,giu,Cửa hàng Xăng dầu Indel Trầu Hôi
+tram,709,710,TXD0710,giu,Petrolimex - Cửa hàng 55
+tram,710,711,TXD0711,giu,Công ty TNHH Hoàng Huynh
+tram,711,712,TXD0712,giu,Công ty TNHH Hữu Lộc Chi nhánh Xăng dầu Hà Thanh Sơn
+tram,712,713,TXD0713,giu,Công ty TNHH Hữu Lộc Chi nhánh Xăng dầu Trương Thanh Hoàng
+tram,713,714,TXD0714,giu,Công ty TNHH Một thành viên nhiên liệu Tây Đô – Chi nhánh Sóc Trăng – Địa điểm kinh doanh bán lẻ Xăng dầu – Trạm Xăng dầu An Hội
+tram,714,715,TXD0715,giu,Công ty TNHH Một thành viên Petrolimex Cần Thơ – Chi nhánh Petrolimex Sóc Trăng – Địa điểm kinh doanh Petrolimex – Cửa hàng 106
+tram,715,716,TXD0716,giu,Công ty TNHH Một thành viên Xăng dầu Phương Nguyên
+tram,716,717,TXD0717,giu,Công ty TNHH Trần Hoàng Em
+tram,717,718,TXD0718,giu,Công ty TNHH Xăng dầu Tuyết Ngọc
+tram,718,719,TXD0719,giu,Công ty TNHH kinh doanh Xăng dầu Sông Hậu
+tram,719,720,TXD0720,giu,Doanh nghiệp tư nhân Xăng dầu Hữu Tâm
+tram,720,721,TXD0721,giu,Chi nhánh Công ty TNHH Một thành viên Xăng dầu Quân Bảo tại Cần Thơ - Địa điểm kinh doanh Cửa hàng Xăng dầu Thới Lai
+tram,721,722,TXD0722,giu,Công ty Cổ phần Nhiên liệu Tây Đô - Trạm Xăng dầu Trường Thắng
+tram,722,723,TXD0723,giu,Công ty TNHH kinh doanh Xăng dầu Thái An
+tram,723,724,TXD0724,giu,Địa điểm kinh doanh Công ty TNHH Vận tải Dầu khí Tây Nam - Cửa hàng Xăng dầu Thới Lai
+tram,724,725,TXD0725,giu,Địa điểm kinh doanh Công ty TNHH Xăng dầu Châu Thành - Cửa hàng bán lẻ Xăng dầu Hiệp Thành (Cơ sở 1)
+tram,725,726,TXD0726,giu,Doanh nghiệp tư nhân Trúc Đăng
+tram,726,727,TXD0727,giu,Cửa hàng Xăng dầu Petrolimex Số 24
+tram,727,728,TXD0728,giu,Đại Lý Xăng dầu Doanh nghiệp tư nhân Thế Kiệt
+tram,728,729,TXD0729,giu,Doanh nghiệp tư nhân Trương Hán Chen
+tram,729,730,TXD0730,giu,Chi nhánh Công ty Cổ phần Xăng dầu Quân Bảo tại Cần Thơ - Địa điểm kinh doanh Cửa hàng Xăng dầu Trung Thảo
+tram,730,731,TXD0731,giu,Công ty TNHH Một thành viên Thương mại Dầu khí Dương An - Cửa hàng kinh doanh Xăng dầu Tư Lít
+tram,731,732,TXD0732,giu,Công ty TNHH Một thành viên Xăng dầu Bảo Bảo - Địa điểm kinh doanh Cửa hàng Xăng dầu Trung Thảo
+tram,732,733,TXD0733,giu,Công ty TNHH Một thành viên Xăng dầu Phường Thoa
+tram,733,734,TXD0734,giu,Doanh nghiệp tư nhân Xăng dầu Nguyễn Văn Tùng
+tram,734,735,TXD0735,giu,Cây xăng 108
+tram,735,736,TXD0736,giu,Cây xăng Hồng Phúc
+tram,736,737,TXD0737,giu,Cây xăng Hương Lan
+tram,737,738,TXD0738,giu,Cây xăng Thuận Phát Nguyễn Thị Hương
+tram,738,739,TXD0739,giu,Cây xăng Xuân Lộc (Võ Thị Mỹ Nga)
+tram,739,740,TXD0740,giu,Công ty TNHH Một thành viên Khải Hà
+tram,740,741,TXD0741,giu,Công ty TNHH Xăng dầu Trường Long
+tram,741,742,TXD0742,giu,Công ty TNHH Xăng dầu Vĩnh Long Petro (Địa điểm kinh doanh Chi nhánh Công ty)
+tram,742,743,TXD0743,giu,Cửa hàng bán lẻ Xăng dầu Mai Thành Đạt
+tram,743,744,TXD0744,giu,Cửa hàng Xăng dầu Chi nhánh Công ty Cổ phần Thương mại Tư vấn - Đầu tư - Xây dựng Bách Khoa Việt - Cửa hàng Xăng dầu Số 12
+tram,744,745,TXD0745,giu,Cửa hàng Xăng dầu Công ty TNHH Một thành viên Nhiên liệu Tây Đô - Trạm Xăng dầu Trường Long Tây
+tram,745,746,TXD0746,giu,Cửa hàng Xăng dầu Doanh nghiệp tư nhân Xăng dầu Hoàng Phúc 2
+tram,746,747,TXD0747,giu,Cửa hàng Xăng dầu Doanh nghiệp tư nhân Xăng dầu Lưu Quốc Hùng
+tram,747,748,TXD0748,giu,Cửa hàng Xăng dầu Kim Phụng
+tram,748,749,TXD0749,giu,Cửa hàng Xăng dầu LUB OIL 02 - Công ty Cổ phần Thương mại Dịch vụ LUB OIL - Chi nhánh Hậu Giang
+tram,749,750,TXD0750,giu,Cửa hàng Xăng dầu Nam Hồng
+tram,750,751,TXD0751,giu,Cửa hàng Xăng dầu Trạm Xăng dầu Nam Sông Hậu 14
+tram,751,752,TXD0752,giu,Cửa hàng Xăng dầu Trạm Xăng dầu Trường Long
+tram,752,753,TXD0753,giu,Cửa hàng kinh doanh Xăng dầu Đức Trí Số 09
+tram,753,754,TXD0754,giu,Cửa hàng kinh doanh Xăng dầu Huỳnh Quân
+tram,754,755,TXD0755,giu,Cửa hàng kinh doanh Xăng dầu Ngân Thạnh
+tram,755,756,TXD0756,giu,Cửa hàng kinh doanh Xăng dầu Số Minh Phát 08
+tram,756,757,TXD0757,giu,Cửa hàng kinh doanh Xăng dầu Tính Phát Số 06
+tram,757,758,TXD0758,giu,Cửa hàng kinh doanh Xăng dầu: Đăng Phát
+tram,758,759,TXD0759,giu,Cây Xăng Dũng Phương
+tram,759,760,TXD0760,giu,Công ty TNHH kinh doanh Xăng dầu Hải Huệ
+tram,760,761,TXD0761,giu,Công ty TNHH Một thành viên Xăng dầu Hiếu Nhung
+tram,761,762,TXD0762,giu,Công ty TNHH Thương mại Dịch vụ Xăng dầu Bình Nguyên Lộc
+tram,762,763,TXD0763,giu,Công ty TNHH Thương mại Dịch vụ Xăng dầu Nguyên Lộc
+tram,763,764,TXD0764,giu,Cửa hàng Xăng dầu An Hiệp Thành (Công ty TNHH Xăng dầu An Hiệp Thành)
+tram,764,765,TXD0765,giu,Cửa hàng Xăng dầu Đặng Văn Phước (Doanh nghiệp tư nhân Đặng Văn Phước)
+tram,765,766,TXD0766,giu,Cửa hàng Xăng dầu Hoàng Yến 68 (Công ty TNHH PetroD Hoàng Yến Cần Thơ)
+tram,766,767,TXD0767,giu,Cửa hàng Xăng dầu Huỳnh Bảo Nam (Công ty TNHH Thương mại Xây dựng Huỳnh Bảo Nam)
+tram,767,768,TXD0768,giu,Cửa hàng Xăng dầu Ngọc Phát
+tram,768,769,TXD0769,giu,Cửa hàng Xăng dầu Ri Ánh (Doanh nghiệp tư nhân Ri Ánh)
+tram,769,770,TXD0770,giu,Cửa hàng Xăng dầu Thiết Xuân
+tram,770,771,TXD0771,giu,Cửa hàng Xăng dầu Trường Xuân (Công ty TNHH Xăng dầu Phúc Minh Tâm)
+tram,771,772,TXD0772,giu,Doanh nghiệp tư nhân Hữu Mai
+tram,772,773,TXD0773,giu,Công ty TNHH Thương mại Dịch vụ Nhật Tâm
+tram,773,774,TXD0774,giu,Công ty TNHH Xăng dầu An Thịnh
+tram,774,775,TXD0775,giu,Công ty TNHH Xăng dầu Gia Phúc Thịnh
+tram,775,776,TXD0776,giu,Công ty TNHH Xăng dầu Kim Thâu
+tram,776,777,TXD0777,giu,Cửa hàng Xăng dầu Vị Thủy
+tram,777,778,TXD0778,giu,Doanh nghiệp tư nhân Anh Tuấn
+tram,778,779,TXD0779,giu,Doanh nghiệp tư nhân Bảy Sương
+tram,779,780,TXD0780,giu,Doanh nghiệp tư nhân Xăng dầu Hai Đạo
+tram,780,781,TXD0781,giu,Chi nhánh Công ty TNHH MTV Xây dựng Thương mại Dịch vụ Thuận Thiên – Cửa hàng Xăng dầu Thuận Thiên
+tram,781,782,TXD0782,giu,Công ty TNHH Một thành viên Xăng dầu Quân Bảo - Địa điểm kinh doanh Cửa hàng Xăng dầu Số 6
+tram,782,783,TXD0783,giu,Cửa hàng Xăng dầu An Thịnh
+tram,783,784,TXD0784,giu,Cửa hàng Xăng dầu Số 07 - Chi nhánh Công ty Cổ phần Xăng dầu Dầu khí Sài Gòn tại Hậu Giang
+tram,784,785,TXD0785,giu,Cửa hàng Xăng dầu Số 07 - Chi nhánh Công ty Cổ phần Xăng dầu Dầu khí Sài Gòn tại Hậu Giang
+tram,785,786,TXD0786,giu,Doanh nghiệp tư nhân Hoàng Hôm 2
+tram,786,787,TXD0787,giu,Doanh nghiệp tư nhân Thương mại Dịch vụ Xăng dầu Hồ Bảo Ngọc
+tram,787,788,TXD0788,giu,Doanh nghiệp tư nhân Trần Thị Thấm
+tram,788,789,TXD0789,giu,Petrolimex - Cửa hàng 10
+tram,789,790,TXD0790,giu,Petrolimex - Cửa hàng 22
+tram,790,791,TXD0791,giu,SE – Cửa hàng Xăng dầu Số 29
+tram,791,792,TXD0792,giu,Chi nhánh Công ty TNHH Dầu khí Quang Thái
+tram,792,793,TXD0793,giu,Chi nhánh Công ty TNHH Nhiên liệu Xăng dầu Sài Gòn - Cửa hàng Xăng dầu Số 5
+tram,793,794,TXD0794,giu,Chi nhánh Công ty TNHH Nhiên liệu Xăng dầu Sóc Trăng - Cửa hàng Xăng dầu Số 01
+tram,794,795,TXD0795,giu,Doanh nghiệp tư nhân Hồng Thắm
+tram,795,796,TXD0796,giu,Doanh nghiệp tư nhân Quý Dũng
+tram,796,797,TXD0797,giu,Doanh nghiệp tư nhân Xăng dầu Mai Vàng
+tram,797,798,TXD0798,giu,Doanh nghiệp tư nhân Xăng dầu Việt Khoa
+tram,798,799,TXD0799,giu,Doanh nghiệp tư nhân Hữu Đạt
+tram,799,800,TXD0800,giu,Doanh nghiệp tư nhân Hữu Đạt
+tram,800,801,TXD0801,giu,Doanh nghiệp tư nhân Huỳnh Hữu Đạt
+tram,801,802,TXD0802,giu,Doanh nghiệp tư nhân Huỳnh Hữu Đạt
+tram,802,803,TXD0803,giu,Lâm Thái Dương
+tram,803,804,TXD0804,giu,Chi nhánh - Công ty Cổ phần Đầu tư Thương mại Dương Trí - Cửa hàng Xăng dầu Số 08
+tram,804,805,TXD0805,giu,Công ty TNHH kinh doanh Xăng dầu Cam Thủy - Cửa hàng Cam Thủy 7
+tram,805,806,TXD0806,giu,Công ty TNHH Một thành viên Xăng dầu Hồng Hào - Cửa hàng Xăng dầu Hồng Hào 8
+tram,806,807,TXD0807,giu,Công ty TNHH Một thành viên Xăng dầu Phúc Tuấn
+tram,807,808,TXD0808,giu,Địa điểm kinh doanh Công ty Cổ phần Dầu khí Thu Đức - Chi nhánh Tây Đô - Cửa hàng Xăng dầu Vĩnh Thạnh
+tram,808,809,TXD0809,giu,Doanh nghiệp tư nhân Xăng dầu Phước Tâm
+tram,809,810,TXD0810,giu,Công ty TNHH Xăng dầu Ngọc Tuyền Phát.
+tram,810,811,TXD0811,giu,Doanh nghiệp tư nhân Trần Thị Thấm
+tram,811,812,TXD0812,giu,Doanh nghiệp tư nhân Xăng dầu – Gas – Bếp gas Hồng Hạnh
+tram,812,813,TXD0813,giu,Doanh nghiệp tư nhân Xăng dầu Huỳnh Phong
+tram,813,814,TXD0814,giu,Chi nhánh Công ty Cổ phần Đầu tư Thương mại Dương Trí
+tram,814,815,TXD0815,giu,Công ty Cổ phần Thương mại Minh Phúc Khang
+tram,815,816,TXD0816,giu,Cửa hàng Điện Hiển 11 (Công ty TNHH Một thành viên Điện Hiển)
+tram,816,817,TXD0817,giu,Cửa hàng Xăng dầu Hồng Hảo 7 (Công ty TNHH Một thành viên Xăng dầu Hồng Hảo)
+tram,817,818,TXD0818,giu,Cửa hàng Xăng dầu Số 7 (Công ty TNHH Một thành viên Xăng dầu Tây Nam Bộ)
+tram,818,819,TXD0819,giu,Cửa hàng Xăng dầu Thuận An Yến Số 12 (Công ty TNHH Thuận An Yến)
+tram,819,820,TXD0820,giu,Doanh nghiệp tư nhân Nguyễn Thị Thuý
+tram,820,821,TXD0821,giu,Doanh nghiệp tư nhân Xăng dầu Vật tư nông nghiệp Phan Văn Thâm
+tram,821,822,TXD0822,giu,Cửa hàng Xăng dầu Hồng Quân
+tram,822,823,TXD0823,giu,Cửa hàng Xăng dầu Trung Quân
+tram,823,824,TXD0824,giu,Doanh nghiệp tư nhân Hoàng Dũng
+tram,824,825,TXD0825,giu,Cửa hàng Xăng dầu Bảy Châu
+tram,825,826,TXD0826,giu,Cửa hàng Xăng dầu Bảy Châu 2
+tram,826,827,TXD0827,giu,Cửa hàng Xăng dầu Công ty TNHH Thương mại Dầu khí 79 Tâm Ngọc
+tram,827,828,TXD0828,giu,Cửa hàng Xăng dầu Dương Phương
+tram,828,829,TXD0829,giu,Cửa hàng Xăng dầu Hậu Giang
+tram,829,830,TXD0830,giu,Cửa hàng Xăng dầu Thành Chiến 2
+tram,830,831,TXD0831,giu,Cửa hàng Xăng dầu Trọng Nhân
+tram,831,832,TXD0832,giu,Cửa hàng Xăng dầu Trung Tuyến
+tram,832,833,TXD0833,giu,Cửa hàng Xăng dầu Trung Tuyến 2
+tram,833,834,TXD0834,giu,Cửa hàng Xăng dầu Vạn Phúc
+tram,834,835,TXD0835,giu,Công ty TNHH MTV Xăng dầu Hồng Tím
+tram,835,836,TXD0836,giu,Công ty TNHH MTV Xăng dầu Mộng Phúc
+tram,836,837,TXD0837,giu,Công ty TNHH MTV Xăng dầu Tuyến Dũng
+tram,837,838,TXD0838,giu,Công ty TNHH Thương mại Dầu khí 79 Tâm Ngọc-Địa điểm kinh doanh Cửa hàng Xăng dầu Tâm Ngọc
+tram,838,839,TXD0839,giu,Công ty TNHH Thương mại Phước Thịnh HG (Cửa hàng Xăng dầu Phước Thịnh HG)
+tram,839,840,TXD0840,giu,Công ty TNHH Xăng dầu Hòa Bình Petro
+tram,840,841,TXD0841,giu,Cửa hàng bán lẻ Xăng dầu Thảo Tường
+tram,841,842,TXD0842,giu,Cửa hàng Xăng dầu Công ty TNHH MTV Xăng dầu Thuận Hòa
+tram,842,843,TXD0843,giu,Doanh nghiệp tư nhân Võ Merceredi

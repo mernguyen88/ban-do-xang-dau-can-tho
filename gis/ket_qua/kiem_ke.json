@@ -1,0 +1,169 @@
+{
+ "raster": {
+  "path": "/home/claude/repo/dau_vao/Hien_trang_2025_7lop_co_rung.tif",
+  "exists": true,
+  "sha256": "f92f71a627e16d15ce874818878b9c260ca4deec30ca3ac2acac0245b31d9303",
+  "sha256_matches_expected": true,
+  "crs": "EPSG:32648",
+  "epsg": 32648,
+  "crs_is_projected": true,
+  "linear_units": "metre",
+  "width": 11723,
+  "height": 11953,
+  "count": 1,
+  "dtype": "uint8",
+  "nodata": 0.0,
+  "res": [
+   10.0,
+   10.0
+  ],
+  "rotation": [
+   0.0,
+   0.0
+  ],
+  "bounds": [
+   524740.0,
+   1021890.0,
+   641970.0,
+   1141420.0
+  ],
+  "problems": [],
+  "bounds_wgs84": [
+   105.22523780828128,
+   9.242231561879231,
+   106.29659686598538,
+   10.325590290352617
+  ],
+  "value_counts": {
+   "0": 76749402,
+   "1": 21008934,
+   "2": 24538455,
+   "3": 3715509,
+   "4": 2649295,
+   "5": 3845688,
+   "6": 6512304,
+   "7": 1105432
+  },
+  "codes_missing_in_raster": [],
+  "values_not_in_class_table": {}
+ },
+ "sources": {
+  "tram": {
+   "path": "/home/claude/repo/dau_vao/Co_so_xang_dau_Can_Tho.shp",
+   "exists": true,
+   "sha256": "593f08c842f12bb1cc7c7759aafc3361cc9221fce47c1b0b8582b66fb33e359b",
+   "layers": [
+    "Co_so_xang_dau_Can_Tho"
+   ],
+   "records": 843,
+   "crs": "EPSG:4326",
+   "epsg": 4326,
+   "geom_types": {
+    "Point": 843
+   },
+   "empty_geometry": 0,
+   "crs_used_for_check": "EPSG:4326",
+   "outside_vietnam": 0,
+   "wgs84_extent": [
+    105.277998,
+    9.273492,
+    106.250091,
+    10.311896
+   ],
+   "outside_raster_extent": 0,
+   "duplicate_geometry_records": 187,
+   "fields": [
+    {
+     "name": "TEN_DIEM",
+     "dtype": "str",
+     "non_empty": 843,
+     "unique": 828,
+     "is_unique_id_candidate": false
+    },
+    {
+     "name": "VI_TRI",
+     "dtype": "str",
+     "non_empty": 843,
+     "unique": 639,
+     "is_unique_id_candidate": false
+    },
+    {
+     "name": "TOA_DO",
+     "dtype": "str",
+     "non_empty": 843,
+     "unique": 717,
+     "is_unique_id_candidate": false
+    },
+    {
+     "name": "GHI_CHU",
+     "dtype": "str",
+     "non_empty": 354,
+     "unique": 1,
+     "is_unique_id_candidate": false
+    }
+   ]
+  },
+  "ben_cang": {
+   "path": "/home/claude/repo/dau_vao/bencang.shp",
+   "exists": true,
+   "sha256": "4c8c5fa59ce5813feec2b180bfc087b517601fe8e8ad1ff938975f554243e0c5",
+   "layers": [
+    "bencang"
+   ],
+   "records": 73,
+   "crs": "EPSG:4326",
+   "epsg": 4326,
+   "geom_types": {
+    "Point": 73
+   },
+   "empty_geometry": 0,
+   "crs_used_for_check": "EPSG:4326",
+   "outside_vietnam": 0,
+   "wgs84_extent": [
+    105.496944,
+    9.520712,
+    106.54166,
+    10.321944
+   ],
+   "outside_raster_extent": 7,
+   "duplicate_geometry_records": 0,
+   "fields": [
+    {
+     "name": "layer",
+     "dtype": "str",
+     "non_empty": 73,
+     "unique": 1,
+     "is_unique_id_candidate": false
+    },
+    {
+     "name": "name",
+     "dtype": "str",
+     "non_empty": 73,
+     "unique": 61,
+     "is_unique_id_candidate": false
+    },
+    {
+     "name": "descriptio",
+     "dtype": "str",
+     "non_empty": 41,
+     "unique": 41,
+     "is_unique_id_candidate": false
+    },
+    {
+     "name": "Toa do X",
+     "dtype": "float64",
+     "non_empty": 73,
+     "unique": 22,
+     "is_unique_id_candidate": false
+    },
+    {
+     "name": "Toa do Y",
+     "dtype": "float64",
+     "non_empty": 73,
+     "unique": 21,
+     "is_unique_id_candidate": false
+    }
+   ]
+  }
+ }
+}

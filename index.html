@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#1c57a5">
-  <meta name="description" content="Tra cứu hiện trạng sử dụng đất năm 2025 trong bán kính 2 km quanh các cơ sở xăng dầu và bến phao tại Cần Thơ.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#1c57a5"><link rel="icon" href="data:,">
+  <meta name="description" content="Tra cứu hiện trạng sử dụng đất năm 2025 quanh các cơ sở xăng dầu, kho xăng dầu và bến cảng tại Cần Thơ.">
   <title>Bản đồ cơ sở xăng dầu Cần Thơ</title>
-  <link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="assets/style.css?v=ctu-20261123">
-  <script defer src="assets/leaflet.js"></script><script defer src="assets/app.js?v=ctu-20261123-rung"></script>
+  <link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="assets/style.css?v=20261123-r2">
+  <script defer src="assets/leaflet.js"></script><script defer src="assets/app.js?v=20261123-r2"></script>
 </head>
 <body>
   <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
@@ -18,12 +18,13 @@
   </defs></svg>
   <header class="site-header">
     <a class="university-logo" href="./" aria-label="Đại học Cần Thơ — về bản đồ tổng quan"><img src="assets/ctu-logo.png" width="1816" height="482" alt="Đại học Cần Thơ — Can Tho University"></a>
-    <div class="project-heading"><h1>Cơ sở xăng dầu Cần Thơ</h1><p>Hiện trạng sử dụng đất trong bán kính 2 km</p></div>
+    <div class="project-heading"><h1>Cơ sở xăng dầu Cần Thơ</h1><p>Hiện trạng sử dụng đất trong vùng đệm 2 km; kho có dung tích thêm 3, 5, 10 km</p></div>
     <button id="methodButton" aria-label="Thông tin dữ liệu" class="button button-quiet"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Thông tin dữ liệu</span></button>
   </header>
   <div class="toolbar" aria-label="Công cụ bản đồ">
-    <div class="location-control"><label for="stationSelect">Cơ sở</label><div class="select-wrap"><select id="stationSelect" disabled><option value="">Đang tải danh sách…</option></select></div></div>
-    <span class="radius-label">Bán kính <strong>2.000 m</strong></span>
+    <div class="search-control"><label for="searchInput">Tìm cơ sở</label><div class="search-wrap"><input id="searchInput" type="search" placeholder="Tên, mã hoặc địa chỉ" autocomplete="off" spellcheck="false" disabled aria-controls="stationList"></div></div>
+    <div class="kind-control"><label for="kindFilter" class="sr-only">Loại cơ sở</label><div class="select-wrap"><select id="kindFilter" disabled><option value="">Tất cả loại</option></select></div></div>
+    <span class="radius-label">Bán kính <strong id="radiusLabel">2.000 m</strong></span>
     <div id="layerControls" class="map-tools" hidden>
       <label class="layer-toggle"><input id="showLanduse" type="checkbox" checked><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg>Hiện trạng</label>
       <details class="opacity-control"><summary aria-label="Điều chỉnh độ hiển thị" title="Độ hiển thị"><svg class="icon" aria-hidden="true"><use href="#i-opacity"/></svg></summary><div class="opacity-popover"><label for="opacity">Độ hiển thị</label><div><input id="opacity" type="range" min="0" max="100" value="85"><output id="opacityValue" for="opacity">85%</output></div></div></details>
@@ -32,29 +33,46 @@
   </div>
   <main class="workspace">
     <section class="map-shell" aria-label="Bản đồ tương tác"><div id="map" role="region" aria-label="Các cơ sở xăng dầu và vùng đệm 2 km"></div>
-      <details class="map-legend" open><summary><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg>Hiện trạng sử dụng đất</summary><div id="legendRows"></div><p>Năm 2025 · Độ phân giải 10 m</p></details>
-      <div id="mapError" class="map-error" hidden role="alert"></div><button id="mobileResults" class="mobile-results" hidden>Xem bảng diện tích</button>
+      <details class="map-legend" open><summary><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg>Hiện trạng sử dụng đất</summary><div id="legendRows"></div><div id="kindLegend" class="kind-legend" hidden></div><p>Năm 2025 · Độ phân giải 10 m</p></details>
+      <div id="mapError" class="map-error" hidden role="alert"></div><button id="mobileResults" class="mobile-results" hidden>Xem kết quả</button>
     </section>
     <aside class="results-panel" aria-label="Danh sách cơ sở và diện tích">
-      <section id="emptyPanel" class="empty-panel"><div class="panel-heading"><h2>Danh sách cơ sở</h2><span id="stationCount">Đang tải…</span></div><p class="list-note">Chọn cơ sở trên bản đồ hoặc trong danh sách.</p><div id="stationList" class="station-list"></div></section>
+      <section id="emptyPanel" class="empty-panel"><div class="panel-heading"><h2>Danh sách cơ sở</h2><span id="stationCount">Đang tải…</span></div>
+        <button id="backToSelected" type="button" class="back-link" hidden></button>
+        <p id="listNote" class="list-note">Chọn cơ sở trên bản đồ hoặc trong danh sách.</p><div id="stationList" class="station-list"></div><button id="moreStations" type="button" class="button button-quiet more-button" hidden></button></section>
       <section id="detailsPanel" hidden aria-live="polite">
-        <div class="result-top"><span id="locationTag"></span><button id="clearSelection" class="icon-button" aria-label="Bỏ chọn cơ sở" title="Bỏ chọn cơ sở"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
-        <h2 id="locationName" class="location-name"></h2><p id="coordinates" class="coordinates"></p>
-        <div class="buffer-summary"><span>Diện tích vùng đệm</span><strong><span id="totalArea">—</span> <small>ha</small></strong></div>
-        <div class="table-heading"><h3>Hiện trạng sử dụng đất</h3><span>2025</span></div>
-        <table class="area-table"><thead><tr><th scope="col">Loại đất</th><th scope="col">ha</th><th scope="col">%</th></tr></thead><tbody id="areaRows"></tbody><tfoot><tr><th scope="row">Tổng các lớp</th><td id="validArea"></td><td id="coveragePercent"></td></tr></tfoot></table>
-        <p class="table-note">Tỷ lệ tính trên diện tích toàn vùng đệm 2 km. Số liệu làm tròn đến 2 chữ số thập phân.</p>
-        <button id="exportSelected" class="button button-primary"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Xuất bảng diện tích</button>
+        <div class="result-top"><span id="locationTag"></span><span class="result-actions"><button id="showList" type="button" class="text-button">Danh sách</button><button id="clearSelection" class="icon-button" aria-label="Bỏ chọn cơ sở" title="Bỏ chọn cơ sở"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></span></div>
+        <h2 id="locationName" class="location-name" tabindex="-1"></h2><p id="coordinates" class="coordinates"></p>
+        <div id="flagNotes" class="flag-notes"></div>
+        <dl id="depotInfo" class="depot-info" hidden></dl>
+        <div id="radiusPicker" class="radius-picker" hidden><span id="radiusPickerLabel">Bán kính tính</span><div class="segmented" role="group" aria-labelledby="radiusPickerLabel" id="radiusButtons"></div></div>
+        <div id="detailStatus" class="detail-status" role="status" hidden><span id="detailStatusText"></span><button id="retryDetail" type="button" class="button button-quiet" hidden>Thử lại</button></div>
+        <div id="detailBody" hidden>
+          <div class="buffer-summary"><span id="bufferLabel">Diện tích vùng đệm</span><strong><span id="totalArea">—</span> <small>ha</small></strong></div>
+          <div class="table-heading"><h3>Hiện trạng sử dụng đất <span>2025</span></h3>
+            <div class="segmented" role="group" aria-label="Cách hiển thị kết quả"><button type="button" data-view="table" aria-pressed="true">Bảng</button><button type="button" data-view="chart" aria-pressed="false">Biểu đồ</button></div></div>
+          <div id="tableView">
+            <table class="area-table"><caption class="sr-only" id="tableCaption">Diện tích và tỷ lệ từng loại đất trong vùng đệm</caption><thead><tr><th scope="col">Loại đất</th><th scope="col">ha</th><th scope="col">%</th></tr></thead><tbody id="areaRows"></tbody><tfoot><tr><th scope="row">Tổng các lớp</th><td id="validArea"></td><td id="coveragePercent"></td></tr></tfoot></table>
+          </div>
+          <figure id="chartView" class="chart-figure" hidden>
+            <div class="chart-head"><figcaption><strong id="chartTitle"></strong><span id="chartSub"></span></figcaption>
+              <div class="segmented segmented-small" role="group" aria-label="Đơn vị biểu đồ"><button type="button" data-unit="ha" aria-pressed="true">ha</button><button type="button" data-unit="percent" aria-pressed="false">%</button></div></div>
+            <div id="chart" class="chart"></div><div id="chartTip" class="chart-tip" hidden></div>
+          </figure>
+          <p id="resultNote" class="table-note"></p>
+          <button id="exportSelected" class="button button-primary"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Xuất bảng diện tích</button>
+          <p id="imageStatus" class="image-status" role="status"></p>
+        </div>
       </section>
-      <div class="panel-footer"><a href="data/dien_tich_2km.csv" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Tải dữ liệu tất cả cơ sở</a></div>
+      <div class="panel-footer"><a href="data/dien_tich.csv" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Tải dữ liệu tất cả cơ sở</a></div>
     </aside>
   </main>
-  <footer class="status-bar"><span id="mapHint">Chọn một cơ sở để xem vùng đệm và bảng diện tích.</span><span id="layerStatus" role="status"></span><span class="projection">Hiện trạng 2025 · 10 m · WGS 84 / UTM 48N</span></footer>
+  <footer class="status-bar"><span id="mapHint">Chọn một cơ sở để xem vùng đệm, bảng và biểu đồ diện tích.</span><span id="layerStatus" role="status"></span><span class="projection">Hiện trạng 2025 · 10 m · WGS 84 / UTM 48N</span></footer>
   <dialog id="methodDialog" aria-labelledby="methodTitle"><div class="dialog-heading"><h2 id="methodTitle">Thông tin dữ liệu</h2><button id="closeDialog" class="icon-button" aria-label="Đóng thông tin"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
-    <div class="dialog-body"><h3>Nguồn dữ liệu</h3><dl class="source-list"><div><dt>Vị trí cơ sở</dt><dd>Cang_vu_Hang_hai_Can_Tho_vi_tri.geojson</dd></div><div><dt>Hiện trạng năm 2025</dt><dd>Hien_trang_2025_7lop_co_rung.tif</dd></div><div><dt>Độ phân giải</dt><dd>10 × 10 m</dd></div><div><dt>Hệ tọa độ tính diện tích</dt><dd>WGS 84 / UTM 48N · EPSG:32648</dd></div></dl>
-      <h3>Vị trí khảo sát</h3><p id="selectionMethod"></p><p>Đây là các bến cảng và bến phao liên quan đến xăng dầu trong tệp cung cấp, không phải danh mục toàn bộ cửa hàng xăng dầu trên địa bàn.</p>
+    <div class="dialog-body"><h3>Nguồn dữ liệu</h3><dl id="sourceList" class="source-list"></dl>
+      <h3>Vị trí khảo sát</h3><p id="selectionMethod"></p><p id="scopeNote"></p><p id="estimatedNote"></p><div id="depotNote"></div>
       <h3>Cách tính diện tích</h3><p id="areaMethod"></p><p>Tỷ lệ từng lớp sử dụng diện tích toàn vùng đệm làm mẫu số. Ảnh hiển thị không được dùng để tính bảng diện tích. Các vùng đệm có thể chồng lấn.</p>
-      <h3>Quy ước phân loại</h3><p>Bảng giữ nguyên bảy loại đất của raster nguồn. Mã 7 là rừng bổ sung. Chỉ thống kê các ô có giá trị phân loại.</p>
+      <h3>Quy ước phân loại</h3><p>Bảng giữ nguyên bảy loại đất của raster nguồn. Mã 7 hiển thị là Rừng. Chỉ thống kê các ô có giá trị phân loại; tổng các lớp có thể nhỏ hơn diện tích vùng đệm.</p>
     </div>
   </dialog><noscript>Vui lòng bật JavaScript để sử dụng bản đồ.</noscript>
 </body>

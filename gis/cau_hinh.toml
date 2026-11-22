@@ -1,0 +1,62 @@
+# Cấu hình quy trình GIS (dữ liệu nhận ngày 23/11/2026).
+# Đường dẫn tương đối tính từ thư mục gốc kho mã.
+
+[raster]
+path = "dau_vao/Hien_trang_2025_7lop_co_rung.tif"     # không đưa lên kho (xem .gitignore)
+expected_sha256 = "f92f71a627e16d15ce874818878b9c260ca4deec30ca3ac2acac0245b31d9303"
+class_table = "input_templates/bang_ma_lop.csv"
+year = 2025
+
+[buffer]
+radii_m = [2000]                      # mọi điểm
+depot_radii_m = [2000, 3000, 5000, 10000]   # điểm đã ghép với kho có dung tích (Phụ lục 2)
+quad_segs = 360                       # 1.440 cạnh / đường tròn, như bản cũ
+calc_crs = "EPSG:32648"
+calc_crs_label = "WGS 84 / UTM 48N · EPSG:32648"
+min_png_px = 1024
+max_png_px = 2048
+
+[output]
+work_dir = "gis/ket_qua"
+web_dir = "data"
+scope_note = "Danh mục gồm các cơ sở xăng dầu (Co_so_xang_dau_Can_Tho) và bến cảng (bencang, chỉ lấy bến cảng) do chủ dự án cung cấp. Kho có dung tích lấy từ Phụ lục 2, Sở Công Thương thành phố Cần Thơ, 2026."
+
+[depots]
+table = "gis/kho_phu_luc_2.csv"       # bảng ghép kho ↔ mã điểm, người dùng xác nhận
+source_label = "Phụ lục 2 — Danh sách kho xăng dầu trên địa bàn thành phố Cần Thơ (Sở Công Thương, 2026)"
+
+[[sources]]
+key = "tram"
+label = "Cơ sở xăng dầu"
+path = "dau_vao/Co_so_xang_dau_Can_Tho.shp"
+kind = "Trạm xăng dầu"
+id_prefix = "TXD"
+id_width = 4
+id_field = ""            # nguồn không có trường ID: dùng thứ tự bản ghi (FID + 1)
+name_field = "TEN_DIEM"
+address_field = "VI_TRI"
+quality_field = "GHI_CHU"
+
+[[sources]]
+key = "ben_cang"
+label = "Bến cảng"
+path = "dau_vao/bencang.shp"
+kind = "Bến cảng"
+# Theo yêu cầu chủ dự án (23/11/2026): chỉ lấy bến cảng. Bản ghi có tên không bắt đầu
+# bằng "Bến cảng" (bến phao, phao BT/CC, rùa neo R1–R4) được ghi "loai" trong anh_xa_id.csv.
+include_name_regex = "^Bến cảng"
+exclude_reason = "không phải bến cảng (chỉ lấy bến cảng theo yêu cầu)"
+id_prefix = "BC"
+id_width = 2
+id_field = ""
+name_field = "name"
+address_field = ""
+description_field = "descriptio"
+quality_field = ""
+
+[dedupe]
+# Gộp tự động chỉ khi CÙNG tên (bỏ dấu, chữ thường) + CÙNG địa chỉ + cách ≤ 1 m.
+auto_merge_m = 1.0
+review_m = 25                 # cặp khác tên cách ≤ 25 m: liệt kê để xem (giữ riêng)
+review_same_name_m = 2000     # cùng tên cách ≤ 2 km: liệt kê để xem (giữ riêng)
+decisions = "gis/quyet_dinh_trung.csv"

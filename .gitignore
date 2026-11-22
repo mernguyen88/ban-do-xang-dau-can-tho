@@ -1,0 +1,5 @@
+# Không đưa raster gốc và tài liệu có thông tin liên hệ cá nhân lên kho web
+dau_vao/*.tif
+dau_vao/*.docx
+gis/ket_qua/cache/
+__pycache__/
