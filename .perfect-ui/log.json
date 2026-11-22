@@ -1,0 +1,11 @@
+[
+  {
+    "date": "2026-11-23",
+    "slug": "ctu-map",
+    "type": "gis-dashboard",
+    "direction": "minimal academic CTU white/blue",
+    "macrostructure": "Workbench",
+    "layout": "map-left results-right",
+    "motion": "1/3 CSS interactions, native scroll"
+  }
+]
