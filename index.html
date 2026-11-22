@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d6159">
+  <meta name="description" content="Bản đồ 9 vị trí xăng dầu và Petromekong, vùng đệm 2 km và diện tích hiện trạng sử dụng đất năm 2025.">
+  <title>Vùng đệm 2 km · Cơ sở xăng dầu Cần Thơ</title>
+  <link rel="stylesheet" href="assets/leaflet.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/leaflet.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 6-10 6L2 9l10-6Zm-9 11 9 5 9-5M3 18l9 5 9-5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  </defs></svg>
+  <header class="header">
+    <a class="brand" href="./" aria-label="Về bản đồ tổng quan">
+      <span class="brand-icon"><svg><use href="#i-layers"/></svg></span>
+      <span><span class="eyebrow">CẦN THƠ · DỮ LIỆU KHÔNG GIAN</span><strong>Hiện trạng quanh cơ sở xăng dầu</strong></span>
+    </a>
+    <div class="header-actions"><span class="private">Bản đồ công khai</span><button id="methodButton" class="text-button"><svg><use href="#i-info"/></svg>Dữ liệu & cách tính</button></div>
+  </header>
+  <main class="workspace">
+    <aside class="sidebar" aria-label="Thông tin vị trí và diện tích">
+      <div class="sidebar-top">
+        <div class="section-top"><span class="eyebrow">PHÂN TÍCH VÙNG LÂN CẬN</span><span class="year">2025</span></div>
+        <h1>Bán kính <span>2 km</span></h1>
+        <p class="subheading">Chọn một vị trí để xem cơ cấu sử dụng đất xung quanh.</p>
+        <label class="field-label" for="stationSelect">Vị trí khảo sát <span id="stationCount">Đang tải…</span></label>
+        <div class="select-wrap"><select id="stationSelect" disabled><option value="">Đang tải dữ liệu…</option></select></div>
+      </div>
+      <section id="emptyPanel" class="empty-panel">
+        <div class="empty-icon"><svg><use href="#i-target"/></svg></div>
+        <h2>Bắt đầu từ một vị trí</h2>
+        <p>Bấm biểu tượng trên bản đồ hoặc chọn cơ sở trong danh sách bên dưới.</p>
+        <div class="list-heading"><span>9 VỊ TRÍ XĂNG DẦU / PETROMEKONG</span></div>
+        <div id="stationList" class="station-list"></div>
+      </section>
+      <section id="detailsPanel" class="details-panel" hidden aria-live="polite">
+        <div class="location-heading"><span id="locationTag" class="location-tag"></span><h2 id="locationName"></h2><p id="coordinates" class="coordinates"></p></div>
+        <div class="area-total"><span>Tổng diện tích vùng đệm</span><strong><span id="totalArea">—</span><small> ha</small></strong></div>
+        <div class="metrics"><div><span>Có dữ liệu</span><strong id="validArea">—</strong><small>ha</small></div><div class="missing-metric"><span>Thiếu dữ liệu</span><strong id="missingArea">—</strong><small>ha</small></div></div>
+        <div class="coverage-label"><span>Phạm vi có dữ liệu</span><strong id="coveragePercent"></strong></div><div class="coverage-track"><div id="coverageFill"></div></div>
+        <div class="table-heading"><h3>Cơ cấu sử dụng đất</h3><span>Trong vùng đệm 2 km</span></div>
+        <div id="compositionBar" class="composition-bar" aria-hidden="true"></div>
+        <table class="area-table"><thead><tr><th scope="col">Loại đất</th><th scope="col">ha</th><th scope="col">%</th></tr></thead><tbody id="areaRows"></tbody></table>
+        <p class="table-note">Tỷ lệ tính trên toàn vùng đệm, bao gồm phần thiếu dữ liệu. Số liệu làm tròn đến 2 chữ số thập phân.</p>
+        <details class="missing-details"><summary>Chi tiết phần thiếu dữ liệu</summary><dl><div><dt>NoData trong raster</dt><dd id="nodataArea"></dd></div><div><dt>Ngoài phạm vi raster</dt><dd id="outsideArea"></dd></div><div><dt>Mã lớp chưa xác định</dt><dd id="unknownArea"></dd></div></dl></details>
+        <div class="export-actions"><button id="exportSelected" class="primary-button"><svg><use href="#i-download"/></svg>Tải bảng vị trí này</button><button id="clearSelection" class="secondary-button">Bỏ chọn</button></div>
+      </section>
+      <div class="sidebar-footer"><svg><use href="#i-layers"/></svg><span>Raster hiện trạng 2025 · 10 m · 7 lớp<br><span class="muted">Diện tích tính từ dữ liệu gốc của bạn.</span></span></div>
+    </aside>
+    <section class="map-shell" aria-label="Bản đồ tương tác">
+      <div id="map" role="region" aria-label="Bản đồ các vị trí xăng dầu Cần Thơ"></div>
+      <div class="map-toolbar"><button id="overviewButton" class="map-button" title="Xem toàn bộ 9 vị trí"><svg><use href="#i-target"/></svg>Toàn bộ vị trí</button><div class="map-caption"><span class="map-caption-line"></span>Vùng đệm theo vị trí được chọn</div></div>
+      <div id="mapHint" class="map-hint"><svg><use href="#i-pin"/></svg><span>Bấm một điểm để mở vùng đệm và bảng diện tích</span></div>
+      <div id="layerControls" class="layer-controls" hidden><label><input id="showLanduse" type="checkbox" checked>Hiện trạng trong vùng đệm</label><div><label for="opacity">Độ hiển thị</label><input id="opacity" type="range" min="0" max="100" value="85"><output id="opacityValue" for="opacity">85%</output></div><span id="layerStatus" role="status"></span></div>
+      <details class="map-legend" open><summary><svg><use href="#i-layers"/></svg>Chú dẫn hiện trạng</summary><div id="legendRows"></div></details>
+      <div id="mapError" class="map-error" hidden role="alert"></div>
+    </section>
+  </main>
+  <dialog id="methodDialog" aria-labelledby="methodTitle">
+    <div class="dialog-heading"><div><span class="eyebrow">THÔNG TIN BẢN ĐỒ</span><h2 id="methodTitle">Dữ liệu & cách tính</h2></div><button id="closeDialog" class="icon-button" aria-label="Đóng"><svg><use href="#i-close"/></svg></button></div>
+    <div class="dialog-body"><h3>Nguồn dữ liệu</h3><dl class="source-list"><div><dt>Vị trí</dt><dd>Cang_vu_Hang_hai_Can_Tho_vi_tri.geojson</dd></div><div><dt>Hiện trạng</dt><dd>Hien_trang_2025_7lop_co_rung.tif</dd></div><div><dt>Độ phân giải</dt><dd>10 × 10 m</dd></div><div><dt>Hệ tọa độ tính toán</dt><dd>WGS 84 / UTM 48N · EPSG:32648</dd></div></dl>
+      <h3>Phạm vi các điểm</h3><p id="selectionMethod"></p><p>Đây là các bến cảng và bến phao liên quan đến xăng dầu trong tệp được cung cấp; không đại diện cho toàn bộ cửa hàng xăng dầu trên địa bàn.</p>
+      <h3>Diện tích và tỷ lệ</h3><p id="areaMethod"></p><p>Phần thiếu dữ liệu được tách thành NoData trong raster, phần ngoài phạm vi raster và mã lớp chưa xác định. NoData không được gán thành một loại đất. Không cộng diện tích các vị trí để suy ra diện tích duy nhất vì các vùng đệm có thể chồng lấn.</p>
+      <h3>Lớp rừng</h3><p>Mã 7 là <strong>rừng bổ sung</strong> theo raster đã cung cấp; giữ nguyên nhãn và giá trị từ dữ liệu nguồn.</p>
+      <a class="primary-button download-all" href="data/dien_tich_2km.csv" download><svg><use href="#i-download"/></svg>Tải bảng diện tích cả 9 vị trí</a>
+    </div>
+  </dialog>
+  <noscript>Vui lòng bật JavaScript để sử dụng bản đồ tương tác.</noscript>
+</body>
+</html>
