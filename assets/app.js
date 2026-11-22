@@ -4,21 +4,13 @@
   const num = new Intl.NumberFormat('vi-VN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const tickNum = new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 2 });
   const fmt = n => num.format(n);
-  const PIN_LIMIT = 60;          // ≤ 60 điểm: ghim đánh số; nhiều hơn: chấm vẽ bằng canvas
   const LIST_PAGE = 200;         // số dòng danh sách hiển thị mỗi lần
-  const KIND_STYLES = [
-    { color: '#1c57a5', fillColor: '#1c57a5', fillOpacity: 1 },
-    { color: '#00799f', fillColor: '#00afef', fillOpacity: 1 },
-    { color: '#1c57a5', fillColor: '#ffffff', fillOpacity: 1 },
-    { color: '#00799f', fillColor: '#00afef', fillOpacity: 1 },
-    { color: '#53677e', fillColor: '#d7e2ef', fillOpacity: 1 }
-  ];
   const els = { details: $('detailsPanel'), empty: $('emptyPanel'), search: $('searchInput'), kind: $('kindFilter') };
   const store = (() => { try { return window.localStorage; } catch { return null; } })();
   const remember = (k, v) => { try { store?.setItem(k, v); } catch { /* bỏ qua */ } };
   const recall = k => { try { return store?.getItem(k); } catch { return null; } };
 
-  let catalog, points = [], byId = new Map(), map, markerLayer, selectedPin = null;
+  let catalog, points = [], byId = new Map(), map, markerLayer, lastSel = null;
   let filtered = [], listShown = 0;
   let selected = null;           // điểm (danh mục) đang chọn
   let detail = null;             // chi tiết đã tải của điểm đang chọn
@@ -61,7 +53,6 @@
       const extra = [p.id, p.kind, p.address].filter(Boolean).map(escapeHTML).join(' · ');
       const current = selected?.id === p.id ? ' aria-current="true"' : '';
       const tags = (p.depot ? `<em class="tag tag-depot">Kho ${cap(p.depot)}</em>` : '')
-        + (p.estimated ? '<em class="tag">Vị trí ước lượng</em>' : '')
         + (p.status === 'outside' ? '<em class="tag tag-warn">Ngoài phạm vi raster</em>' : '');
       return `<button type="button" data-station="${escapeHTML(p.id)}"${current}><span>${pad(p.n)}</span><span>${escapeHTML(p.name)}<small>${extra}</small>${tags ? `<span class="tags">${tags}</span>` : ''}</span></button>`;
     }).join(''));
@@ -87,47 +78,74 @@
       if (!on && markerLayer.hasLayer(m)) markerLayer.removeLayer(m);
     }
   }
+  const ICON_TRAM = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="5" fill="#1c57a5" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="5" width="8" height="14" rx="1.3" fill="#fff"/><rect x="7.2" y="7" width="4.6" height="3.6" fill="#1c57a5"/><path d="M13.5 9.5h1.6c.7 0 1.2.5 1.2 1.2v5c0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2V9.2L16.8 7" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  const ICON_PORT = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0a86b8" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="6.6" r="1.8" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M12 8.4v10M8.6 11.2h6.8M6.2 13.2a5.8 5.8 0 0 0 11.6 0" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>');
+  const iconFor = p => p.kind === 'Bến cảng'
+    ? L.divIcon({ className: 'pt pt-port', iconSize: [24, 24], iconAnchor: [12, 12], html: '' })
+    : L.divIcon({ className: 'pt pt-tram', iconSize: [19, 19], iconAnchor: [9.5, 9.5], html: '' });
   function buildMarkers() {
-    const usePins = points.length <= PIN_LIMIT;
-    const renderer = usePins ? null : L.canvas({ padding: 0.3, tolerance: 6 });
+    document.documentElement.style.setProperty('--icon-tram', `url("${ICON_TRAM}")`);
+    document.documentElement.style.setProperty('--icon-port', `url("${ICON_PORT}")`);
     markerLayer = L.layerGroup().addTo(map);
     for (const p of points) {
-      let m;
-      if (usePins) {
-        m = L.marker([p.lat, p.lon], { title: `${p.id} · ${p.name}`, alt: `${p.id} · ${p.name}`, keyboard: true,
-          icon: L.divIcon({ className: 'fuel-pin', iconSize: [30, 30], iconAnchor: [15, 15], html: `<span class="pin-face">${pad(p.n)}</span>` }) });
-      } else {
-        const st = KIND_STYLES[Math.min(p.kindIndex, KIND_STYLES.length - 1)];
-        m = L.circleMarker([p.lat, p.lon], { renderer, radius: p.depot ? 8 : p.kind === 'Bến cảng' ? 6 : 4.5, weight: p.depot ? 3 : 1.5, ...st,
-          color: p.depot ? '#0b2f63' : st.color, fillOpacity: p.estimated ? 0.4 : st.fillOpacity, dashArray: null });
-      }
-      m.bindTooltip(`${escapeHTML(p.id)} · ${escapeHTML(p.name)}`, { direction: 'top', offset: usePins ? [0, -16] : [0, -6] });
+      const m = L.marker([p.lat, p.lon], { icon: iconFor(p), keyboard: false, title: '', riseOnHover: true, zIndexOffset: p.kind === 'Bến cảng' ? 200 : 0 });
+      m.bindTooltip(`${escapeHTML(p.id)} · ${escapeHTML(p.name)}`, { direction: 'top', offset: [0, -11] });
       m.on('click', () => choose(p.id));
       markers.set(p.id, m); markerLayer.addLayer(m);
     }
-    map.getContainer().dataset.markerMode = usePins ? 'pins' : 'canvas';
-    if (!usePins) {
-      $('kindLegend').innerHTML = catalog.kinds.map((k, i) => { const st = KIND_STYLES[Math.min(i, KIND_STYLES.length - 1)]; return `<div><span class="kind-dot" style="background:${st.fillColor};border-color:${st.color}"></span>${escapeHTML(k.name)}</div>`; }).join('')
-        + (catalog.depot_count ? '<div><span class="kind-dot kind-dot-depot"></span>Kho có dung tích (2–10 km)</div>' : '')
-        + (catalog.estimated_count ? '<div><span class="kind-dot kind-dot-est"></span>Vị trí ước lượng</div>' : '');
-      $('kindLegend').hidden = false;
-    }
+    map.getContainer().dataset.markerMode = 'icons';
+    $('kindLegend').innerHTML = catalog.kinds.map(k => `<div><span class="pt-legend ${k.name === 'Bến cảng' ? 'pt-port' : 'pt-tram'}"></span>${escapeHTML(k.name)}</div>`).join('')
+      + '<div><span class="hatch-legend"></span>Chồng lấn với vùng đệm 2 km lân cận</div>';
+    $('kindLegend').hidden = false;
   }
   function highlightMarker() {
-    if (selectedPin) { selectedPin.remove(); selectedPin = null; }
     const id = selected?.id;
-    if (map.getContainer().dataset.markerMode === 'pins') {
-      for (const [key, m] of markers) { m.getElement()?.classList.toggle('is-selected', key === id); m.setZIndexOffset(key === id ? 1000 : 0); }
-    } else if (selected) {
-      selectedPin = L.marker([selected.lat, selected.lon], { pane: 'selectedPin', interactive: false, keyboard: false,
-        icon: L.divIcon({ className: 'fuel-pin is-selected', iconSize: [22, 22], iconAnchor: [11, 11], html: '<span class="pin-face pin-dot"></span>' }) }).addTo(map);
+    if (lastSel && lastSel !== id) { const m = markers.get(lastSel); m?.getElement()?.classList.remove('is-selected'); m?.setZIndexOffset(byId.get(lastSel)?.kind === 'Bến cảng' ? 200 : 0); }
+    if (id) { const m = markers.get(id); m?.setZIndexOffset(1000); m?.getElement()?.classList.add('is-selected'); }
+    lastSel = id || null;
+  }
+
+  /* ---------- Vùng chồng lấn với vùng đệm 2 km lân cận (chỉ hiển thị) ---------- */
+  let overlapLayer = null;
+  const NEIGHBOR_R = 2000, SEG = 128;
+  function circlePoly(cx, cy, r) { const out = []; for (let i = 0; i < SEG; i++) { const t = 2 * Math.PI * i / SEG; out.push([cx + r * Math.cos(t), cy + r * Math.sin(t)]); } return out; }
+  function clip(subject, clipPoly) {          // Sutherland–Hodgman, đa giác lồi ngược chiều kim đồng hồ
+    let out = subject;
+    for (let i = 0; i < clipPoly.length && out.length; i++) {
+      const [ax, ay] = clipPoly[i], [bx, by] = clipPoly[(i + 1) % clipPoly.length];
+      const inside = ([px, py]) => (bx - ax) * (py - ay) - (by - ay) * (px - ax) >= 0;
+      const inter = ([px, py], [qx, qy]) => { const d1 = (bx - ax) * (py - ay) - (by - ay) * (px - ax), d2 = (bx - ax) * (qy - ay) - (by - ay) * (qx - ax); const t = d1 / (d1 - d2); return [px + t * (qx - px), py + t * (qy - py)]; };
+      const input = out; out = [];
+      for (let j = 0; j < input.length; j++) {
+        const P = input[j], Q = input[(j + 1) % input.length];
+        if (inside(Q)) { if (!inside(P)) out.push(inter(P, Q)); out.push(Q); } else if (inside(P)) out.push(inter(P, Q));
+      }
     }
+    return out;
+  }
+  function drawOverlaps(p, r) {
+    if (overlapLayer) { overlapLayer.remove(); overlapLayer = null; }
+    const kx = 111320 * Math.cos(p.lat * Math.PI / 180), ky = 110574;
+    const toXY = q => [(q.lon - p.lon) * kx, (q.lat - p.lat) * ky];
+    const toLL = ([x, y]) => [p.lat + y / ky, p.lon + x / kx];
+    const self = circlePoly(0, 0, r);
+    const lenses = []; let n = 0;
+    for (const q of points) {
+      if (q.id === p.id) continue;
+      const [x, y] = toXY(q);
+      if (Math.hypot(x, y) >= r + NEIGHBOR_R) continue;
+      const lens = clip(circlePoly(x, y, NEIGHBOR_R), self);
+      if (lens.length > 2) { lenses.push(lens.map(toLL)); n++; }
+    }
+    if (lenses.length) overlapLayer = L.polygon(lenses, { pane: 'boundary', interactive: false, className: 'overlap-hatch', weight: 0.7, color: '#1c57a5', opacity: 0.35, fillOpacity: 1 }).addTo(map);
+    return n;
   }
 
   /* ---------- Chọn điểm ---------- */
   function clearLayers() {
     if (image) { image.remove(); image = null; }
     if (buffer) { buffer.remove(); buffer = null; }
+    if (overlapLayer) { overlapLayer.remove(); overlapLayer = null; }
   }
   function setHash(id) {
     const h = id ? `#${encodeURIComponent(id)}${radius !== 2000 ? '/' + radius : ''}` : location.pathname + location.search;
@@ -217,6 +235,8 @@
     document.querySelectorAll('[data-radius]').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.radius) === radius)));
     buffer = L.geoJSON(r.buffer, { pane: 'boundary', interactive: false, style: { color: '#1c57a5', weight: 2, opacity: 1, fillOpacity: 0 } }).addTo(map);
     if (r.image) addImage(d, r); else { $('imageStatus').textContent = ''; $('layerStatus').textContent = ''; }
+    const nOver = drawOverlaps(selected, radius);
+    $('overlapRow').innerHTML = `<dt>Chồng lấn</dt><dd>${nOver ? `${nOver} vùng đệm 2 km lân cận (tô sọc trên bản đồ)` : 'Không có'}</dd>`;
     $('layerControls').hidden = !r.image;
     renderDetail(d, r);
     map.getContainer().setAttribute('data-radius', String(radius));
@@ -224,19 +244,19 @@
     if (fit) map.fitBounds(buffer.getBounds(), { padding: [30, 30], animate: false, maxZoom: 16 });
   }
   function renderPointInfo(d) {
-    const notes = [];
-    if ((d.position_quality || '').toLowerCase().includes('ước lượng'))
-      notes.push('<p class="note">Tọa độ là <strong>vị trí ước lượng</strong> theo tệp nguồn (nhiều điểm dùng chung tâm phường/xã). Vùng đệm và diện tích chỉ mang tính tham khảo.</p>');
-    if (d.merged_from?.length) notes.push(`<p class="note note-quiet">Gộp bản ghi trùng hoàn toàn: ${d.merged_from.map(escapeHTML).join(', ')}.</p>`);
-    $('flagNotes').innerHTML = notes.join('');
-    const k = d.depot;
-    $('depotInfo').hidden = !k;
+    $('flagNotes').innerHTML = '';
+    const k = d.depot, rows = [];
     if (k) {
-      $('depotInfo').innerHTML = `<div><dt>Kho (Phụ lục 2, STT ${k.stt})</dt><dd>${escapeHTML(k.ten_kho)}</dd></div>`
-        + `<div><dt>Dung tích</dt><dd>${k.dung_tich_m3 != null ? cap(k.dung_tich_m3) : '—'}</dd></div>`
-        + `<div><dt>Loại kho · Tình trạng</dt><dd>${escapeHTML(k.loai_kho)} · ${escapeHTML(k.tinh_trang)}</dd></div>`
-        + `<div class="depot-match"><dt>Ghép với điểm bản đồ (${escapeHTML(k.muc_khop)})</dt><dd>${escapeHTML(k.can_cu)}</dd></div>`;
+      rows.push(`<div><dt>Kho (Phụ lục 2)</dt><dd>${escapeHTML(k.ten_kho)}</dd></div>`,
+        `<div><dt>Dung tích</dt><dd>${k.dung_tich_m3 != null ? cap(k.dung_tich_m3) : '—'}</dd></div>`,
+        `<div><dt>Loại kho</dt><dd>${escapeHTML(k.loai_kho)}</dd></div>`,
+        `<div><dt>Tình trạng</dt><dd>${escapeHTML(k.tinh_trang)}</dd></div>`);
     }
+    const est = (d.position_quality || '').toLowerCase().includes('ước lượng');
+    rows.push(`<div><dt>Vị trí</dt><dd>${est ? 'Ước lượng (theo tệp nguồn)' : 'Theo tệp nguồn'}${d.coord_note ? `; ${escapeHTML(d.coord_note)}` : ''}</dd></div>`);
+    rows.push('<div id="overlapRow"></div>');
+    $('depotInfo').innerHTML = rows.join('');
+    $('depotInfo').hidden = false;
     const radii = Object.keys(d.results).map(Number).sort((a, b) => a - b);
     $('radiusPicker').hidden = radii.length < 2;
     $('radiusButtons').innerHTML = radii.map(r => `<button type="button" data-radius="${r}" aria-pressed="${r === radius}">${km(r)}</button>`).join('');
@@ -392,14 +412,12 @@
     byId = new Map(points.map(p => [p.id, p]));
     fillInfo();
     els.kind.innerHTML = '<option value="">Tất cả loại</option>' + catalog.kinds.map(k => `<option value="${escapeHTML(k.name)}">${escapeHTML(k.name)} (${k.count})</option>`).join('')
-      + (catalog.depot_count ? `<option value="__depot">Kho có dung tích (${catalog.depot_count})</option>` : '')
-      + (catalog.estimated_count ? `<option value="__estimated">Vị trí ước lượng (${catalog.estimated_count})</option>` : '');
+      + (catalog.depot_count ? `<option value="__depot">Kho có dung tích (${catalog.depot_count})</option>` : '');
     els.kind.disabled = false; els.search.disabled = false;
 
     map = L.map('map', { zoomControl: false, minZoom: 7, maxZoom: 20, scrollWheelZoom: true, attributionControl: true, preferCanvas: false });
     map.createPane('classified').style.zIndex = 350;
     map.createPane('boundary').style.zIndex = 410;
-    map.createPane('selectedPin').style.zIndex = 650;
     L.control.zoom({ position: 'topright' }).addTo(map);
     L.control.scale({ imperial: false, position: 'bottomright', maxWidth: 120 }).addTo(map);
     let tileErrors = 0, tileLoads = 0;

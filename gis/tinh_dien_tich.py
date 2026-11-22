@@ -184,6 +184,8 @@ def main(argv=None):
                 "depot": depots.get(p["id"]), "results": by_point[p["id"]]}
         if p.get("description"):
             item["description"] = p["description"]
+        if p.get("coord_note"):
+            item["coord_note"] = p["coord_note"]
         points.append(item)
 
     src_labels = {s["key"]: s["label"] for s in cfg["sources"]}
@@ -192,6 +194,7 @@ def main(argv=None):
         kinds_count[pt["kind"]] = kinds_count.get(pt["kind"], 0) + 1
     merge_report = (work / "bao_cao_hop_nhat.md").read_text(encoding="utf-8")
     auto = merge_report.count("— gop (tự động)")
+    shifted = merge_report.count(" dịch 10 m đông")
     meta = {
         "title": "Hiện trạng quanh cơ sở xăng dầu", "year": cfg["raster"]["year"], "radius_m": b["radii_m"][0],
         "radii_default": b["radii_m"], "radii_depot": b["depot_radii_m"],
@@ -203,7 +206,9 @@ def main(argv=None):
                    "với vùng đệm, sử dụng raster gốc 10 m. Tỷ lệ từng lớp tính trên toàn diện tích vùng đệm. "
                    "Ảnh hiển thị dùng lấy mẫu láng giềng gần nhất, không dùng để tính diện tích."),
         "selection": (f"{len(points)} vị trí: " + ", ".join(f"{v} {k.lower()}" for k, v in kinds_count.items())
-                      + f". Gộp {auto} bản ghi trùng hoàn toàn (cùng tên, địa chỉ và tọa độ). Từ tệp bencang chỉ lấy bến cảng."
+                      + (f". Gộp {auto} bản ghi trùng hoàn toàn (cùng tên, địa chỉ và tọa độ)." if auto else "")
+                      + (f". {shifted} bản ghi trùng hoàn toàn được giữ riêng, dịch 10 m về phía đông." if shifted else "")
+                      + " Từ tệp bencang chỉ lấy bến cảng."
                       + f" {len(depots)}/{len(depots) + len(unmatched)} kho trong Phụ lục 2 được ghép với điểm trên bản đồ và có thêm bán kính 3, 5, 10 km."),
         "scope_note": cfg["output"]["scope_note"],
         "depots_unmatched": [{"stt": u["stt"], "ten_kho": u["ten_kho"], "dung_tich_m3": u["dung_tich_m3"]} for u in unmatched],

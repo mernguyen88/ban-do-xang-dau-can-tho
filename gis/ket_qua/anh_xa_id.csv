@@ -127,7 +127,7 @@ tram,51,52,TXD0052,giu,Công ty TNHH Thương mại và Vận tải Dầu khí �
 tram,52,53,TXD0053,giu,Công ty TNHH Xăng dầu Nhật Đoan
 tram,53,54,TXD0054,giu,Doanh nghiệp tư nhân Duy Tín
 tram,54,55,TXD0055,giu,Doanh nghiệp tư nhân Thuận Tâm
-tram,55,56,TXD0055,gop_vao,Doanh nghiệp tư nhân Thuận Tâm
+tram,55,56,TXD0056,giu,Doanh nghiệp tư nhân Thuận Tâm
 tram,56,57,TXD0057,giu,Doanh nghiệp tư nhân Xăng dầu Hậu Giang
 tram,57,58,TXD0058,giu,Doanh nghiệp tư nhân Xăng dầu Ngọc Nhi
 tram,58,59,TXD0059,giu,Chi nhánh 3 - Cty TNHH.DVTH 99 tại Cần Thơ
@@ -267,7 +267,7 @@ tram,191,192,TXD0192,giu,Công ty TNHH MTV KS Ngọc Lan
 tram,192,193,TXD0193,giu,Công ty TNHH Xăng dầu 5A
 tram,193,194,TXD0194,giu,Công ty TNHH Xăng dầu Bích Thủy
 tram,194,195,TXD0195,giu,Công ty TNHH Xăng dầu Thái Thuận Phong
-tram,195,196,TXD0195,gop_vao,Công ty TNHH Xăng dầu Thái Thuận Phong
+tram,195,196,TXD0196,giu,Công ty TNHH Xăng dầu Thái Thuận Phong
 tram,196,197,TXD0197,giu,Công ty Xăng dầu Tây Nam Bộ - Chi nhánh Xăng dầu Sóc Trăng (Cửa hàng Số 9)
 tram,197,198,TXD0198,giu,Cửa hàng bán lẻ Xăng dầu 30/4
 tram,198,199,TXD0199,giu,Cửa hàng bán lẻ Xăng dầu Địa điểm kinh doanh Số 2 - Công ty TNHH Dầu khí Huỳnh Như
@@ -485,7 +485,7 @@ tram,409,410,TXD0410,giu,Công tyTNHH MTV nhiên liệu Tây Đô – Trạm Xă
 tram,410,411,TXD0411,giu,Cửa hàng Xăng dầu Cái Tắc
 tram,411,412,TXD0412,giu,Cửa hàng Xăng dầu Ngã Sáu
 tram,412,413,TXD0413,giu,Cửa hàng Xăng dầu Số 1
-tram,413,414,TXD0413,gop_vao,Cửa hàng Xăng dầu Số 1
+tram,413,414,TXD0414,giu,Cửa hàng Xăng dầu Số 1
 tram,414,415,TXD0415,giu,Cửa hàng Xăng dầu Số 8
 tram,415,416,TXD0416,giu,Doanh nghiệp tư nhân kinh doanh Xăng dầu Trung Kiên.
 tram,416,417,TXD0417,giu,Petrolimex - Cửa hàng Số 19

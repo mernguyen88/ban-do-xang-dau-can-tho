@@ -11,9 +11,9 @@ Cập nhật: 23/11/2026 (lượt 2). Chủ dự án: Nguyễn Trọng Nguyễn.
 | Nội dung | Trạng thái |
 | --- | --- |
 | 9 vị trí cũ (XD01–XD09) | **Đã xóa** theo yêu cầu; còn trong lịch sử git (commit `706cf05`) |
-| 843 cơ sở xăng dầu | Đã đưa vào: 840 điểm (gộp 3 bản ghi trùng hoàn toàn) |
+| 843 cơ sở xăng dầu | Đã đưa vào đủ 843 điểm; 3 bản ghi trùng hoàn toàn (TXD0056, TXD0196, TXD0414) dịch 10 m về phía đông, ghi trong thuộc tính |
 | 73 bản ghi `bencang` | Chỉ lấy **28 bến cảng** theo yêu cầu; 45 bến phao/phao/rùa neo ghi "loai" trong `gis/ket_qua/anh_xa_id.csv` |
-| Vùng đệm 2 km, bảng ha/%, CSV | Đã có cho 868 điểm, tính từ raster gốc |
+| Vùng đệm 2 km, bảng ha/%, CSV | Đã có cho 871 điểm, tính từ raster gốc |
 | Bảng / Biểu đồ (thanh ngang, ha / %) | Đã có |
 | 3, 5, 10 km cho kho có dung tích (Phụ lục 2) | Đã có cho 7 điểm ghép được; **11 kho chưa có vị trí** (không tự gán) |
 | Tìm kiếm, lọc, tải chi tiết theo điểm, chống phản hồi cũ | Đã có |
@@ -23,7 +23,7 @@ Cập nhật: 23/11/2026 (lượt 2). Chủ dự án: Nguyễn Trọng Nguyễn.
 
 | Tệp | Ghi chú |
 | --- | --- |
-| `dau_vao/Co_so_xang_dau_Can_Tho.*` | 843 điểm, EPSG:4326, trường TEN_DIEM, VI_TRI, TOA_DO, GHI_CHU. Không có trường ID → ID = `TXD` + thứ tự bản ghi (0001–0843). TOA_DO khớp hình học cả 843 bản ghi. 354 bản ghi "Vị trí ước lượng" (353 sau gộp). |
+| `dau_vao/Co_so_xang_dau_Can_Tho.*` | 843 điểm, EPSG:4326, trường TEN_DIEM, VI_TRI, TOA_DO, GHI_CHU. Không có trường ID → ID = `TXD` + thứ tự bản ghi (0001–0843). TOA_DO khớp hình học cả 843 bản ghi. 354 bản ghi "Vị trí ước lượng" . |
 | `dau_vao/bencang.*` | 73 điểm, EPSG:4326. ID = `BC` + thứ tự (01–73). Bến cảng = tên bắt đầu "Bến cảng". |
 | `dau_vao/Hien_trang_2025_7lop_co_rung.tif` | **Không commit** (.gitignore). EPSG:32648, 10 m, uint8, NoData 0, 11723×11953; SHA-256 `f92f71a627e16d15ce874818878b9c260ca4deec30ca3ac2acac0245b31d9303`. Mã 1–7 đều có, không có mã lạ. |
 | `dau_vao/thongtinbosung.docx` | **Không commit** (có tên, điện thoại người đại diện). Bảng Phụ lục 2 đã trích (bỏ cột liên hệ) vào `gis/kho_phu_luc_2_trich.csv`; tổng 449.814 m³ khớp dòng tổng cộng. |
@@ -32,7 +32,7 @@ Thứ tự bản ghi là cơ sở của ID: nếu chủ dự án gửi shapefile
 
 ## Đối chiếu trùng
 
-- Gộp tự động chỉ khi cùng tên + cùng địa chỉ (chuẩn hóa) + cách ≤ 1 m: TXD0055←0056, TXD0195←0196, TXD0413←0414.
+- 3 cặp trùng hoàn toàn (cùng tên + địa chỉ + tọa độ): theo yêu cầu không gộp; TXD0056, TXD0196, TXD0414 dịch 10 m về phía đông (`duplicate_action = "offset"` trong cấu hình). Đặt `"merge"` để gộp lại.
 - 59 nhóm (182 điểm) dùng chung một tọa độ (thường là tâm phường/xã của vị trí ước lượng) nhưng khác tên → **giữ riêng**; vùng đệm và kết quả trùng nhau, giao diện ghi chú "vị trí ước lượng".
 - Danh sách cặp gần nhau/cùng tên: `gis/ket_qua/doi_chieu_trung.csv`. Muốn gộp/tách: ghi `gop`/`rieng` vào `gis/quyet_dinh_trung.csv`, chạy lại.
 
@@ -54,7 +54,7 @@ Thứ tự bản ghi là cơ sở của ID: nếu chủ dự án gửi shapefile
 
 - Vùng đệm tròn 1.440 cạnh trong EPSG:32648; diện tích lớp = giao thực tế ô–vùng đệm; % trên toàn vùng đệm. `qc` (nodata/outside/unknown/missing) chỉ trong JSON.
 - Tái lập 5 bến cảng trùng tọa độ với XD01–XD05 cũ: khác biệt ≤ 6·10⁻¹³ ha mọi lớp.
-- `kiem_tra_nhat_quan.py`: 868 điểm, 889 vùng đệm (868×2 km + 7×3/5/10 km), 0 lỗi.
+- `kiem_tra_nhat_quan.py`: 871 điểm, 892 vùng đệm (871×2 km + 7×3/5/10 km), 0 lỗi.
 - `doi_chieu_doc_lap.py` (polygon hóa raster): nội vùng, mép raster, nhiều NoData, cặp gần nhau 7,8 m, đủ 7 lớp, kho 2–10 km — lệch tối đa 4,5·10⁻⁸ m².
 - `kiem_thu/tuong_tac.py` (Chrome headless): 30/30 đạt — đổi nhanh A→B, đổi bán kính, lỗi tải/ảnh, bỏ chọn, lọc, tìm không dấu, bàn phím, mở lại theo liên kết, điểm ngoài raster, 375 px không tràn ngang.
 - `kiem_thu/do_toc_do.py` (máy chủ cục bộ, không nén): sẵn sàng 0,38 s; 4G chậm mô phỏng 1,16 s; chọn điểm 0,1–0,8 s. Danh mục 148 KB (≈28 KB gzip); chi tiết 1 điểm 12–47 KB gzip; tổng dữ liệu tĩnh ≈ 72 MB (33 MB JSON + 39 MB PNG) nhưng chỉ tải theo điểm được chọn.
@@ -75,3 +75,9 @@ Logo CTU nguyên bản; trắng–xanh `#1C57A5`/`#00AFEF`; bản đồ trái/k�
 1. Chủ dự án xác nhận bảng ghép kho (đặc biệt STT 4) và cung cấp tọa độ 11 kho chưa ghép.
 2. 353 vị trí ước lượng: nếu có tọa độ chính xác hơn, thay trong shapefile và chạy lại.
 3. Nếu dung lượng repo trở thành vấn đề, có thể giảm PNG (ví dụ `max_png_px`) hoặc lưu vùng đệm dạng tham số.
+
+## Lượt 3 (23/11/2026)
+
+- Ký hiệu điểm: trạm xăng dầu (ô vuông xanh, bơm xăng), bến cảng (tròn xanh lơ, mỏ neo). Chú giải chỉ còn 2 loại điểm + vùng chồng lấn; "kho có dung tích" và "vị trí ước lượng" chỉ hiện trong thuộc tính.
+- Khi chọn điểm: phần giao giữa vùng đệm đang xem và vùng đệm 2 km của các điểm lân cận được tô sọc nhẹ (tính trong trình duyệt, đa giác 128 cạnh, chỉ để hiển thị; không ảnh hưởng diện tích). Thuộc tính ghi số vùng đệm chồng lấn.
+- Bỏ dòng "Ghép với điểm bản đồ" khỏi giao diện (căn cứ ghép vẫn trong `gis/kho_phu_luc_2.csv` và JSON chi tiết).

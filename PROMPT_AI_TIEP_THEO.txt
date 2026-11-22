@@ -1,6 +1,6 @@
 Hãy tiếp tục dự án bản đồ WebGIS Cần Thơ trong repo https://github.com/mernguyen88/ban-do-xang-dau-can-tho (website https://mernguyen88.github.io/ban-do-xang-dau-can-tho/), không tạo website khác.
 
-Đọc BAN_GIAO_AI.md và README.md trước. Dữ liệu hiện tại: 868 điểm (840 cơ sở xăng dầu + 28 bến cảng), vùng đệm 2 km; 7 kho trong Phụ lục 2 có thêm 3/5/10 km. Quy trình GIS chạy lại được trong gis/ (kiem_ke → hop_nhat_diem → tinh_dien_tich → kiem_tra_nhat_quan → doi_chieu_doc_lap).
+Đọc BAN_GIAO_AI.md và README.md trước. Dữ liệu hiện tại: 871 điểm (843 cơ sở xăng dầu + 28 bến cảng), vùng đệm 2 km; 7 kho trong Phụ lục 2 có thêm 3/5/10 km. Quy trình GIS chạy lại được trong gis/ (kiem_ke → hop_nhat_diem → tinh_dien_tich → kiem_tra_nhat_quan → doi_chieu_doc_lap).
 
 Raster gốc Hien_trang_2025_7lop_co_rung.tif và thongtinbosung.docx KHÔNG nằm trong repo; cần người dùng đính kèm vào dau_vao/ trước khi tính lại.
 

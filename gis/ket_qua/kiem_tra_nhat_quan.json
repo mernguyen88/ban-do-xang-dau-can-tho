@@ -1,5 +1,5 @@
 {
- "points": 868,
+ "points": 871,
  "errors": [],
  "rows": [
   {
@@ -547,6 +547,16 @@
    "radius": 2000,
    "area_ha": 1256.6330740070146,
    "geom_ha": 1256.6329985770146,
+   "valid_ha": 1256.6330740070127,
+   "coverage_percent": 99.99999999999986,
+   "outside_ha": 0.0,
+   "classes_present": 6
+  },
+  {
+   "id": "TXD0056",
+   "radius": 2000,
+   "area_ha": 1256.6330740070146,
+   "geom_ha": 1256.6329711479084,
    "valid_ha": 1256.6330740070127,
    "coverage_percent": 99.99999999999986,
    "outside_ha": 0.0,
@@ -1938,6 +1948,16 @@
    "area_ha": 1256.6330740070146,
    "geom_ha": 1256.6331833653949,
    "valid_ha": 1256.6330740070118,
+   "coverage_percent": 99.99999999999977,
+   "outside_ha": 0.0,
+   "classes_present": 6
+  },
+  {
+   "id": "TXD0196",
+   "radius": 2000,
+   "area_ha": 1256.6330740070146,
+   "geom_ha": 1256.6330923424048,
+   "valid_ha": 1256.6330740070116,
    "coverage_percent": 99.99999999999977,
    "outside_ha": 0.0,
    "classes_present": 6
@@ -4137,6 +4157,16 @@
    "radius": 2000,
    "area_ha": 1256.6330740070146,
    "geom_ha": 1256.6333722160573,
+   "valid_ha": 1256.633074007012,
+   "coverage_percent": 99.9999999999998,
+   "outside_ha": 0.0,
+   "classes_present": 6
+  },
+  {
+   "id": "TXD0414",
+   "radius": 2000,
+   "area_ha": 1256.6330740070146,
+   "geom_ha": 1256.6331146090065,
    "valid_ha": 1256.633074007012,
    "coverage_percent": 99.9999999999998,
    "outside_ha": 0.0,

@@ -1,6 +1,6 @@
 # Bản đồ cơ sở xăng dầu Cần Thơ
 
-Website tra cứu hiện trạng sử dụng đất năm 2025 quanh **868 vị trí**: 840 cơ sở xăng dầu và 28 bến cảng, tính từ raster hiện trạng gốc 10 m. 9 vị trí cũ đã được bỏ theo yêu cầu (lượt 23/11/2026).
+Website tra cứu hiện trạng sử dụng đất năm 2025 quanh **871 vị trí**: 843 cơ sở xăng dầu và 28 bến cảng, tính từ raster hiện trạng gốc 10 m. 9 vị trí cũ đã được bỏ theo yêu cầu (lượt 23/11/2026).
 
 - Bấm một điểm: chỉ hiện **một** vùng đệm, ảnh hiện trạng trong vùng đệm và bảng/biểu đồ diện tích (ha, %) của điểm đó.
 - Mọi điểm có vùng đệm **2 km**. 7 điểm được ghép với kho có dung tích trong **Phụ lục 2** có thêm **3, 5, 10 km**.
@@ -11,12 +11,12 @@ Website tra cứu hiện trạng sử dụng đất năm 2025 quanh **868 vị t
 
 | Nguồn | Bản ghi | Dùng |
 | --- | --- | --- |
-| `dau_vao/Co_so_xang_dau_Can_Tho.shp` (WGS84) | 843 | 840 (gộp 3 bản ghi trùng hoàn toàn cùng tên + địa chỉ + tọa độ) |
+| `dau_vao/Co_so_xang_dau_Can_Tho.shp` (WGS84) | 843 | 843 (3 bản ghi trùng hoàn toàn được giữ, bản sau dịch 10 m về phía đông theo yêu cầu) |
 | `dau_vao/bencang.shp` (WGS84) | 73 | 28 bến cảng (bỏ 45 bến phao/phao/rùa neo theo yêu cầu) |
 | `Hien_trang_2025_7lop_co_rung.tif` | EPSG:32648, 10 m, NoData 0 | SHA-256 `f92f71a6…9303`; **không đưa lên kho** — đặt vào `dau_vao/` khi chạy lại |
 | Phụ lục 2 (`thongtinbosung.docx`) | 18 kho | 7 kho ghép được với điểm bản đồ (`gis/kho_phu_luc_2.csv`); 11 kho không có vị trí |
 
-Lưu ý: 353 điểm ghi "Vị trí ước lượng" trong nguồn, nhiều điểm dùng chung tâm phường/xã; 3 bến cảng Duyên Hải nằm ngoài phạm vi raster (không tính diện tích). Giao diện ghi rõ các trường hợp này.
+Lưu ý: 354 điểm ghi "Vị trí ước lượng" trong nguồn, nhiều điểm dùng chung tâm phường/xã; 3 bến cảng Duyên Hải nằm ngoài phạm vi raster (không tính diện tích). Giao diện ghi rõ các trường hợp này.
 
 ## Phương pháp
 

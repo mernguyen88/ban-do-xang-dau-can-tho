@@ -14,7 +14,7 @@ async def state(pg):
       det: document.getElementById('map').dataset.detailStation || null,
       name: document.getElementById('locationName').textContent,
       tag: document.getElementById('locationTag').textContent,
-      buffers: document.querySelectorAll('.leaflet-boundary-pane path').length,
+      buffers: document.querySelectorAll('.leaflet-boundary-pane path:not(.overlap-hatch)').length,
       images: [...document.querySelectorAll('.leaflet-classified-pane img')].map(i => i.src.split('/').pop()),
       rows: [...document.querySelectorAll('#areaRows tr')].map(r => [...r.children].map(td => td.textContent)),
       chartStation: document.getElementById('chart').dataset.station || null,
@@ -28,7 +28,7 @@ async def state(pg):
 
 async def main():
     async with async_playwright() as p:
-        b = await p.chromium.launch(args=['--no-sandbox'])
+        b = await p.chromium.launch(args=['--no-sandbox'], **({'executable_path': '/usr/bin/google-chrome'} if __import__('os').path.exists('/usr/bin/google-chrome') else {}))
         ctx = await b.new_context(viewport={'width': 1366, 'height': 820}, accept_downloads=True)
         pg = await ctx.new_page()
         errs = []; pg.on('pageerror', lambda e: errs.append(str(e)))
@@ -170,8 +170,8 @@ async def main():
         check('điểm ngoài raster: không hiện bảng/biểu đồ số 0, có ghi chú', all(vis) and 'ngoài phạm vi raster' in note and not st['images'])
         est_id = next(p[0] for p in cat['points'] if p[6])
         await pg.evaluate(f"location.hash='#{est_id}'"); await pg.wait_for_selector(f'#map[data-detail-station={est_id}]')
-        fl = await pg.text_content('#flagNotes')
-        check('vị trí ước lượng có ghi chú', 'ước lượng' in fl, est_id)
+        fl = await pg.text_content('#depotInfo')
+        check('vị trí ước lượng hiện trong thuộc tính', 'Ước lượng' in fl, est_id)
         await pg.click('#showList'); await pg.select_option('#kindFilter', '__depot'); await pg.wait_for_timeout(100)
         cnt = await pg.locator('#stationList [data-station]').count()
         check('lọc kho có dung tích', cnt == cat['depot_count'], str(cnt))

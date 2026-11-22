@@ -162,6 +162,26 @@ def main(argv=None):
                       "ten_a": a_["name"], "ten_b": b_["name"], "dia_chi_a": a_["address"], "dia_chi_b": b_["address"],
                       "vi_tri_a": a_["position_quality"], "vi_tri_b": b_["position_quality"]})
 
+    # Trùng hoàn toàn + duplicate_action = "offset": giữ riêng, dịch bản ghi sau về phía đông
+    offset_notes = []
+    if dd.get("duplicate_action") == "offset":
+        step = float(dd.get("duplicate_offset_m", 10.0))
+        shift_count = defaultdict(int)
+        to_wgs = chung.transformer(calc, "EPSG:4326")
+        for p in pairs:
+            if p["phan_loai"] != "tu_dong_gop":
+                continue
+            later = by_id[p["id_b"]] if order[p["id_b"]] > order[p["id_a"]] else by_id[p["id_a"]]
+            shift_count[p["id_a"]] += 1
+            k = shift_count[p["id_a"]]
+            later["x_m"] += step * k
+            lon, lat = to_wgs.transform(later["x_m"], later["y_m"])
+            later["lon"], later["lat"] = round(float(lon), 7), round(float(lat), 7)
+            later["coord_note"] = f"dịch {step * k:g} m về phía đông (trùng hoàn toàn {p['id_a']})"
+            p["phan_loai"] = "trung_hoan_toan_dich_toa_do"
+            p["quyet_dinh"] = f"giữ riêng, dịch {later['id']} {step * k:g} m"
+            offset_notes.append(f"- {later['id']} dịch {step * k:g} m đông (trùng {p['id_a']}): {later['name']} · {later['address']}")
+
     decisions = read_decisions(dd.get("decisions"))
     parent = {i: i for i in ids}
 
@@ -175,6 +195,8 @@ def main(argv=None):
         dec = decisions.get(key, {})
         q = dec.get("quyet_dinh", "")
         merge = (p["phan_loai"] == "tu_dong_gop" and q != "rieng") or q == "gop"
+        if p["phan_loai"] == "trung_hoan_toan_dich_toa_do":
+            continue
         p["quyet_dinh"] = q or ("gop (tự động)" if p["phan_loai"] == "tu_dong_gop" else "giữ riêng (chưa có quyết định)")
         if merge:
             ra, rb = find(p["id_a"]), find(p["id_b"])
@@ -229,7 +251,8 @@ def main(argv=None):
         kept = sum(1 for x in id_map if x["source"] == m["key"] and x["trang_thai"] == "giu")
         L.append(f"| {m['label']} | {m['name']} | `{m['sha256'][:12]}…` | {m['crs']} | {m['records']} | {dropped} | {merged} | {kept} |")
     L += ["", f"**Tổng điểm cuối cùng: {len(final)}** (" + ", ".join(f"{k}: {v}" for k, v in kinds.items()) + ")", ""]
-    L += [f"- Cặp gộp tự động (cùng tên + cùng địa chỉ + ≤ {dd['auto_merge_m']} m): {cnt['tu_dong_gop']}",
+    L += [f"- Cặp trùng hoàn toàn (cùng tên + cùng địa chỉ + ≤ {dd['auto_merge_m']} m): {cnt['tu_dong_gop'] + cnt['trung_hoan_toan_dich_toa_do']} "
+          f"({'giữ riêng, dịch tọa độ' if offset_notes else 'gộp'})",
           f"- Cặp cùng tên nhưng khác vị trí (≤ {dd['review_same_name_m']} m), giữ riêng: {cnt['cung_ten_khac_vi_tri']}",
           f"- Cặp khác tên cách ≤ {dd['review_m']} m, giữ riêng: {cnt['gan_nhau_khac_ten']}",
           f"- Quyết định người dùng đã áp dụng: {sum(1 for p in pairs if tuple(sorted((p['id_a'], p['id_b']))) in decisions)}",
@@ -241,6 +264,8 @@ def main(argv=None):
         reasons[(d["source"], d["ly_do"])] += 1
     for (src, why), n in reasons.items():
         L.append(f"  - {src}: {n} bản ghi — {why}")
+    if offset_notes:
+        L += ["", "## Bản ghi trùng hoàn toàn: giữ riêng, dịch tọa độ (theo yêu cầu chủ dự án)", ""] + offset_notes
     L += ["", "## Cặp gộp tự động", ""]
     for p in pairs:
         if p["phan_loai"] == "tu_dong_gop":

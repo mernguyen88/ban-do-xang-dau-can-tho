@@ -55,8 +55,12 @@ description_field = "descriptio"
 quality_field = ""
 
 [dedupe]
-# Gộp tự động chỉ khi CÙNG tên (bỏ dấu, chữ thường) + CÙNG địa chỉ + cách ≤ 1 m.
+# Bản ghi trùng hoàn toàn: CÙNG tên (bỏ dấu, chữ thường) + CÙNG địa chỉ + cách ≤ 1 m.
 auto_merge_m = 1.0
+# Theo yêu cầu chủ dự án (23/11/2026): KHÔNG gộp, giữ đủ 843 trạm; bản ghi sau
+# của mỗi cặp được dịch 10 m về phía đông (trong UTM) và ghi chú trong thuộc tính.
+duplicate_action = "offset"   # "merge" | "offset"
+duplicate_offset_m = 10.0
 review_m = 25                 # cặp khác tên cách ≤ 25 m: liệt kê để xem (giữ riêng)
 review_same_name_m = 2000     # cùng tên cách ≤ 2 km: liệt kê để xem (giữ riêng)
 decisions = "gis/quyet_dinh_trung.csv"

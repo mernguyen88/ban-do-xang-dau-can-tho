@@ -1,10 +1,10 @@
 {
- "points": 868,
- "catalog_bytes": 147587,
+ "points": 871,
+ "catalog_bytes": 147998,
  "detail_bytes_max": 148398,
- "detail_bytes_total": 32131309,
- "version": "e7258c165a22",
- "images": 763,
- "image_bytes_total": 39107258,
+ "detail_bytes_total": 32238775,
+ "version": "e7f80016ae46",
+ "images": 766,
+ "image_bytes_total": 39230496,
  "images_removed": 0
 }
