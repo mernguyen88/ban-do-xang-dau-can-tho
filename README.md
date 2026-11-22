@@ -10,7 +10,7 @@ Bấm một vị trí để xem vùng đệm 2 km, hiện trạng bên trong, b�
 - Gộp các bản ghi trùng tên và tọa độ. Bến phao cùng tên nhưng khác tọa độ được giữ riêng.
 - Vùng đệm 2.000 m trong UTM 48N; 1.440 cạnh. Diện tích ô biên tính theo phần giao với vùng đệm.
 - Tỷ lệ tính trên toàn vùng đệm, bao gồm phần thiếu dữ liệu.
-- Mã 7 là rừng bổ sung theo raster nguồn.
+- Mã 7 hiển thị là Rừng; chỉ đổi tên lớp theo yêu cầu, giữ nguyên mã và số liệu.
 - Các vùng đệm chồng lấn; không cộng trực tiếp để suy ra diện tích duy nhất.
 - Các kết quả đã được kiểm tra độc lập bằng cách chuyển raster sang polygon và giao với từng vùng đệm.
 
@@ -25,3 +25,7 @@ Leaflet 1.9.4 đi kèm giấy phép trong assets/LEAFLET-LICENSE.txt. Bản đ�
 ## Giao diện
 
 Logo Đại học Cần Thơ do chủ dự án cung cấp, giữ nguyên tỷ lệ và màu. Giao diện nền trắng, màu xanh theo logo; font Be Vietnam Pro và Noto Sans hỗ trợ tiếng Việt, lưu cùng website. Không khẳng định đây là trang xuất bản chính thức của trường.
+
+## Bàn giao để phát triển tiếp
+
+Đọc [BAN_GIAO_AI.md](BAN_GIAO_AI.md), đưa [PROMPT_AI_TIEP_THEO.txt](PROMPT_AI_TIEP_THEO.txt) cho AI tiếp theo và kiểm tra các tệp đầu vào trước khi thêm dữ liệu. Kế hoạch bổ sung 843 trạm và 73 bến cảng cùng biểu đồ chưa được triển khai trong bản này.

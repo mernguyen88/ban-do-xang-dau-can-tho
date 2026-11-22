@@ -1,0 +1,16 @@
+Hãy tiếp tục dự án bản đồ WebGIS Cần Thơ trong gói mã tôi gửi, không tạo website khác từ đầu.
+
+Đọc BAN_GIAO_AI.md trước. Repo: https://github.com/mernguyen88/ban-do-xang-dau-can-tho ; website: https://mernguyen88.github.io/ban-do-xang-dau-can-tho/ . Dự án HTML/CSS/JS thuần và Leaflet, xuất bản GitHub Pages từ main /(root).
+
+Yêu cầu:
+1. Bổ sung bộ 843 trạm xăng dầu và 73 bến cảng từ tệp thật tôi cung cấp. Kiểm tra CRS, tọa độ, mã ID, bản ghi trùng giữa các nguồn và 9 vị trí hiện hành trước khi quyết định tổng cuối cùng. Không tự tạo hoặc suy đoán dữ liệu để đủ số lượng.
+2. Bấm một điểm chỉ hiển thị vùng đệm 2.000 m, hiện trạng sử dụng đất trong vùng và bảng diện tích ha, tỷ lệ từng lớp của điểm đó. Tính diện tích từ raster gốc, xử lý ô biên theo phần giao. Tỷ lệ tính trên toàn diện tích vùng đệm; không tự chuẩn hóa tổng 7 lớp lên 100%.
+3. Thêm chế độ Bảng / Biểu đồ; biểu đồ thanh ngang diện tích ha cho 7 loại đất, cùng màu và dữ liệu với bảng, cập nhật khi đổi điểm. Giữ bảng, CSV và cách xem trên điện thoại.
+4. Mã lớp 7 tên Rừng (đã được đổi trong gói bàn giao), không dùng tên Rừng bổ sung trong giao diện/biểu đồ/CSV. Không hiển thị diện tích thiếu; vẫn theo dõi nội bộ để kiểm tra dữ liệu.
+5. Giữ logo CTU nguyên bản, tông trắng–xanh, bố cục tra cứu gọn. Không làm lại thành landing page có thẻ KPI/gradient hoặc hiệu ứng dày đặc.
+6. Tối ưu để dùng bộ điểm lớn: danh mục nhẹ, tải chi tiết/ảnh theo điểm, tìm kiếm và lọc loại cơ sở, xử lý phản hồi cũ khi đổi điểm nhanh. Không tải đồng thời mọi ảnh/vùng đệm và không tính toàn raster trong trình duyệt.
+7. Tạo quy trình tiền xử lý GIS có thể chạy lại; kiểm tra số liệu và tương tác, rồi cập nhật repo/website hiện tại khi có quyền. Nếu chưa có quyền GitHub, bàn giao mã và hướng dẫn chạy/xuất bản cụ thể, không nói đã xuất bản.
+
+Trước tiên hãy kiểm kê các tệp nhận được và chỉ ra tệp còn thiếu. Raster gốc Hien_trang_2025_7lop_co_rung.tif KHÔNG nằm trong gói mã; PNG và bảng JSON tính sẵn không thay thế raster gốc để phân tích vị trí mới. Chưa có tệp 843 trạm và 73 bến cảng trong gói này. Có thể làm biểu đồ ngay từ dữ liệu thật 9 vị trí sẵn có trong khi chờ các tệp GIS còn thiếu.
+
+Không bịa số liệu, tọa độ, số lượng đã xử lý hoặc kết quả kiểm thử. Hãy tiến hành các phần đủ dữ liệu, báo ngắn gọn phần thiếu và bàn giao đầy đủ mã cùng cách tái lập.

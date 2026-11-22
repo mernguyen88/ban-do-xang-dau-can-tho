@@ -73,7 +73,7 @@
   }
   async function init() {
     if (!window.L) throw new Error('Chưa tải được thư viện bản đồ. Hãy tải lại trang.');
-    const response = await fetch('data/stations.json');
+    const response = await fetch('data/stations.json?v=20261123-rung');
     if (!response.ok) throw new Error('Chưa tải được dữ liệu vị trí. Hãy tải lại trang.');
     data = await response.json();
     if (!data.stations?.length) throw new Error('Chưa có vị trí trong bộ dữ liệu.');
