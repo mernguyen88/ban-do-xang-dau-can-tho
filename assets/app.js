@@ -1,5 +1,7 @@
 'use strict';
 (() => {
+  const V = window.Vietflex;
+  const BASEMAP = 'osm';          // 'osm' | 'google-legacy' — nền bản đồ
   const $ = id => document.getElementById(id);
   const num = new Intl.NumberFormat('vi-VN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const tickNum = new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 2 });
@@ -81,14 +83,14 @@
   const ICON_TRAM = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="5" fill="#1c57a5" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="5" width="8" height="14" rx="1.3" fill="#fff"/><rect x="7.2" y="7" width="4.6" height="3.6" fill="#1c57a5"/><path d="M13.5 9.5h1.6c.7 0 1.2.5 1.2 1.2v5c0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2V9.2L16.8 7" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   const ICON_PORT = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0a86b8" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="6.6" r="1.8" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M12 8.4v10M8.6 11.2h6.8M6.2 13.2a5.8 5.8 0 0 0 11.6 0" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>');
   const iconFor = p => p.kind === 'Bến cảng'
-    ? L.divIcon({ className: 'pt pt-port', iconSize: [24, 24], iconAnchor: [12, 12], html: '' })
-    : L.divIcon({ className: 'pt pt-tram', iconSize: [19, 19], iconAnchor: [9.5, 9.5], html: '' });
+    ? new V.DivIcon({ className: 'pt pt-port', iconSize: [24, 24], iconAnchor: [12, 12], html: '' })
+    : new V.DivIcon({ className: 'pt pt-tram', iconSize: [19, 19], iconAnchor: [9.5, 9.5], html: '' });
   function buildMarkers() {
     document.documentElement.style.setProperty('--icon-tram', `url("${ICON_TRAM}")`);
     document.documentElement.style.setProperty('--icon-port', `url("${ICON_PORT}")`);
-    markerLayer = L.layerGroup().addTo(map);
+    markerLayer = new V.LayerGroup().addTo(map);
     for (const p of points) {
-      const m = L.marker([p.lat, p.lon], { icon: iconFor(p), keyboard: false, title: '', riseOnHover: true, zIndexOffset: p.kind === 'Bến cảng' ? 200 : 0 });
+      const m = new V.Marker([p.lat, p.lon], { icon: iconFor(p), keyboard: false, title: '', riseOnHover: true, zIndexOffset: p.kind === 'Bến cảng' ? 200 : 0 });
       m.bindTooltip(`${escapeHTML(p.id)} · ${escapeHTML(p.name)}`, { direction: 'top', offset: [0, -11] });
       m.on('click', () => choose(p.id));
       markers.set(p.id, m); markerLayer.addLayer(m);
@@ -137,7 +139,7 @@
       const lens = clip(circlePoly(x, y, NEIGHBOR_R), self);
       if (lens.length > 2) { lenses.push(lens.map(toLL)); n++; }
     }
-    if (lenses.length) overlapLayer = L.polygon(lenses, { pane: 'boundary', interactive: false, className: 'overlap-hatch', weight: 0.7, color: '#1c57a5', opacity: 0.35, fillOpacity: 1 }).addTo(map);
+    if (lenses.length) overlapLayer = new V.Polygon(lenses, { pane: 'boundary', interactive: false, className: 'overlap-hatch', weight: 0.7, color: '#1c57a5', opacity: 0.35, fillOpacity: 1 }).addTo(map);
     return n;
   }
 
@@ -169,7 +171,7 @@
     clearSelection();
     const list = filtered.length ? filtered : points;
     if (list.length === 1) map.setView([list[0].lat, list[0].lon], 14, { animate: false });
-    else map.fitBounds(L.latLngBounds(list.map(p => [p.lat, p.lon])).pad(.18), { animate: false, maxZoom: 13 });
+    else map.fitBounds(new V.LatLngBounds(list.map(p => [p.lat, p.lon])).pad(.18), { animate: false, maxZoom: 13 });
   }
   function detailUrl(id) { return `data/details/${encodeURIComponent(id)}.json?v=${catalog.version}`; }
   function loadDetail(id, signal) {
@@ -233,7 +235,7 @@
     clearLayers();
     $('radiusLabel').textContent = `${new Intl.NumberFormat('vi-VN').format(radius)} m`;
     document.querySelectorAll('[data-radius]').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.radius) === radius)));
-    buffer = L.geoJSON(r.buffer, { pane: 'boundary', interactive: false, style: { color: '#1c57a5', weight: 2, opacity: 1, fillOpacity: 0 } }).addTo(map);
+    buffer = new V.GeoJSON(r.buffer, { pane: 'boundary', interactive: false, style: { color: '#1c57a5', weight: 2, opacity: 1, fillOpacity: 0 } }).addTo(map);
     if (r.image) addImage(d, r); else { $('imageStatus').textContent = ''; $('layerStatus').textContent = ''; }
     drawOverlaps(selected, radius);
     $('layerControls').hidden = !r.image;
@@ -260,7 +262,7 @@
     $('radiusButtons').innerHTML = radii.map(r => `<button type="button" data-radius="${r}" aria-pressed="${r === radius}">${km(r)}</button>`).join('');
   }
   function addImage(d, r) {
-    const current = L.imageOverlay(`${r.image}?v=${catalog.version}`, r.image_bounds, { pane: 'classified', opacity: Number($('opacity').value) / 100, interactive: false, alt: `Hiện trạng sử dụng đất trong bán kính ${km(radius)} quanh ${d.name}` });
+    const current = new V.ImageOverlay(`${r.image}?v=${catalog.version}`, r.image_bounds, { pane: 'classified', opacity: Number($('opacity').value) / 100, interactive: false, alt: `Hiện trạng sử dụng đất trong bán kính ${km(radius)} quanh ${d.name}` });
     image = current;
     $('imageStatus').textContent = ''; $('layerStatus').textContent = 'Đang tải lớp hiện trạng…';
     current.on('load', () => { if (image === current) $('layerStatus').textContent = ''; });
@@ -390,7 +392,7 @@
   }
 
   async function init() {
-    if (!window.L) throw new Error('Chưa tải được thư viện bản đồ. Hãy tải lại trang.');
+    if (!window.Vietflex) throw new Error('Chưa tải được thư viện bản đồ. Hãy tải lại trang.');
     const response = await fetch('data/catalog.json', { cache: 'no-cache' });
     if (!response.ok) throw new Error('Chưa tải được danh mục vị trí. Hãy tải lại trang.');
     catalog = await response.json();
@@ -408,15 +410,17 @@
     els.kind.innerHTML = '<option value="">Tất cả loại</option>' + catalog.kinds.map(k => `<option value="${escapeHTML(k.name)}">${escapeHTML(k.name)} (${k.count})</option>`).join('');
     els.kind.disabled = false; els.search.disabled = false;
 
-    map = L.map('map', { zoomControl: false, minZoom: 7, maxZoom: 20, scrollWheelZoom: true, attributionControl: true, preferCanvas: false });
+    map = new V.VietflexMap('map', { googleMaps: BASEMAP !== 'osm', useLegacyGoogleTiles: BASEMAP === 'google-legacy', googleMapType: 'roadmap', zoomControl: false, minZoom: 7, maxZoom: 20, scrollWheelZoom: true, attributionControl: true, preferCanvas: false });
     map.createPane('classified').style.zIndex = 350;
     map.createPane('boundary').style.zIndex = 410;
-    L.control.zoom({ position: 'topright' }).addTo(map);
-    L.control.scale({ imperial: false, position: 'bottomright', maxWidth: 120 }).addTo(map);
+    new V.ZoomControl({ position: 'topright' }).addTo(map);
+    new V.ScaleControl({ imperial: false, position: 'bottomright', maxWidth: 120 }).addTo(map);
     let tileErrors = 0, tileLoads = 0;
-    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>', maxZoom: 19, maxNativeZoom: 19 }).addTo(map);
-    tiles.on('tileerror', () => { tileErrors++; if (tileErrors > 3 && !tileLoads) { $('mapError').hidden = false; $('mapError').textContent = 'Bản đồ nền chưa tải được. Các vị trí, vùng đệm và hiện trạng vẫn sử dụng được.'; } });
-    tiles.on('tileload', () => { tileLoads++; $('mapError').hidden = true; });
+    const tiles = BASEMAP === 'osm'
+      ? new V.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>', maxZoom: 19, maxNativeZoom: 19 }).addTo(map)
+      : map.baseLayer;
+    tiles?.on('tileerror', () => { tileErrors++; if (tileErrors > 3 && !tileLoads) { $('mapError').hidden = false; $('mapError').textContent = 'Bản đồ nền chưa tải được. Các vị trí, vùng đệm và hiện trạng vẫn sử dụng được.'; } });
+    tiles?.on('tileload', () => { tileLoads++; $('mapError').hidden = true; });
     buildMarkers();
 
     $('stationList').addEventListener('click', e => { const t = e.target.closest('[data-station]'); if (t) choose(t.dataset.station, { focus: true }); });
