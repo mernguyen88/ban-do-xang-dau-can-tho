@@ -1,4 +1,4 @@
-# Bản đồ cơ sở xăng dầu Cần Thơ
+# Bản đồ rủi ro tràn dầu trên địa bàn Thành phố Cần Thơ
 
 Website tra cứu hiện trạng sử dụng đất năm 2025 quanh **871 vị trí**: 843 cơ sở xăng dầu và 28 bến cảng, tính từ raster hiện trạng gốc 10 m. 9 vị trí cũ đã được bỏ theo yêu cầu (lượt 23/11/2026).
 
