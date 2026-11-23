@@ -4,7 +4,7 @@
 [raster]
 path = "dau_vao/Hien_trang_2025_7lop_co_rung.tif"     # không đưa lên kho (xem .gitignore)
 expected_sha256 = "f92f71a627e16d15ce874818878b9c260ca4deec30ca3ac2acac0245b31d9303"
-class_table = "input_templates/bang_ma_lop.csv"
+class_table = "gis/bang_ma_lop.csv"
 year = 2025
 
 [buffer]

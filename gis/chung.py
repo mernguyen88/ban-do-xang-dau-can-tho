@@ -32,7 +32,7 @@ def load_config(path: str | Path) -> dict:
         q = Path(p)
         return q if q.is_absolute() else (ROOT / q)
     cfg["raster"]["path"] = resolve(cfg["raster"]["path"])
-    cfg["raster"]["class_table"] = resolve(cfg["raster"].get("class_table", "input_templates/bang_ma_lop.csv"))
+    cfg["raster"]["class_table"] = resolve(cfg["raster"].get("class_table", "gis/bang_ma_lop.csv"))
     for s in cfg.get("sources", []):
         s["path"] = resolve(s["path"])
     if cfg.get("depots", {}).get("table"):

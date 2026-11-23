@@ -56,8 +56,8 @@ Thứ tự bản ghi là cơ sở của ID: nếu chủ dự án gửi shapefile
 - Tái lập 5 bến cảng trùng tọa độ với XD01–XD05 cũ: khác biệt ≤ 6·10⁻¹³ ha mọi lớp.
 - `kiem_tra_nhat_quan.py`: 871 điểm, 892 vùng đệm (871×2 km + 7×3/5/10 km), 0 lỗi.
 - `doi_chieu_doc_lap.py` (polygon hóa raster): nội vùng, mép raster, nhiều NoData, cặp gần nhau 7,8 m, đủ 7 lớp, kho 2–10 km — lệch tối đa 4,5·10⁻⁸ m².
-- `kiem_thu/tuong_tac.py` (Chrome headless): 30/30 đạt — đổi nhanh A→B, đổi bán kính, lỗi tải/ảnh, bỏ chọn, lọc, tìm không dấu, bàn phím, mở lại theo liên kết, điểm ngoài raster, 375 px không tràn ngang.
-- `kiem_thu/do_toc_do.py` (máy chủ cục bộ, không nén): sẵn sàng 0,38 s; 4G chậm mô phỏng 1,16 s; chọn điểm 0,1–0,8 s. Danh mục 148 KB (≈28 KB gzip); chi tiết 1 điểm 12–47 KB gzip; tổng dữ liệu tĩnh ≈ 72 MB (33 MB JSON + 39 MB PNG) nhưng chỉ tải theo điểm được chọn.
+- Kiểm thử trình duyệt (Chrome headless, kịch bản đã bỏ khỏi repo ở lượt 5): 31/31 đạt — đổi nhanh A→B, đổi bán kính, lỗi tải/ảnh, bỏ chọn, lọc, tìm không dấu, bàn phím, mở lại theo liên kết, điểm ngoài raster, 375 px không tràn ngang.
+- Đo tốc độ (máy chủ cục bộ, không nén): sẵn sàng 0,38 s; 4G chậm mô phỏng 1,16 s; chọn điểm 0,1–0,8 s. Danh mục 148 KB (≈28 KB gzip); chi tiết 1 điểm 12–47 KB gzip; tổng dữ liệu tĩnh ≈ 72 MB (33 MB JSON + 39 MB PNG) nhưng chỉ tải theo điểm được chọn.
 
 ## Kiến trúc web
 
@@ -88,3 +88,7 @@ Trắng–xanh `#1C57A5`/`#00AFEF`; bản đồ trái/kết quả phải (điệ
 - Bỏ mục lọc "Kho có dung tích", bỏ chân chú giải "Năm 2025 · Độ phân giải 10 m".
 - Dòng "Vị trí: Ước lượng" chỉ hiện ở điểm ước lượng; điểm khác không có dòng này.
 - Hộp "Thông tin dữ liệu" chỉ còn nguồn (Sở Công Thương TPCT; Random Forest trên Sentinel-1/2), độ phân giải, hệ tọa độ và ghi chú vị trí ước lượng. Nội dung sửa trong mục `[info]` của `gis/cau_hinh.toml` rồi chạy `python gis/tinh_dien_tich.py`.
+
+## Lượt 5 (23/11/2026)
+
+- Bỏ `.perfect-ui/`, `plans/`, `kiem_thu/`, `input_templates/` (bảng mã lớp chuyển sang `gis/bang_ma_lop.csv`). Website chỉ cần `index.html`, `assets/`, `data/`, `.nojekyll`; `gis/` và `dau_vao/` để tính lại.
