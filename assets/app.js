@@ -410,7 +410,7 @@
     els.kind.innerHTML = '<option value="">Tất cả loại</option>' + catalog.kinds.map(k => `<option value="${escapeHTML(k.name)}">${escapeHTML(k.name)} (${k.count})</option>`).join('');
     els.kind.disabled = false; els.search.disabled = false;
 
-    map = new V.VietflexMap('map', { googleMaps: BASEMAP !== 'osm', useLegacyGoogleTiles: BASEMAP === 'google-legacy', googleMapType: 'roadmap', zoomControl: false, minZoom: 7, maxZoom: 20, scrollWheelZoom: true, attributionControl: true, preferCanvas: false });
+    map = new V.VietflexMap('map', { googleMaps: BASEMAP !== 'osm', useLegacyGoogleTiles: BASEMAP === 'google-legacy', googleMapType: 'roadmap', zoomControl: false, minZoom: 5, maxZoom: 20, scrollWheelZoom: true, attributionControl: true, preferCanvas: false });
     map.createPane('classified').style.zIndex = 350;
     map.createPane('boundary').style.zIndex = 410;
     new V.ZoomControl({ position: 'topright' }).addTo(map);
@@ -421,6 +421,12 @@
       : map.baseLayer;
     tiles?.on('tileerror', () => { tileErrors++; if (tileErrors > 3 && !tileLoads) { $('mapError').hidden = false; $('mapError').textContent = 'Bản đồ nền chưa tải được. Các vị trí, vùng đệm và hiện trạng vẫn sử dụng được.'; } });
     tiles?.on('tileload', () => { tileLoads++; $('mapError').hidden = true; });
+    // Nhãn chủ quyền: OpenStreetMap không ghi tên hai quần đảo theo cách gọi của Việt Nam
+    map.createPane('labels').style.zIndex = 420;
+    for (const [lat, lon, text] of [[16.45, 111.75, 'Quần đảo Hoàng Sa<br>(Việt Nam)'], [9.9, 114.4, 'Quần đảo Trường Sa<br>(Việt Nam)']]) {
+      new V.Marker([lat, lon], { pane: 'labels', interactive: false, keyboard: false,
+        icon: new V.DivIcon({ className: 'sea-label', iconSize: [170, 40], iconAnchor: [85, 20], html: text }) }).addTo(map);
+    }
     buildMarkers();
 
     $('stationList').addEventListener('click', e => { const t = e.target.closest('[data-station]'); if (t) choose(t.dataset.station, { focus: true }); });

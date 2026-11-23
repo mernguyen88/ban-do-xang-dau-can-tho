@@ -65,3 +65,4 @@ dialog{width:calc(100% - 32px);max-width:620px;max-height:85dvh;padding:0;border
 .site-header{height:auto;min-height:64px;padding-top:10px;padding-bottom:10px}.project-heading{border-left:0;padding-left:0}.project-heading h1{margin:0}
 @media(min-width:801px){.workspace{height:auto}}
 @media(max-width:800px){.site-header{min-height:0;flex-wrap:nowrap;padding:10px 16px}.project-heading{order:0;flex-basis:auto;padding:0}}
+.sea-label{border:0!important;background:none!important;text-align:center;font:italic 600 13px/1.35 'Be Vietnam Pro','Noto Sans',sans-serif;color:#1c57a5;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 2px #fff;white-space:nowrap;pointer-events:none}
