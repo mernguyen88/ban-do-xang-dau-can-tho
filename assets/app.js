@@ -235,8 +235,7 @@
     document.querySelectorAll('[data-radius]').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.radius) === radius)));
     buffer = L.geoJSON(r.buffer, { pane: 'boundary', interactive: false, style: { color: '#1c57a5', weight: 2, opacity: 1, fillOpacity: 0 } }).addTo(map);
     if (r.image) addImage(d, r); else { $('imageStatus').textContent = ''; $('layerStatus').textContent = ''; }
-    const nOver = drawOverlaps(selected, radius);
-    $('overlapRow').innerHTML = `<dt>Chồng lấn</dt><dd>${nOver ? `${nOver} vùng đệm 2 km lân cận (tô sọc trên bản đồ)` : 'Không có'}</dd>`;
+    drawOverlaps(selected, radius);
     $('layerControls').hidden = !r.image;
     renderDetail(d, r);
     map.getContainer().setAttribute('data-radius', String(radius));
@@ -254,9 +253,8 @@
     }
     const est = (d.position_quality || '').toLowerCase().includes('ước lượng');
     if (est) rows.push('<div><dt>Vị trí</dt><dd>Ước lượng</dd></div>');
-    rows.push('<div id="overlapRow"></div>');
     $('depotInfo').innerHTML = rows.join('');
-    $('depotInfo').hidden = false;
+    $('depotInfo').hidden = !rows.length;
     const radii = Object.keys(d.results).map(Number).sort((a, b) => a - b);
     $('radiusPicker').hidden = radii.length < 2;
     $('radiusButtons').innerHTML = radii.map(r => `<button type="button" data-radius="${r}" aria-pressed="${r === radius}">${km(r)}</button>`).join('');
