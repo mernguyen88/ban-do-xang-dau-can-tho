@@ -64,3 +64,13 @@ duplicate_offset_m = 10.0
 review_m = 25                 # cặp khác tên cách ≤ 25 m: liệt kê để xem (giữ riêng)
 review_same_name_m = 2000     # cùng tên cách ≤ 2 km: liệt kê để xem (giữ riêng)
 decisions = "gis/quyet_dinh_trung.csv"
+
+# Nội dung hộp "Thông tin dữ liệu" trên web
+[info]
+estimated_note = "Vị trí ước lượng là vị trí chưa xác định chính xác do thiếu thông tin địa chỉ cụ thể."
+[[info.sources]]
+label = "Vị trí cơ sở xăng dầu và bến cảng"
+text = "Sở Công Thương thành phố Cần Thơ"
+[[info.sources]]
+label = "Hiện trạng năm 2025"
+text = "Phân loại có kiểm soát bằng thuật toán Random Forest trên chuỗi ảnh đa thời gian Sentinel-1 và Sentinel-2"

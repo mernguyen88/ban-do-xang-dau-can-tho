@@ -4,8 +4,8 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#1c57a5"><link rel="icon" href="data:,">
   <meta name="description" content="Tra cứu hiện trạng sử dụng đất năm 2025 quanh các cơ sở xăng dầu, kho xăng dầu và bến cảng tại Cần Thơ.">
   <title>Bản đồ cơ sở xăng dầu Cần Thơ</title>
-  <link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="assets/style.css?v=20261123-r3">
-  <script defer src="assets/leaflet.js"></script><script defer src="assets/app.js?v=20261123-r3"></script>
+  <link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="assets/style.css?v=20261123-r4">
+  <script defer src="assets/leaflet.js"></script><script defer src="assets/app.js?v=20261123-r4"></script>
 </head>
 <body>
   <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
@@ -18,8 +18,7 @@
     <symbol id="i-opacity" viewBox="0 0 24 24"><path d="M12 2S5 10 5 14a7 7 0 0 0 14 0c0-4-7-12-7-12Z"/><path d="M12 7v12a5 5 0 0 0 5-5c0-2-2.5-5.5-5-7Z" fill="currentColor" stroke="none"/></symbol>
   </defs></svg>
   <header class="site-header">
-    <a class="university-logo" href="./" aria-label="Đại học Cần Thơ — về bản đồ tổng quan"><img src="assets/ctu-logo.png" width="1816" height="482" alt="Đại học Cần Thơ — Can Tho University"></a>
-    <div class="project-heading"><h1>Cơ sở xăng dầu Cần Thơ</h1><p>Hiện trạng sử dụng đất trong vùng đệm 2 km; kho có dung tích thêm 3, 5, 10 km</p></div>
+    <div class="project-heading"><h1>Cơ sở xăng dầu Cần Thơ</h1></div>
     <button id="methodButton" aria-label="Thông tin dữ liệu" class="button button-quiet"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Thông tin dữ liệu</span></button>
   </header>
   <div class="toolbar" aria-label="Công cụ bản đồ">
@@ -34,7 +33,7 @@
   </div>
   <main class="workspace">
     <section class="map-shell" aria-label="Bản đồ tương tác"><div id="map" role="region" aria-label="Các cơ sở xăng dầu và vùng đệm 2 km"></div>
-      <details class="map-legend" open><summary><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg>Hiện trạng sử dụng đất</summary><div id="legendRows"></div><div id="kindLegend" class="kind-legend" hidden></div><p>Năm 2025 · Độ phân giải 10 m</p></details>
+      <details class="map-legend" open><summary><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg>Hiện trạng sử dụng đất</summary><div id="legendRows"></div><div id="kindLegend" class="kind-legend" hidden></div></details>
       <div id="mapError" class="map-error" hidden role="alert"></div><button id="mobileResults" class="mobile-results" hidden>Xem kết quả</button>
     </section>
     <aside class="results-panel" aria-label="Danh sách cơ sở và diện tích">
@@ -71,9 +70,7 @@
   <footer class="status-bar"><span id="mapHint">Chọn một cơ sở để xem vùng đệm, bảng và biểu đồ diện tích.</span><span id="layerStatus" role="status"></span><span class="projection">Hiện trạng 2025 · 10 m · WGS 84 / UTM 48N</span></footer>
   <dialog id="methodDialog" aria-labelledby="methodTitle"><div class="dialog-heading"><h2 id="methodTitle">Thông tin dữ liệu</h2><button id="closeDialog" class="icon-button" aria-label="Đóng thông tin"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
     <div class="dialog-body"><h3>Nguồn dữ liệu</h3><dl id="sourceList" class="source-list"></dl>
-      <h3>Vị trí khảo sát</h3><p id="selectionMethod"></p><p id="scopeNote"></p><p id="estimatedNote"></p><div id="depotNote"></div>
-      <h3>Cách tính diện tích</h3><p id="areaMethod"></p><p>Tỷ lệ từng lớp sử dụng diện tích toàn vùng đệm làm mẫu số. Ảnh hiển thị không được dùng để tính bảng diện tích. Các vùng đệm có thể chồng lấn.</p>
-      <h3>Quy ước phân loại</h3><p>Bảng giữ nguyên bảy loại đất của raster nguồn. Mã 7 hiển thị là Rừng. Chỉ thống kê các ô có giá trị phân loại; tổng các lớp có thể nhỏ hơn diện tích vùng đệm.</p>
+      <h3>Vị trí khảo sát</h3><p id="estimatedNote"></p>
     </div>
   </dialog><noscript>Vui lòng bật JavaScript để sử dụng bản đồ.</noscript>
 </body>

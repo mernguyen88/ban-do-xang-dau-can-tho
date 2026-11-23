@@ -61,3 +61,7 @@ dialog{width:calc(100% - 32px);max-width:620px;max-height:85dvh;padding:0;border
 .pt-legend{width:16px;height:16px;flex:none;background:center/contain no-repeat}.pt-legend.pt-tram{background-image:var(--icon-tram)}.pt-legend.pt-port{background-image:var(--icon-port)}
 .leaflet-boundary-pane path.overlap-hatch{fill:url(#hatch);fill-opacity:.55}
 .hatch-legend{width:16px;height:12px;flex:none;border:1px solid #1c57a5;background:repeating-linear-gradient(45deg,#1c57a5 0 1px,transparent 1px 5px);opacity:.75}
+/* Lượt 4: đầu trang không logo */
+.site-header{height:auto;min-height:64px;padding-top:10px;padding-bottom:10px}.project-heading{border-left:0;padding-left:0}.project-heading h1{margin:0}
+@media(min-width:801px){.workspace{height:auto}}
+@media(max-width:800px){.site-header{min-height:0;flex-wrap:nowrap;padding:10px 16px}.project-heading{order:0;flex-basis:auto;padding:0}}

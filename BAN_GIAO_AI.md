@@ -68,7 +68,7 @@ Thứ tự bản ghi là cơ sở của ID: nếu chủ dự án gửi shapefile
 
 ## Ràng buộc thiết kế (giữ nguyên)
 
-Logo CTU nguyên bản; trắng–xanh `#1C57A5`/`#00AFEF`; bản đồ trái/kết quả phải (điện thoại: trên/dưới); không hero, gradient, thẻ KPI. Tên lớp 7 là **Rừng**. Không hiển thị diện tích thiếu.
+Trắng–xanh `#1C57A5`/`#00AFEF`; bản đồ trái/kết quả phải (điện thoại: trên/dưới); không hero, gradient, thẻ KPI. Tên lớp 7 là **Rừng**. Không hiển thị diện tích thiếu.
 
 ## Việc còn mở
 
@@ -81,3 +81,10 @@ Logo CTU nguyên bản; trắng–xanh `#1C57A5`/`#00AFEF`; bản đồ trái/k�
 - Ký hiệu điểm: trạm xăng dầu (ô vuông xanh, bơm xăng), bến cảng (tròn xanh lơ, mỏ neo). Chú giải chỉ còn 2 loại điểm + vùng chồng lấn; "kho có dung tích" và "vị trí ước lượng" chỉ hiện trong thuộc tính.
 - Khi chọn điểm: phần giao giữa vùng đệm đang xem và vùng đệm 2 km của các điểm lân cận được tô sọc nhẹ (tính trong trình duyệt, đa giác 128 cạnh, chỉ để hiển thị; không ảnh hưởng diện tích). Thuộc tính ghi số vùng đệm chồng lấn.
 - Bỏ dòng "Ghép với điểm bản đồ" khỏi giao diện (căn cứ ghép vẫn trong `gis/kho_phu_luc_2.csv` và JSON chi tiết).
+
+## Lượt 4 (23/11/2026) — theo yêu cầu chủ dự án
+
+- Bỏ logo CTU và dòng phụ ở đầu trang (tệp `assets/ctu-logo.png` vẫn giữ trong repo). Thay thế ràng buộc "giữ logo" ở trên.
+- Bỏ mục lọc "Kho có dung tích", bỏ chân chú giải "Năm 2025 · Độ phân giải 10 m".
+- Dòng "Vị trí: Ước lượng" chỉ hiện ở điểm ước lượng; điểm khác không có dòng này.
+- Hộp "Thông tin dữ liệu" chỉ còn nguồn (Sở Công Thương TPCT; Random Forest trên Sentinel-1/2), độ phân giải, hệ tọa độ và ghi chú vị trí ước lượng. Nội dung sửa trong mục `[info]` của `gis/cau_hinh.toml` rồi chạy `python gis/tinh_dien_tich.py`.

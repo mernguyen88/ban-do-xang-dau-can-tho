@@ -253,7 +253,7 @@
         `<div><dt>Tình trạng</dt><dd>${escapeHTML(k.tinh_trang)}</dd></div>`);
     }
     const est = (d.position_quality || '').toLowerCase().includes('ước lượng');
-    rows.push(`<div><dt>Vị trí</dt><dd>${est ? 'Ước lượng (theo tệp nguồn)' : 'Theo tệp nguồn'}${d.coord_note ? `; ${escapeHTML(d.coord_note)}` : ''}</dd></div>`);
+    if (est) rows.push('<div><dt>Vị trí</dt><dd>Ước lượng</dd></div>');
     rows.push('<div id="overlapRow"></div>');
     $('depotInfo').innerHTML = rows.join('');
     $('depotInfo').hidden = false;
@@ -383,16 +383,12 @@
 
   function fillInfo() {
     $('legendRows').innerHTML = catalog.classes.map(c => `<div><span class="swatch" style="background:${c.color}"></span>${escapeHTML(c.name)}</div>`).join('');
-    $('selectionMethod').textContent = catalog.selection || '';
-    $('scopeNote').textContent = catalog.scope_note || '';
-    $('estimatedNote').textContent = catalog.estimated_count ? `${catalog.estimated_count} điểm có tọa độ ghi "Vị trí ước lượng" trong tệp nguồn; nhiều điểm dùng chung tâm phường/xã nên vùng đệm trùng nhau.` : '';
-    const um = catalog.depots_unmatched || [];
-    $('depotNote').innerHTML = um.length ? `<p>Các kho trong Phụ lục 2 chưa có vị trí trên bản đồ (không tự gán tọa độ):</p><ul>${um.map(u => `<li>${u.stt}. ${escapeHTML(u.ten_kho)}${u.dung_tich_m3 ? ' — ' + cap(u.dung_tich_m3) : ''}</li>`).join('')}</ul>` : '';
-    $('areaMethod').textContent = (catalog.method || '').split('Tỷ lệ')[0];
+    const info = catalog.info || {};
+    $('estimatedNote').textContent = info.estimated_note || '';
     const res = catalog.resolution_m ? `${catalog.resolution_m[0]} × ${catalog.resolution_m[1]} m` : '';
-    $('sourceList').innerHTML = (catalog.sources || []).map(s => `<div><dt>${escapeHTML(s.label || 'Nguồn')}</dt><dd>${escapeHTML(s.name)}</dd></div>`).join('')
+    $('sourceList').innerHTML = (info.sources || []).map(s => `<div><dt>${escapeHTML(s.label)}</dt><dd>${escapeHTML(s.text)}</dd></div>`).join('')
       + (res ? `<div><dt>Độ phân giải</dt><dd>${escapeHTML(res)}</dd></div>` : '')
-      + `<div><dt>Hệ tọa độ tính diện tích</dt><dd>${escapeHTML(catalog.crs_label || catalog.crs)}</dd></div>`;
+      + `<div><dt>Hệ tọa độ</dt><dd>${escapeHTML(catalog.crs_label || catalog.crs)}</dd></div>`;
   }
 
   async function init() {
@@ -411,8 +407,7 @@
     if (!points.length) throw new Error('Chưa có vị trí trong bộ dữ liệu.');
     byId = new Map(points.map(p => [p.id, p]));
     fillInfo();
-    els.kind.innerHTML = '<option value="">Tất cả loại</option>' + catalog.kinds.map(k => `<option value="${escapeHTML(k.name)}">${escapeHTML(k.name)} (${k.count})</option>`).join('')
-      + (catalog.depot_count ? `<option value="__depot">Kho có dung tích (${catalog.depot_count})</option>` : '');
+    els.kind.innerHTML = '<option value="">Tất cả loại</option>' + catalog.kinds.map(k => `<option value="${escapeHTML(k.name)}">${escapeHTML(k.name)} (${k.count})</option>`).join('');
     els.kind.disabled = false; els.search.disabled = false;
 
     map = L.map('map', { zoomControl: false, minZoom: 7, maxZoom: 20, scrollWheelZoom: true, attributionControl: true, preferCanvas: false });

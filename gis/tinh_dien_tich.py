@@ -211,6 +211,7 @@ def main(argv=None):
                       + " Từ tệp bencang chỉ lấy bến cảng."
                       + f" {len(depots)}/{len(depots) + len(unmatched)} kho trong Phụ lục 2 được ghép với điểm trên bản đồ và có thêm bán kính 3, 5, 10 km."),
         "scope_note": cfg["output"]["scope_note"],
+        "info": cfg.get("info", {}),
         "depots_unmatched": [{"stt": u["stt"], "ten_kho": u["ten_kho"], "dung_tich_m3": u["dung_tich_m3"]} for u in unmatched],
     }
     stats = webdata.write_web_data(web, meta, points)
