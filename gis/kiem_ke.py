@@ -22,8 +22,15 @@ import chung  # noqa: E402
 VN_BBOX = (102.0, 8.0, 110.5, 23.5)
 
 
+def rel(path: Path) -> str:
+    try:
+        return str(Path(path).resolve().relative_to(chung.ROOT))
+    except ValueError:
+        return str(path)
+
+
 def inventory_vector(path: Path, layer=None, source_crs=None, raster_bounds_wgs=None):
-    rep = {"path": str(path), "exists": path.exists()}
+    rep = {"path": rel(path), "exists": path.exists()}
     if not path.exists():
         return rep
     rep["sha256"] = chung.sha256(path)
@@ -78,7 +85,7 @@ def inventory_vector(path: Path, layer=None, source_crs=None, raster_bounds_wgs=
 
 
 def inventory_raster(path: Path, class_table, expected_sha, calc_crs, full_scan=True):
-    rep = {"path": str(path), "exists": path.exists()}
+    rep = {"path": rel(path), "exists": path.exists()}
     if not path.exists():
         return rep
     import rasterio

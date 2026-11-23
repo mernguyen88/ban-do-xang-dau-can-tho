@@ -1,6 +1,6 @@
 {
  "raster": {
-  "path": "/home/claude/repo/dau_vao/Hien_trang_2025_7lop_co_rung.tif",
+  "path": "dau_vao/Hien_trang_2025_7lop_co_rung.tif",
   "exists": true,
   "sha256": "f92f71a627e16d15ce874818878b9c260ca4deec30ca3ac2acac0245b31d9303",
   "sha256_matches_expected": true,
@@ -49,7 +49,7 @@
  },
  "sources": {
   "tram": {
-   "path": "/home/claude/repo/dau_vao/Co_so_xang_dau_Can_Tho.shp",
+   "path": "dau_vao/Co_so_xang_dau_Can_Tho.shp",
    "exists": true,
    "sha256": "593f08c842f12bb1cc7c7759aafc3361cc9221fce47c1b0b8582b66fb33e359b",
    "layers": [
@@ -104,7 +104,7 @@
    ]
   },
   "ben_cang": {
-   "path": "/home/claude/repo/dau_vao/bencang.shp",
+   "path": "dau_vao/bencang.shp",
    "exists": true,
    "sha256": "4c8c5fa59ce5813feec2b180bfc087b517601fe8e8ad1ff938975f554243e0c5",
    "layers": [
